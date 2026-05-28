@@ -4,9 +4,9 @@ import {
   stepCountIs,
   streamText,
   tool,
-  type UIMessage,
 } from "ai";
 import { z } from "zod";
+import type { ChatMessage, WeatherToolOutput } from "@/app/lib/chat-types";
 
 const VLLM_BASE_URL = "https://jungle-cia-spot-rna.trycloudflare.com/v1";
 const VLLM_API_KEY =
@@ -30,7 +30,7 @@ const vllm = createOpenAICompatible({
 export const maxDuration = 60;
 
 export async function POST(req: Request) {
-  const { messages }: { messages: UIMessage[] } = await req.json();
+  const { messages }: { messages: ChatMessage[] } = await req.json();
 
   const result = streamText({
     model: vllm.chatModel(MODEL),
@@ -48,7 +48,7 @@ export async function POST(req: Request) {
               'City name, optionally with country/region. Examples: "Tokyo", "Paris, France", "Austin, Texas".',
             ),
         }),
-        execute: async ({ location }) => {
+        execute: async ({ location }): Promise<WeatherToolOutput> => {
           const geoUrl = `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(
             location,
           )}&count=1&language=en&format=json`;

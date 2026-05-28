@@ -2,21 +2,12 @@
 
 import { useChat } from "@ai-sdk/react";
 import { useEffect, useRef, useState } from "react";
+import type { ChatMessage } from "@/app/lib/chat-types";
 
-type WeatherResult = {
-  location?: string;
-  timezone?: string | null;
-  temperature_c?: number;
-  feels_like_c?: number;
-  humidity_pct?: number;
-  wind_kmh?: number;
-  wind_direction_deg?: number;
-  precipitation_mm?: number;
-  is_day?: boolean;
-  condition?: string;
-  weather_code?: number;
-  error?: string;
-};
+type WeatherToolPart = Extract<
+  ChatMessage["parts"][number],
+  { type: "tool-get_weather" }
+>;
 
 const SUGGESTIONS = [
   "What's the weather in Tokyo right now?",
@@ -27,7 +18,7 @@ const SUGGESTIONS = [
 
 export default function Page() {
   const [input, setInput] = useState("");
-  const { messages, sendMessage, status, error } = useChat();
+  const { messages, sendMessage, status, error } = useChat<ChatMessage>();
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -194,37 +185,34 @@ function MessageBubble({
   );
 }
 
-function WeatherToolCard({
-  part,
-}: {
-  part: {
-    state: string;
-    input?: { location?: string };
-    output?: WeatherResult;
-    errorText?: string;
-  };
-}) {
-  const { state, input, output, errorText } = part;
-
-  if (state === "input-streaming" || state === "input-available") {
+function WeatherToolCard({ part }: { part: WeatherToolPart }) {
+  if (part.state === "input-streaming" || part.state === "input-available") {
+    const location =
+      typeof part.input === "object" &&
+      part.input !== null &&
+      "location" in part.input &&
+      typeof part.input.location === "string"
+        ? part.input.location
+        : undefined;
     return (
       <div className="flex items-center gap-2 rounded-xl bg-slate-50 px-3 py-2 text-xs text-slate-500">
         <Spinner />
-        Looking up weather{input?.location ? ` for ${input.location}` : ""}…
+        Looking up weather{location ? ` for ${location}` : ""}…
       </div>
     );
   }
 
-  if (state === "output-error") {
+  if (part.state === "output-error") {
     return (
       <div className="rounded-xl border border-rose-200 bg-rose-50 px-3 py-2 text-xs text-rose-700">
-        Weather tool failed: {errorText ?? "unknown error"}
+        Weather tool failed: {part.errorText ?? "unknown error"}
       </div>
     );
   }
 
-  if (state !== "output-available" || !output) return null;
-  if (output.error) {
+  if (part.state !== "output-available") return null;
+  const output = part.output;
+  if ("error" in output) {
     return (
       <div className="rounded-xl border border-amber-200 bg-amber-50 px-3 py-2 text-xs text-amber-800">
         {output.error}
@@ -232,7 +220,7 @@ function WeatherToolCard({
     );
   }
 
-  const isDay = !!output.is_day;
+  const isDay = output.is_day;
   return (
     <div
       className={`overflow-hidden rounded-2xl border ${
@@ -247,9 +235,9 @@ function WeatherToolCard({
             {output.location}
           </div>
           <div className="mt-0.5 text-2xl font-semibold tracking-tight text-slate-900">
-            {Math.round(output.temperature_c ?? 0)}°C
+            {Math.round(output.temperature_c)}°C
             <span className="ml-2 text-sm font-normal text-slate-500">
-              feels {Math.round(output.feels_like_c ?? 0)}°
+              feels {Math.round(output.feels_like_c)}°
             </span>
           </div>
           <div className="text-xs text-slate-600">{output.condition}</div>
@@ -263,11 +251,11 @@ function WeatherToolCard({
         </div>
       </div>
       <div className="grid grid-cols-3 divide-x divide-white/60 border-t border-white/70 bg-white/40 text-center text-xs text-slate-600">
-        <Stat label="Humidity" value={`${output.humidity_pct ?? 0}%`} />
-        <Stat label="Wind" value={`${Math.round(output.wind_kmh ?? 0)} km/h`} />
+        <Stat label="Humidity" value={`${output.humidity_pct}%`} />
+        <Stat label="Wind" value={`${Math.round(output.wind_kmh)} km/h`} />
         <Stat
           label="Precip"
-          value={`${(output.precipitation_mm ?? 0).toFixed(1)} mm`}
+          value={`${output.precipitation_mm.toFixed(1)} mm`}
         />
       </div>
     </div>
