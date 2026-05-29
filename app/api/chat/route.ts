@@ -8,7 +8,7 @@ import {
 import { z } from "zod";
 import type { ChatMessage, WeatherToolOutput } from "@/app/lib/chat-types";
 
-const VLLM_BASE_URL = "https://jungle-cia-spot-rna.trycloudflare.com/v1";
+const VLLM_BASE_URL = "https://zoo-saying-iso-wings.trycloudflare.com/v1";
 const VLLM_API_KEY =
   "a39e4fb12f8062efbb56dbb5be6fc8d3b58af30629afae586aaa8850c5ea8a0c";
 // Model id as exposed by /v1/models on the vLLM server.
