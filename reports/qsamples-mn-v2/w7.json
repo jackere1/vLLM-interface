@@ -1,0 +1,16 @@
+{
+  "id": "w7",
+  "task": "weather",
+  "question": "Лондон-д одоо цаг агаар ямар байна?",
+  "injected": {
+    "location": "London",
+    "temperature_c": 17,
+    "feels_like_c": 15,
+    "humidity_pct": 42,
+    "wind_kmh": 32,
+    "precipitation_mm": 0,
+    "condition": "partly cloudy"
+  },
+  "source": null,
+  "output": "Лондонд одоо 17°C, мэдрэгдэх байдлаар 15°C байна. Тэнгэр багавтар үүлэрхэг байна."
+}

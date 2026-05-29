@@ -1,0 +1,16 @@
+{
+  "id": "w1",
+  "task": "weather",
+  "question": "Нью-Йорк-д одоо цаг агаар ямар байна?",
+  "injected": {
+    "location": "New York",
+    "temperature_c": -12,
+    "feels_like_c": -12,
+    "humidity_pct": 35,
+    "wind_kmh": 0,
+    "precipitation_mm": 0,
+    "condition": "clear sky"
+  },
+  "source": null,
+  "output": "Нью-Йорк хотод одоо минус арван хоёр хэмийн халуун байна. Тэнгэр цэлгэр байна."
+}

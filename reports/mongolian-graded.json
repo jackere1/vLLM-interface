@@ -41,154 +41,249 @@
       "task": "weather",
       "problem": "температурыг -12°C байна — wrong case: accusative -ыг used with copula байна; should be nominative 'температур' (or 'температур нь -12°C байна'); Fluency: 'температурыг -12°C байна' uses the accusative case marker -ыг on температур, which is ungrammatical with the intransitive copula байна. Correct would be nominative 'температур -12°C байна' or 'температур нь -12°C байна'. This is a clear grammatical error.; Minor (not failing on its own): 'тэнгэр цэлгэр' inverts the usual collocation 'цэлгэр тэнгэр'; acceptable as a predicative 'the sky is clear', so borderline but not an error.",
       "output": "Нью-Йорк хотод одоогоор тэнгэр цэлгэр, температурыг -12°C байна. Мэдрэгдэх температур мөн -12°C байна.",
-      "question": "Нью-Йорк-д одоо цаг агаар ямар байна?"
+      "question": "Нью-Йорк-д одоо цаг агаар ямар байна?",
+      "injected": {
+        "location": "New York",
+        "temperature_c": -12,
+        "feels_like_c": -12,
+        "humidity_pct": 35,
+        "wind_kmh": 0,
+        "precipitation_mm": 0,
+        "condition": "clear sky"
+      }
     },
     {
       "id": "w2",
       "task": "weather",
       "problem": "\"бүдгэр cloudy\" — the English word \"cloudy\" is left untranslated and embedded in the Mongolian sentence (code-switching, broken); \"бүдгэр\" is not a standard/correct Mongolian weather term; \"overcast\" should be \"бүрхэг\" (or \"үүлэрхэг\"). \"бүдгэр\" reads as a malformed/non-standard word; Condition mistranslation/hallucination: injected condition is \"overcast\" (should be \"бүрхэг\" or \"үүлэрхэг\"), but the output renders it as \"бүдгэр cloudy\" — neither matches \"overcast\".; Code-switching/broken Mongolian: the English word \"cloudy\" is left untranslated and spliced into the Mongolian sentence \"...одоо бүдгэр cloudy байна.\"; \"бүдгэр\" is a non-standard/malformed Mongolian weather term (derives from \"бүдэг\" = dim/faint), not a correct word for cloud cover; it neither means overcast nor cloudy.; Combined, the condition clause is both a factual mistranslation and clearly broken Mongolian. The numeric facts (10°C, feels-like 8°C, wind 32 км/ц) are all faithful; the remaining two sentences are grammatical and natural.",
       "output": "Мөрөн хотод одоо бүдгэр cloudy байна. Температур 10°C, мэдрэгдэх байдал 8°C байна. Салхи 32 км/ц-аар хүчтэй байна.",
-      "question": "Мөрөн-д одоо цаг агаар ямар байна?"
+      "question": "Мөрөн-д одоо цаг агаар ямар байна?",
+      "injected": {
+        "location": "Мөрөн",
+        "temperature_c": 10,
+        "feels_like_c": 8,
+        "humidity_pct": 67,
+        "wind_kmh": 32,
+        "precipitation_mm": 0.8,
+        "condition": "overcast"
+      }
     },
     {
       "id": "w3",
       "task": "weather",
       "problem": "оржгүй — non-standard/ungrammatical negation; the converb 'орж' cannot take the negative suffix '-гүй' directly. Standard would be 'орохгүй байна' (is not raining) or 'ороогүй байна' (has not rained).; оржгүй — ungrammatical negation (converb 'орж' + negative suffix '-гүй'); standard forms are 'орохгүй байна' or 'ороогүй байна'",
       "output": "Улаанбаатар хотод одоо бороо оржгүй байна, манантай бөгөөд -15°C (мэдрэгдэхэд -16°C) байна.",
-      "question": "Улаанбаатар хотод одоо бороо орж байна уу?"
+      "question": "Улаанбаатар хотод одоо бороо орж байна уу?",
+      "injected": {
+        "location": "Ulaanbaatar",
+        "temperature_c": -15,
+        "feels_like_c": -16,
+        "humidity_pct": 46,
+        "wind_kmh": 31,
+        "precipitation_mm": 0,
+        "condition": "fog"
+      }
     },
     {
       "id": "w4",
       "task": "weather",
       "problem": "цэлгэр тэнгэртэй — wrong word for 'clear sky'; 'цэлгэр' means 'vast/wide/spacious', not 'clear/cloudless'. The correct meteorological term is 'цэлмэг тэнгэртэй'.; Condition mistranslation: injected.condition='clear sky' rendered as 'цэлгэр тэнгэртэй'; 'цэлгэр' means vast/spacious, not clear/cloudless. Correct term: 'цэлмэг тэнгэртэй'. Faithfulness (condition mismatch) + fluency (wrong-word/near-homophone) error.; 'цэлгэр тэнгэр' is not a valid Mongolian expression for a clear sky.",
       "output": "Нью-Йорк хотод одоогоор цэлгэр тэнгэртэй, -12°C байна. Мэдрэгдэх температур мөн адил -12°C байна.",
-      "question": "Нью-Йорк-гийн агаарын температур хэд байна вэ?"
+      "question": "Нью-Йорк-гийн агаарын температур хэд байна вэ?",
+      "injected": {
+        "location": "New York",
+        "temperature_c": -12,
+        "feels_like_c": -12,
+        "humidity_pct": 35,
+        "wind_kmh": 0,
+        "precipitation_mm": 0,
+        "condition": "clear sky"
+      }
     },
     {
       "id": "w7",
       "task": "weather",
       "problem": "\"бүдэгцэн наранды\" — both words are malformed/invented; \"наранды\" is not a valid Mongolian word form (нар=sun) and \"бүдэгцэн\" is a non-standard coinage; \"бүдэгцэн наранды\" mistranslates \"partly cloudy\": it references the sun (\"dim sunny\") rather than clouds; correct would be \"хэсэгчлэн/багавтар үүлэрхэг\"; FLUENCY: \"наранды\" is a malformed/invented word form (root нар(ан) = sun; valid would be нартай/наран, not -ды).; FLUENCY: \"бүдэгцэн\" is a non-standard coinage; standard form would be \"бүдэгхэн\".; FAITHFULNESS/HALLUCINATION: \"partly cloudy\" rendered as \"бүдэгцэн наранды\" (dim sunny) — invents sun, drops clouds; correct is \"хэсэгчлэн/багавтар үүлэрхэг\".; MISTRANSLATION: the condition phrase is semantically wrong and awkward.",
       "output": "Лондонд одоо бүдэгцэн наранды, 17 градус байна (мэдрэгдэхэд 15 градус). Салхи хүчтэй байна.",
-      "question": "Лондон-д одоо цаг агаар ямар байна?"
+      "question": "Лондон-д одоо цаг агаар ямар байна?",
+      "injected": {
+        "location": "London",
+        "temperature_c": 17,
+        "feels_like_c": 15,
+        "humidity_pct": 42,
+        "wind_kmh": 32,
+        "precipitation_mm": 0,
+        "condition": "partly cloudy"
+      }
     },
     {
       "id": "w8",
       "task": "weather",
       "problem": "\"одоогоор ... оржээ\" — the resultative/evidential past \"оржээ\" sits slightly awkwardly with the present-time adverb \"одоогоор\", but it is not a clear grammatical error; see above; Output claims \"бороо оржээ\" (it is raining) in Paris, but injected.condition is \"overcast\" (бүрхэг) — not rain. The output then also says \"бүрхэг байна\" (overcast), contradicting its own opening claim. Asserting rain when the condition is overcast is a hallucination/misrepresentation of injected.condition, and wrongly answers the question \"is it raining?\" in the affirmative.",
       "output": "Парис хотод одоогоор бороо оржээ. Температур -16°C, мэдрэгдэх байдал -19°C-тэй, бүхэлдээ бүрхэг байна.",
-      "question": "Парис хотод одоо бороо орж байна уу?"
+      "question": "Парис хотод одоо бороо орж байна уу?",
+      "injected": {
+        "location": "Paris",
+        "temperature_c": -16,
+        "feels_like_c": -19,
+        "humidity_pct": 43,
+        "wind_kmh": 33,
+        "precipitation_mm": 0.8,
+        "condition": "overcast"
+      }
     },
     {
       "id": "w9",
       "task": "weather",
       "problem": "бүхэлдээ бүрэг — 'бүрэг' means timid/shy/cowardly, not 'overcast'; the correct word is 'бүрхэг' (overcast/cloudy). 'overcast' should be rendered тэнгэр бүрхэг / бүрхэг тэнгэртэй. 'бүхэлдээ бүрэг' literally reads 'entirely timid', a clear mistranslation/wrong-word error.; FAITHFULNESS: condition 'overcast' mistranslated as 'бүхэлдээ бүрэг'; 'бүрэг' = timid/shy, not overcast (correct: 'бүрхэг' / 'тэнгэр бүрхэг'). Condition not faithfully conveyed.; FLUENCY: 'бүрэг' is a wrong-word error (one letter off from 'бүрхэг') and non-idiomatic for weather.; FLUENCY: 'бүхэлдээ бүрэг' reads as 'entirely timid' — unnatural and meaningless for a weather report.; All injected numbers and location are correct — no numeric hallucination.",
       "output": "Парисийн агаар одоогоор -16°C байгаа бөгөөд -19°C мэт мэдрэгдэж, бүхэлдээ бүрэг байна.",
-      "question": "Парис-гийн агаарын температур хэд байна вэ?"
+      "question": "Парис-гийн агаарын температур хэд байна вэ?",
+      "injected": {
+        "location": "Paris",
+        "temperature_c": -16,
+        "feels_like_c": -19,
+        "humidity_pct": 43,
+        "wind_kmh": 33,
+        "precipitation_mm": 0.8,
+        "condition": "overcast"
+      }
     },
     {
       "id": "w10",
       "task": "weather",
       "problem": "Ерэөнхий — misspelling/non-word; should be Ерөнхий (extra э inserted); Fluency: \"Ерэөнхий\" is a misspelled non-word (invalid vowel cluster рэө). Correct form is \"Ерөнхий\" (general); an extra \"э\" is inserted before \"ө\". This is clearly broken Mongolian.",
       "output": "Берлин хотод одоо -11°C байна, мэдрэгдэх температур -13°C байна. Ерэөнхий нөхцөл нь хөнгөн бороотой байна.",
-      "question": "Берлин-д одоо цаг агаар ямар байна?"
+      "question": "Берлин-д одоо цаг агаар ямар байна?",
+      "injected": {
+        "location": "Berlin",
+        "temperature_c": -11,
+        "feels_like_c": -13,
+        "humidity_pct": 92,
+        "wind_kmh": 12,
+        "precipitation_mm": 0,
+        "condition": "light rain"
+      }
     },
     {
       "id": "g14",
       "task": "general",
       "problem": "удаахan — malformed mixed-script non-word (Cyrillic 'удаах' + Latin 'an'); intended 'удаан' (slow); FLUENCY: 'удаахan' is a malformed mixed-script non-word (5 Cyrillic letters у-д-а-а-х [U+0443,0434,0430,0430,0445] + 2 Latin letters a-n [U+0061,U+006E]). Intended word is 'удаан' (slow). Verified at codepoint level. This is clearly broken Mongolian.",
       "output": "TCP болон UDP-ийн гол ялгаа нь найдвартай байдал болон хурд юм:\n\n*   **TCP (Transmission Control Protocol):** Өгөгдлийг хүлээн авсан эсэхийг баталгаажуулдаг, дарааллыг нь хадгалдаг, найдвартай боловч удаахan (Жишээ нь: Веб хөтөч, И-мэйл).\n*   **UDP (User Datagram Protocol):** Өгөгдлийг зөвхөн илгээдэг, баталгаажуулалт хийхгүй, маш хурдан боловч зарим мэдээлэл алдагдах магадлалтай (Жишээ нь: Онлайн тоглоом, Видео стриминг).",
-      "question": "TCP болон UDP протоколын гол ялгаа юу вэ?"
+      "question": "TCP болон UDP протоколын гол ялгаа юу вэ?",
+      "injected": null
     },
     {
       "id": "g15",
       "task": "general",
       "problem": "нүүрсхүлэг / нүүрсхүлэгийг — non-standard/invented word for carbon dioxide; the correct Mongolian terms are 'нүүрсхүчлийн хий', 'нүүрстөрөгчийн давхар исэл', or 'нүүрсхүчил'. 'Нүүрсхүлэг' is not a recognized Mongolian word.; усыг болон нүүрсхүлэгийг — slightly awkward double-accusative listing; 'ус болон нүүрсхүчлийн хийг' would read more naturally; FLUENCY: 'нүүрсхүлэг' / 'нүүрсхүлэгийг' is a non-standard, invented term for carbon dioxide. Standard Mongolian uses 'нүүрсхүчлийн хий', 'нүүрстөрөгчийн давхар исэл', or 'нүүрсхүчил'. The morpheme '-хүлэг' is not a chemistry suffix (as a standalone word 'хүлэг' means 'steed'), so the compound is not recognizable Mongolian terminology in a science explanation.; FLUENCY (minor): 'усыг болон нүүрсхүлэгийг' is an awkward double-accusative listing; 'ус болон нүүрсхүчлийн хийг' reads more naturally.; FLUENCY (minor): 'эрчим хүч буюу сахар болон хүчилтөрөгч болгон' is slightly loose phrasing ('energy or sugar and oxygen'), though understandable.",
       "output": "Фотосинтез гэдэг нь ургамал нарны гэрлийг ашиглан усыг болон нүүрсхүлэгийг эрчим хүч буюу сахар болон хүчилтөрөгч болгон хувиргах процесс юм. Энгийнээр хэлбэл, ургамал нарны тусламжтайгаар өөртөө хэрэгцээтэй \"хоол\" бэлдэж, бидний амьсгалах хүчилтөрөгчийг ялгаруулж буй үйл явц юм.",
-      "question": "Фотосинтез гэж юу вэ? Энгийнээр тайлбарлаач."
+      "question": "Фотосинтез гэж юу вэ? Энгийнээр тайлбарлаач.",
+      "injected": null
     },
     {
       "id": "g16",
       "task": "general",
       "problem": "複雑 — CJK (Japanese/Chinese) characters injected mid-sentence in 'complexity' '複雑 асуудлыг'; should be Mongolian e.g. 'нарийн төвөгтэй'. Foreign script in Cyrillic text.; хүчлээх — invented/incorrect verb in 'компьютерыг хүчлээх замаар'; should be 'ашиглах' (using). Not a valid word in this sense.; хэв шимийг — incorrect; should be 'хэв маягийг' (patterns). 'шим' means nutrient/sap, nonsensical here.; дуурайлгах — awkward causative; 'дуурайх' would be natural.; 複雑 — two CJK (Japanese/Chinese) ideographs (U+8907 複, U+96D1 雑, meaning 'complex/miscellaneous') injected mid-sentence in 'таньж,複雑 асуудлыг'; foreign script in Cyrillic text, also missing space after the comma. Should be Mongolian e.g. 'нарийн төвөгтэй асуудлыг'.; хүчлээх — invalid/invented verb in 'компьютерыг хүчлээх замаар'; not a real Mongolian word in this sense ('хүчил' = acid). Intended meaning is 'ашиглах' (using computers).",
       "output": "Хиймэл оюун ухаан гэдэг нь компьютерыг хүчлээх замаар хүний оюун санааны үйл ажиллагааг, тухайлбал суралцах, дүн шинжилгээ хийх, шийдвэр гаргах чадварыг дуурайлгах технологи юм. Энэ нь өгөгдөлд дүн шинжилгээ хийж, хэв шимийг таньж,複雑 асуудлыг шийдвэрлэх замаар хүний ажлыг хөнгөвчилж, бүтээмжийг нэмэгдүүлдэг.",
-      "question": "Хиймэл оюун ухаан гэж юу вэ? Хоёр өгүүлбэрээр тайлбарла."
+      "question": "Хиймэл оюун ухаан гэж юу вэ? Хоёр өгүүлбэрээр тайлбарла.",
+      "injected": null
     },
     {
       "id": "g17",
       "task": "general",
       "problem": "сууриллан (double л misspelling/mis-conjugation; correct converb of суурилах is суурилан); асуудалд шийдвэр гаргах (somewhat awkward collocation; асуудлыг шийдвэрлэх would be more natural); сууриллан: misspelled/mis-conjugated converb of суурилах; correct is суурилан (single л) — clear non-standard form; компьютерыг: vowel-harmony error, loanword компьютер should take -ийг (компьютерийг), not back-vowel -ыг — missed by grader; асуудалд шийдвэр гаргах: mildly awkward collocation, асуудлыг шийдвэрлэх more idiomatic — minor, not a hard error",
       "output": "Хиймэл оюун ухаан гэдэг нь компьютерыг хүнийх шиг сэтгэн бодох, суралцах болон асуудалд шийдвэр гаргах чадвартай болгох технологи юм. Энэ нь өгөгдөлд дүн шинжилгээ хийж, хэв маягт сууриллан урьдчилан таамаглал гаргах замаар төрөл бүрийн даалгаврыг гүйцэтгэдэг.",
-      "question": "Хиймэл оюун ухаан гэж юу вэ? Хоёр өгүүлбэрээр тайлбарла."
+      "question": "Хиймэл оюун ухаан гэж юу вэ? Хоёр өгүүлбэрээр тайлбарла.",
+      "injected": null
     },
     {
       "id": "g20",
       "task": "general",
       "problem": "\"үе шаруудаас\" — malformed/non-word; correct plural of \"үе шат\" is \"үе шатуудаас\"; \"конденсаци (унтрах)\" — wrong gloss: \"унтрах\" means to extinguish/fall asleep, not condensation; correct term is \"өтгөрөх\"; \"хэлбэржлэн хувирч\" — \"хэлбэржлэн\" is a malformed conjugation; natural form would be \"хэлбэрээ өөрчлөн\" or \"хэлбэржин\"; FLUENCY/MISTRANSLATION: \"конденсаци (унтрах)\" — the parenthetical Mongolian gloss \"унтрах\" means 'to fall asleep / to extinguish (a fire)', which has nothing to do with condensation. The correct term is \"өтгөрөх\". This both reads as broken word choice and actively mislabels a core stage of the water cycle, so it is a faithfulness/factual defect in addition to a fluency one.; FLUENCY (non-word): \"үе шаруудаас\" — malformed. The noun is \"үе шат\" (stage); the correct ablative plural is \"үе шатуудаас\". The dropped \"т\" yields a non-word.; FLUENCY (mis-conjugation): \"хэлбэржлэн хувирч\" — \"хэлбэржлэн\" inserts an extra \"л\"; the valid converb of \"хэлбэржих\" is \"хэлбэржин\". Natural phrasing would be \"хэлбэрээ өөрчлөн\" or \"хэлбэржин\".",
       "output": "Усны эргэлт гэдэг нь ус дэлхийн гадаргуу, агаар болон газрын доорх хэсгүүдийн хооронд тасралтгүй эргэлдэж, хэлбэржлэн хувирч байх процесс юм. Энэ нь ууршлах, конденсаци (унтрах), тунадас болон урсгал гэсэн үндсэн үе шаруудаас бүрдэнэ.",
-      "question": "Усны эргэлт (water cycle) гэж юу вэ?"
+      "question": "Усны эргэлт (water cycle) гэж юу вэ?",
+      "injected": null
     },
     {
       "id": "x21",
       "task": "xsum",
       "problem": "дамжлан — appears to be a mis-conjugation/typo of 'дамжуулан' (by means of/through); 'дамжлан' is not a standard form; аргуудаар дамжлан ... бүтээмжийг нэмэгдүүлэх — slightly awkward construction even if 'дамжуулан' were used; Hallucination: 'React-ийн төлөв удирдлага, эффектүүдийн талаарх' invents 'эффектүүдийн' (React effects/useEffect). The source's React section is titled 'useReducer with Context' and covers only complex-state management with useReducer + Context for passing state/dispatch; there is no effects/useEffect content. This is a fabricated detail.; Fluency: 'аргуудаар дамжлан' — 'дамжлан' is a non-standard mis-conjugation. The intended converb of 'дамжуулах' (by means of / through) is 'дамжуулан' (and 'дамжих' gives 'дамжин'); 'дамжлан' is neither and is grammatically off. The clause would read correctly as 'аргуудаар дамжуулан' or simply 'аргуудаар'.; Minor awkwardness: even corrected to 'дамжуулан', 'санах ойг хэмнэх аргуудаар дамжуулан ... бүтээмжийг нэмэгдүүлэх' is a slightly strained construction, though not wrong on its own.; эффектүүдийн (React 'effects'/useEffect) — the source's React section covers only useReducer + Context (state management), no effects content; this topic is invented",
       "output": "Энэхүү баримт бичиг нь Next.js-ийн сервер компонентуудын өгөгдөл авах, динамик маршрут, серверт суурилсан үйлдлүүд болон React-ийн төлөв удирдлага, эффектүүдийн талаарх зааврыг багцалсан байна. Мөн vLLM-ийн PagedAttention, багцлах (batching) болон санах ойг хэмнэх аргуудаар дамжлан өгөгдөл боловсруулах бүтээмжийг нэмэгдүүлэх, OpenAI-тай нийцэх API-г ашиглах талаарх мэдээллийг өгжээ. Ерөнхийдөө эдгээр нь веб хөгжүүлэлт болон хиймэл оюун ухааны загварын үйлчилгээг оновчтой болгох техникийн шийдлүүдийг тайлбарласан байна.",
-      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч."
+      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч.",
+      "injected": null,
+      "source": "[doc:401fc1a4]\n\n## Next.js — Data fetching in Server Components\nIn the App Router, data fetching is colocated inside async Server Components using the fetch API. The caching behavior is controlled per request. `fetch(url, { cache: 'force-cache' })` caches until manually invalidated (like getStaticProps) and is the default. `fetch(url, { cache: 'no-store' })` refetches on every request (like getServerSideProps). Time-based revalidation uses `fetch(url, { next: { revalidate: 10 } })` to cache with a 10-second lifetime.\n\nexport default async function Page() {\n  const staticData = await fetch('https://...', { cache: 'force-cache' })\n  const dynamicData = await fetch('https://...', { cache: 'no-store' })\n  const revalidated = await fetch('https://...', { next: { revalidate: 10 } })\n  return <div>...</div>\n}\n\n## React — useReducer with Context\nFor complex state, a parent manages it with useReducer while Context passes both state and dispatch deep into the tree, so any descendant can read state and dispatch actions without prop drilling.\n\nconst [tasks, dispatch] = useReducer(tasksReducer, initialTasks);\nfunction tasksReducer(tasks, action) {\n  switch (action.type) {\n    case 'added': return [...tasks, { id: action.id, text: action.text, done: false }];\n    case 'changed': return tasks.map(t => t.id === action.task.id ? action.task : t);\n    case 'deleted': return tasks.filter(t => t.i"
     },
     {
       "id": "x23",
       "task": "xsum",
       "problem": "\"зааварчилгааг ... багтсан байна\" — accusative-marked object (-ыг) paired with the intransitive verb \"багтсан\" (is included); should be transitive \"багтаасан байна\" (contains). Inconsistent: the same sentence type later correctly uses \"багтаасан байна\".; \"серверт үйлдлүүд\" (for Server Actions) — dative \"серверт\" is awkward/ungrammatical; natural form is \"серверийн үйлдлүүд\".; see above; The output claims the document covers \"vLLM-ийн ... санах ойг хэмнэх аргууд\" (vLLM memory-saving methods). The source's vLLM section only describes OpenAI-compatible endpoints, hosting one model at a time, a models-listing endpoint, and configurable host/port (localhost:8000). There is no mention of memory, caching, or memory-saving methods anywhere in the source.",
       "output": "Энэхүү баримт бичиг нь Next.js-ийн динамик маршрут, сервер бүрэлдэхүүн хэсгүүд болон серверт үйлдлүүд (Server Actions), vLLM-ийн сервер эндпойнт болон санах ойг хэмнэх аргуудын талаарх зааварчилгааг багтсан байна. Мөн Vercel AI SDK-ийн `streamText` функц, бүтэцлэгдсэн гаралт болон олон шатлалт агент үүсгэх заавар, React-ийн Hook-уудын ангилал болон цэвэрлэгээний функцүүдийн талаарх мэдээллийг өгүүлжээ. Ерөнхийдээ эдгээр зааврууд нь орчин үеийн веб хөгжүүлэлт болон хиймэл оюуны загваруудыг нэгтгэх техникийн шийдлүүдийг багтаасан байна.",
-      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч."
+      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч.",
+      "injected": null,
+      "source": "[doc:95562161]\n\n## Next.js — Dynamic routes with params\nA dynamic segment like [slug] receives a params prop. In recent versions params is a Promise that must be awaited before use. The component fetches the matching record and renders it.\n\nexport default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {\n  const { slug } = await params\n  const post = await getPost(slug)\n  return (<div><h1>{post.title}</h1><p>{post.content}</p></div>)\n}\n\n## vLLM — Server endpoints overview\nThe server provides multiple OpenAI-compatible endpoints: /v1/completions for raw text generation, /v1/chat/completions for chat with message history and tools, /v1/embeddings for embeddings, and /v1/audio/transcriptions and /v1/audio/translations for speech. It hosts one model at a time and provides a models listing endpoint. The host and port default to localhost:8000 and are configurable with --host and --port.\n\n## Vercel AI SDK — streamText and structured output\nstreamText streams text from a model and prompt; the output is available as a textStream, with a fullStream of typed parts and tool-call handling, retries, and telemetry built in. streamObject is deprecated in favor of streamText with the output setting and Output.object to stream structured data validated by a zod schema.\n\nconst { partialOutputStream } = streamText({ model, output: Output.object({ schema: z.object({ "
     },
     {
       "id": "x24",
       "task": "xsum",
       "problem": "динамимаар — invented non-word; intended 'динамикаар' (dynamically), 'м' substituted for 'к'; аргамендүүдийг — garbled non-word; should be 'аргуудыг' (methods); HALLUCINATION: output claims vLLM uses PagedAttention to boost performance; source's vLLM section mentions only tensor parallelism (tensor_parallel_size, sharding params across GPUs). PagedAttention is never in the document.; FLUENCY: 'динамимаар' is an invented non-word; intended 'динамикаар' (dynamically), 'к' corrupted to 'м'.; FLUENCY: 'аргамендүүдийг' is a garbled non-word; should be 'аргуудыг' (methods).; MINOR: 'гүйцэтгэлийг нэмэгдүүлэх' (improve performance) mischaracterizes tensor parallelism, which the source frames as essential for fitting large models on multiple GPUs, not as a performance boost.",
       "output": "Энэхүү баримт бичиг нь Next.js-ийн route handler, сервер компонентын өгөгдөл хүлээн авах, мета өгөгдлийг динамимаар үүсгэх аргуудын талаар зааварчилгаа өгсөн байна. Мөн Vercel AI SDK-ийн `useChat` hook болон олон шатлалын агент ашиглах заавар, vLLM-ийн tensor parallelism болон PagedAttention-ийг ашиглан гүйцэтгэлийг нэмэгдүүлэх аргамендүүдийг тайлбарлажээ. Ерөнхийдөө энэ нь вэб хөгжүүлэлт болон хиймэл оюун ухааны загварыг оновчтой ашиглах техникийн зааврууд юм.",
-      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч."
+      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч.",
+      "injected": null,
+      "source": "[doc:1be7be0b]\n\n## Next.js — Route handler with error handling\nA POST route handler should wrap work in try/catch, return appropriate HTTP status codes, and avoid leaking sensitive error detail to clients.\n\nimport { submit } from '@/lib/submit'\nexport async function POST(request: Request) {\n  try {\n    await submit(request)\n    return new Response(null, { status: 204 })\n  } catch (reason) {\n    const message = reason instanceof Error ? reason.message : 'Unexpected error'\n    return new Response(message, { status: 500 })\n  }\n}\n\n## vLLM — Tensor parallelism\nTensor parallelism shards model parameters across multiple GPUs within each layer, which is essential for models too large to fit on a single GPU. Set tensor_parallel_size to the number of GPUs.\n\nfrom vllm import LLM\nllm = LLM(model=\"meta-llama/Llama-3.3-70B-Instruct\", tensor_parallel_size=4)\n\n## Next.js — Data fetching in Server Components\nIn the App Router, data fetching is colocated inside async Server Components using the fetch API. The caching behavior is controlled per request. `fetch(url, { cache: 'force-cache' })` caches until manually invalidated (like getStaticProps) and is the default. `fetch(url, { cache: 'no-store' })` refetches on every request (like getServerSideProps). Time-based revalidation uses `fetch(url, { next: { revalidate: 10 } })` to cache with a 10-second lifetime.\n\nexport default async function Page("
     },
     {
       "id": "x25",
       "task": "xsum",
       "problem": "Hallucination: 'олон шатлалт агент үүсгэх арга' ('a method for creating multi-tier/multi-layered agents') is fabricated. The source's Vercel AI SDK section only says useChat messages have parts that are text or tool-call parts; the vLLM section only mentions parallel_tool_calls controlling whether multiple tool calls are allowed. Neither section describes building agents, and nothing mentions 'multi-tier' agents. This is an invented technical concept.; Minor (not disqualifying): 'мета өгөгдлийг удирдах' ('managing metadata') is a slightly loose rendering of generateMetadata 'setting metadata dynamically', and 'интеграцчлал' is a clunky loan-derivation, but both are grammatical and understandable — fluency is not broken.; олон шатлалт агент үүсгэх арга ('a method for creating multi-tier/multi-layered agents') — the source contains no mention of agent creation. The Vercel AI SDK section describes useChat managing chat state with messages/sendMessage and text-or-tool-call message parts; the vLLM section mentions parallel_tool_calls. Neither describes building 'multi-tier agents'. This is an invented fact.",
       "output": "Энэхүү баримт бичиг нь React-ийн Hook-уудын ангиллын талаарх мэдээлэл болон Next.js-ийн динамик маршрут, Server Actions, Suspense-ийг ашиглан стриминг хийх, мета өгөгдлийг удирдах заавруудыг багтаасан болно. Мөн Vercel AI SDK-ийн `useChat` hook болон олон шатлалт агент үүсгэх арга, vLLM-ийн OpenAI-тай нийцтэй Chat API-ийн талаарх техникийн тайлбарыг өгсөн байна. Ерөнхийдөө энэ нь орчин үеийн веб хөгжүүлэлт болон хиймэл оюун ухааны интеграцчлалын хэрэгслүүдийн талаарх заавар юм.",
-      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч."
+      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч.",
+      "injected": null,
+      "source": "[doc:95f098c7]\n\n## React — Built-in hook categories\nReact's built-in Hooks fall into categories. State Hooks: useState (direct updates) and useReducer (update logic in a reducer). Context Hooks: useContext reads and subscribes to a context. Ref Hooks: useRef and useImperativeHandle. Effect Hooks: useEffect connects to external systems, useLayoutEffect fires before paint, useInsertionEffect for libraries injecting CSS. Performance Hooks: useMemo caches expensive results, useCallback caches function definitions, useTransition and useDeferredValue keep the UI responsive. Other Hooks: useId, useSyncExternalStore, useActionState.\n\n## Next.js — Dynamic routes with params\nA dynamic segment like [slug] receives a params prop. In recent versions params is a Promise that must be awaited before use. The component fetches the matching record and renders it.\n\nexport default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {\n  const { slug } = await params\n  const post = await getPost(slug)\n  return (<div><h1>{post.title}</h1><p>{post.content}</p></div>)\n}\n\n## Vercel AI SDK — useChat on the client\nThe useChat hook from @ai-sdk/react manages chat state on the client. It exposes messages and sendMessage; each message has parts that can be text or tool-call parts, which the UI renders accordingly.\n\nconst { messages, sendMessage } = useChat();\nmessages.map(m => m.pa"
     },
     {
       "id": "x26",
       "task": "xsum",
       "problem": "Үນээс — contains a Lao character ນ (U+0E99) embedded instead of Cyrillic; broken non-word, should be Үүнээс; багтсан байна — awkward; багтаасан байна (transitive) would be more natural for 'includes'; HALLUCINATION: final clause invents 'vLLM PagedAttention, batching' — entirely absent from source.; Lao letter U+0E99 in 'Үນээс' (should be Cyrillic 'Үүнээс').; Accusative object + intransitive verb mismatch: 'зааварчилгааг ... багтсан байна' should be 'багтаасан'.; vLLM-ийн PagedAttention, batching-ийн тухай техникийн мэдээлэл — the source document does NOT mention vLLM, PagedAttention, or batching at all; entirely fabricated",
       "output": "Энэхүү баримт бичиг нь Next.js-ийн Server Actions, динамик маршрут, Streaming болон Server Components-ийн талаарх зааварчилгааг багтсан байна. Мөн React-ийн useEffect, useReducer, Context болон төрөл бүрийн Hook-уудын ашиглалтыг тайлбарласан. Үนээс гадна Vercel AI SDK-ийн useChat hook болон vLLM-ийн PagedAttention, batching-ийн тухай техникийн мэдээллийг өгүүлжээ.",
-      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч."
+      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч.",
+      "injected": null,
+      "source": "[doc:4ae84ee4]\n\n## Next.js — Server Actions for mutations\nMutations should be handled by Server Actions, invoked from a <form> so they only run on explicit user interaction (never as a side effect of rendering). This keeps mutation logic on the server and avoids accidental writes during render.\n\nimport { logout } from './actions'\nexport default function Page() {\n  return (<><UserProfile /><form action={logout}><button type=\"submit\">Logout</button></form></>)\n}\n\n## React — Effects with cleanup\nEffects that connect to an external system should return a cleanup function. A chat connection must disconnect on cleanup so connections do not accumulate. For data fetching, an \"ignore\" flag prevents a stale response from overwriting fresh state.\n\nuseEffect(() => {\n  let ignore = false;\n  async function start() { const json = await fetchTodos(userId); if (!ignore) setTodos(json); }\n  start();\n  return () => { ignore = true; };\n}, [userId]);\n\n## Next.js — Dynamic routes with params\nA dynamic segment like [slug] receives a params prop. In recent versions params is a Promise that must be awaited before use. The component fetches the matching record and renders it.\n\nexport default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {\n  const { slug } = await params\n  const post = await getPost(slug)\n  return (<div><h1>{post.title}</h1><p>{post.content}</p></div>)\n}\n"
     },
     {
       "id": "x27",
       "task": "xsum",
       "problem": "Hallucination: the output claims the document covers \"динамик мета өгөгдөл\" (dynamic metadata). The source has 8 sections (Next.js route handler, vLLM OpenAI-compatible Chat API, Server-to-Client Component data passing, React useReducer with Context, vLLM conserving memory, React built-in hook categories, Next.js streaming with Suspense, Vercel AI SDK useChat) and none concerns metadata. This topic is invented and unsupported, making the summary unfaithful.; \"динамик мета өгөгдөл\" (dynamic metadata) — the source document has no section about dynamic metadata; this topic is invented and not supported by the source.",
       "output": "Энэхүү баримт бичиг нь Next.js-ийн route handler, сервер болон клиент компонентуудын өгөгдөл дамжуулах, динамик мета өгөгдөл, Suspense-ийг ашиглан стриминг хийх аргуудын талаар зааварчилгаа өгсөн байна. Мөн React-ийн hook-уудын ангилал, useReducer болон Context-ийг ашиглан төвлөрсөн төлөв (state) удирдах, Vercel AI SDK-ийн useChat hook-ийн талаар тайлбарласан. vLLM-ийн OpenAI-тай нийцэх Chat API болон санах ойг хэмнэх тохиргооны талаарх мэдээллийг багтаажээ.",
-      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч."
+      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч.",
+      "injected": null,
+      "source": "[doc:676e57e4]\n\n## Next.js — Route handler with error handling\nA POST route handler should wrap work in try/catch, return appropriate HTTP status codes, and avoid leaking sensitive error detail to clients.\n\nimport { submit } from '@/lib/submit'\nexport async function POST(request: Request) {\n  try {\n    await submit(request)\n    return new Response(null, { status: 204 })\n  } catch (reason) {\n    const message = reason instanceof Error ? reason.message : 'Unexpected error'\n    return new Response(message, { status: 500 })\n  }\n}\n\n## vLLM — OpenAI-compatible Chat API\nvLLM exposes an HTTP server implementing the OpenAI API protocol, acting as a drop-in replacement. POST /v1/chat/completions accepts messages (the conversation history), plus optional model, stream, max_tokens, temperature, top_p, and stop. The response contains choices and a usage object with prompt_tokens, completion_tokens, and total_tokens. parallel_tool_calls controls whether more than one tool call is allowed per request (default true).\n\n## Next.js — Server Components passing data to Client Components\nA Server Component can fetch data directly with async/await and forward it to a Client Component as props. This replaces getServerSideProps and getStaticProps with a simpler pattern and keeps secrets on the server.\n\nimport HomePage from './home-page'\nasync function getPosts() {\n  const res = await fetch('https://..."
     },
     {
       "id": "x28",
       "task": "xsum",
       "problem": "өгч{ছে}л — corrupted token with embedded Bengali script characters (U+099B BENGALI LETTER CHA, U+09C7 BENGALI VOWEL SIGN E); a non-word, likely meant to be 'өгсөн'; төгдөлүүдийн — malformed non-word; 'endpoints' should be 'төгсгөлүүд', 'төгдөл' is not a Mongolian word; HALLUCINATION: 'React-ийн useEffect-ийн цэвэрлэгээний функц' (React's useEffect cleanup function) is fabricated — the source never mentions React, useEffect, or any cleanup function (confirmed: 'useEffect' and 'React' appear only in the output, not the source). The source covers Next.js data fetching/caching, route handler error handling, Server Actions, Server-to-Client data passing; vLLM PagedAttention/batching/chunked prefill, conserving memory, OpenAI-compatible endpoints; and Vercel AI SDK streamText.; FLUENCY (non-word with foreign script): 'өгчছেл' contains embedded Bengali characters U+099B (BENGALI LETTER CHA) and U+09C7 (BENGALI VOWEL SIGN E) inside a Cyrillic word — a corrupted token, likely intended as 'өгсөн' ('gave/provided'). Verified at codepoint level.; FLUENCY (malformed non-word): 'төгдөлүүдийн' — 'endpoints' should be 'төгсгөлүүд'; 'төгдөл' is not a valid Mongolian word (misspelling of 'төгсгөл').; React-ийн useEffect-ийн цэвэрлэгээний функц (React's useEffect cleanup function) — the source document contains no mention of React useEffect or any cleanup function; this fact is fabricated",
       "output": "Энэхүү баримт бичиг нь Next.js-ийн сервер бүрэлдэхүүн хэсгүүд, өгөгдөл татах, сервер үйлдлүүд болон React-ийн useEffect-ийн цэвэрлэгээний функц зэрэг хөгжүүлэлтийн заавруудыг багтаасан байна. Мөн vLLM-ийн PagedAttention, багцлах (batching), санах ойг хэмнэх аргууд болон OpenAI-тай нийцтэй сервер төгдөлүүдийн талаарх мэдээллийг өгчছেл. Үүнээс гадна Vercel AI SDK-ийн streamText ашиглан бүтэцлэгдсэн өгөгдлийг урсгал хэлбэрээр гаргах боломжтойг тайлбарласан байна.",
-      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч."
+      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч.",
+      "injected": null,
+      "source": "[doc:02059941]\n\n## Next.js — Data fetching in Server Components\nIn the App Router, data fetching is colocated inside async Server Components using the fetch API. The caching behavior is controlled per request. `fetch(url, { cache: 'force-cache' })` caches until manually invalidated (like getStaticProps) and is the default. `fetch(url, { cache: 'no-store' })` refetches on every request (like getServerSideProps). Time-based revalidation uses `fetch(url, { next: { revalidate: 10 } })` to cache with a 10-second lifetime.\n\nexport default async function Page() {\n  const staticData = await fetch('https://...', { cache: 'force-cache' })\n  const dynamicData = await fetch('https://...', { cache: 'no-store' })\n  const revalidated = await fetch('https://...', { next: { revalidate: 10 } })\n  return <div>...</div>\n}\n\n## Next.js — Route handler with error handling\nA POST route handler should wrap work in try/catch, return appropriate HTTP status codes, and avoid leaking sensitive error detail to clients.\n\nimport { submit } from '@/lib/submit'\nexport async function POST(request: Request) {\n  try {\n    await submit(request)\n    return new Response(null, { status: 204 })\n  } catch (reason) {\n    const message = reason instanceof Error ? reason.message : 'Unexpected error'\n    return new Response(message, { status: 500 })\n  }\n}\n\n## vLLM — PagedAttention, batching and chunked prefill\nvLLM achieves"
     },
     {
       "id": "x29",
       "task": "xsum",
       "problem": "\"Үนвдээ\" — broken non-word: a Thai character 'น' (U+0E19, THAI CHARACTER NO NU) is embedded in the middle of a Cyrillic string. The intended word was likely \"Үүнээс гадна\" / \"Түүнчлэн\" (in addition). Mixed-script garbled token.; Fluency: \"Үนвдээ\" is a broken mixed-script non-word — a Thai character 'น' (U+0E19, THAI CHARACTER NO NU) is spliced into a Cyrillic string. Confirmed by codepoint inspection: Ү(U+04AE) + น(U+0E19) + в + д + э + э. The intended connector was almost certainly \"Түүнчлэн\" or \"Үүнээс гадна\" (in addition). This is a clear, hard defect that fails the strict fluency rubric.",
       "output": "Энэхүү баримт бичигт Next.js-ийн Server Components-ийг ашиглан өгөгдөл татах, динамик мета өгөгдөл болон маршрутыг удирдах, Server Actions-оор өөрчлөлт (mutation) хийх аргуудыг тайлбарласан байна. Мөн React-ийн төрөл бүрийн Hook-уудын ангилал болон useEffect-ийн цэвэрлэх функцийн ач холбогдлыг заасан байна. Үนвдээ Vercel AI SDK-ийн олон алхмын streamText агентыг хэрхэн хэрэгжүүлэх зааврыг багтаажээ.",
-      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч."
+      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч.",
+      "injected": null,
+      "source": "[doc:b852c6e2]\n\n## Next.js — Server Actions for mutations\nMutations should be handled by Server Actions, invoked from a <form> so they only run on explicit user interaction (never as a side effect of rendering). This keeps mutation logic on the server and avoids accidental writes during render.\n\nimport { logout } from './actions'\nexport default function Page() {\n  return (<><UserProfile /><form action={logout}><button type=\"submit\">Logout</button></form></>)\n}\n\n## Vercel AI SDK — Multi-step streamText agent\nA multi-step agent chains streamText calls inside createUIMessageStream. Step 1 can force a tool call (toolChoice: 'required'); step 2 continues the workflow with a different model/system prompt and the messages from the previous step. Results are merged into one UI message stream, controlling start/finish events.\n\nconst result1 = streamText({ model: 'openai/gpt-4o-mini', system: 'Extract the user goal.', messages, toolChoice: 'required', tools: { extractGoal: tool({ inputSchema: z.object({ goal: z.string() }), execute: async ({ goal }) => goal }) } });\nwriter.merge(result1.toUIMessageStream({ sendFinish: false }));\nconst result2 = streamText({ model: 'openai/gpt-4o', system: 'Repeat the extracted goal.', messages: [...convertToModelMessages(messages), ...(await result1.response).messages] });\nwriter.merge(result2.toUIMessageStream({ sendStart: false }));\n\n## Next.js — Dynam"
     },
     {
       "id": "x30",
       "task": "xsum",
       "problem": "see above; Олон шатлалт агент хөгжүүлэх зааврыг багтаасан ('includes instructions for developing multi-step/multi-tier agents') — the source's Vercel AI SDK section only covers streamText/streamObject text and structured-output streaming (textStream, fullStream, tool-call handling, retries, telemetry, streamObject deprecation). There is NO content about agents or multi-step agent development; this is fabricated.",
       "output": "Энэхүү баримт бичиг нь Next.js-ийн динамик маршрут, өгөгдөл татах, сервер action болон алдаа зохицуулалтын аргачлалуудыг тайлбарласан байна. Мөн React-ийн hook-уудын ангилал болон effect-ийн цэвэрлэгээний функцийг, vLLM-ийн санах ойг хэмнэх аргуудыг зааварласан байна. Түүнчлэн Vercel AI SDK-ийг ашиглан бүтэцлэгдсэн өгөгдөл урсгал (stream) үүсгэх болон олон шатлалт агент хөгжүүлэх зааврыг багтаасан болно.",
-      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч."
+      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч.",
+      "injected": null,
+      "source": "[doc:cff76849]\n\n## Next.js — Dynamic routes with params\nA dynamic segment like [slug] receives a params prop. In recent versions params is a Promise that must be awaited before use. The component fetches the matching record and renders it.\n\nexport default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {\n  const { slug } = await params\n  const post = await getPost(slug)\n  return (<div><h1>{post.title}</h1><p>{post.content}</p></div>)\n}\n\n## vLLM — Conserving memory\nMemory usage can be reduced by limiting context length with max_model_len and the maximum batch size with max_num_seqs. This is useful under memory constraints or when sequences are short.\n\nfrom vllm import LLM\nllm = LLM(model=\"adept/fuyu-8b\", max_model_len=2048, max_num_seqs=2)\n\n## React — Built-in hook categories\nReact's built-in Hooks fall into categories. State Hooks: useState (direct updates) and useReducer (update logic in a reducer). Context Hooks: useContext reads and subscribes to a context. Ref Hooks: useRef and useImperativeHandle. Effect Hooks: useEffect connects to external systems, useLayoutEffect fires before paint, useInsertionEffect for libraries injecting CSS. Performance Hooks: useMemo caches expensive results, useCallback caches function definitions, useTransition and useDeferredValue keep the UI responsive. Other Hooks: useId, useSyncExternalStore, useActionState.\n\n#"
     }
   ]
 }

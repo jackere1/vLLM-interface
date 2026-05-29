@@ -1,0 +1,16 @@
+{
+  "id": "w4",
+  "task": "weather",
+  "question": "Нью-Йорк-гийн агаарын температур хэд байна вэ?",
+  "injected": {
+    "location": "New York",
+    "temperature_c": -12,
+    "feels_like_c": -12,
+    "humidity_pct": 35,
+    "wind_kmh": 0,
+    "precipitation_mm": 0,
+    "condition": "clear sky"
+  },
+  "source": null,
+  "output": "Нью-Йорк хотын агаарын температур минус арван хоёр хэмийн хэмжигдэхүүн байна. Тэнгэр цэлгэр байна."
+}

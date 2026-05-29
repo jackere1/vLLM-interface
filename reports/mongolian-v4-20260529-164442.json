@@ -1,0 +1,329 @@
+{
+  "meta": {
+    "generatedAt": "2026-05-29T08:44:42.373Z",
+    "model": "gemma-4-31b",
+    "variant": "optimal: glossary+guardrail+formal+keep-latin, no thinking"
+  },
+  "samples": [
+    {
+      "id": "g11",
+      "task": "general",
+      "question": "Нарны аймагт хэдэн гариг байдаг вэ?",
+      "injected": null,
+      "source": null,
+      "output": "Нарны аймагт найман гариг байдаг."
+    },
+    {
+      "id": "g12",
+      "task": "general",
+      "question": "Фотосинтез гэж юу вэ? Энгийнээр тайлбарлаач.",
+      "injected": null,
+      "source": null,
+      "output": "Фотосинтез гэдэг нь ургамал нарны гэрлийг ашиглан нүүрсхүчлийн хий, уснаас өөрт хэрэгцээтэй тэжээл буюу сахар болон хүчилтөрөгчийг бүтээх процесс юм. Энэхүү үйл явц нь ургамлын навч дахь хлорофиллийн тусламжтайгаар явагддаг."
+    },
+    {
+      "id": "g13",
+      "task": "general",
+      "question": "Дэлхийн хамгийн өндөр уул аль вэ?",
+      "injected": null,
+      "source": null,
+      "output": "Дэлхийн хамгийн өндөр уул нь Эверест уул юм."
+    },
+    {
+      "id": "g14",
+      "task": "general",
+      "question": "TCP болон UDP протоколын гол ялгаа юу вэ?",
+      "injected": null,
+      "source": null,
+      "output": "TCP болон UDP протоколуудын гол ялгаа нь өгөгдөл дамжуулах найдвартай байдалд оршино.\n\nTCP нь холболттой протокол бөгөөд өгөгдлийг зөв дарааллаар, алдаагүй хүргэж чадсан эсэхийг баталгаажуулдаг. Харин UDP нь холболтгүй протокол бөгөөд өгөгдлийг хурдан дамжуулахыг эрхэмлэх бөгөөд хүрсэн эсэхийг шалгадаггүй."
+    },
+    {
+      "id": "g15",
+      "task": "general",
+      "question": "Фотосинтез гэж юу вэ? Энгийнээр тайлбарлаач.",
+      "injected": null,
+      "source": null,
+      "output": "Фотосинтез гэдэг нь ургамал нарны гэрлийг ашиглан нүүрсхүчлийн хий, уснаас өөрт хэрэгцээтэй тэжээл буюу сахар болон хүчилтөрөгч үйлдвэрлэх процесс юм. Энэхүү үйл явцын үр дүнд ургамал өсөж хөгжихийн зэрэгцээ агаар мандалд хүчилтөрөгчийг ялгаруулдаг."
+    },
+    {
+      "id": "g16",
+      "task": "general",
+      "question": "Хиймэл оюун ухаан гэж юу вэ? Хоёр өгүүлбэрээр тайлбарла.",
+      "injected": null,
+      "source": null,
+      "output": "Хиймэл оюун ухаан гэдэг нь компьютерыг хүний оюуныг дуурайлган сэтгэн бодох, суралцах чадвартай болгох технологи юм. Энэхүү систем нь өгөгдлийг шинжлэн, асуудалд шийдвэр гаргах болон шинэ мэдээлэл бүтээх чадвартай байдаг."
+    },
+    {
+      "id": "g17",
+      "task": "general",
+      "question": "Хиймэл оюун ухаан гэж юу вэ? Хоёр өгүүлбэрээр тайлбарла.",
+      "injected": null,
+      "source": null,
+      "output": "Хиймэл оюун ухаан гэдэг нь компьютерыг хүний оюуныг дуурайлган сэтгэн бодох, суралцах чадвартай болгох технологи юм. Энэхүү систем нь өгөгдлийг боловсруулж, асуудлыг шийдвэрлэх болон шинэ мэдээллийг бийвүлэх зорилготой."
+    },
+    {
+      "id": "g18",
+      "task": "general",
+      "question": "Рекурс (recursion) гэж юу вэ? Богино жишээтэйгээр тайлбарла.",
+      "injected": null,
+      "source": null,
+      "output": "Рекурс гэдэг нь функц өөрийгөө дахин дуудах үйлдлийг хэлнэ. Энэ нь том асуудлыг жижиг хэсгүүдэд хувааж шийдвэрлэх арга юм.\n\nЖишээ нь: Факториалыг тооцоолохдоо нэг тоог өмнөх бүх бүхэл тойм залгаж үржүүлдэг. Хэрэв бид гурвын факториалыг олж байгаа бол эхлээд гурвыг хоёрын факториалаар үржүүлж, дараа нь хоёыг нэгээр үржүүлнэ. Энэхүү өөрийгөө дахин дуудах процесс нь нэгт хүрэх хүртэл үргэлжилнэ."
+    },
+    {
+      "id": "g19",
+      "task": "general",
+      "question": "Хиймэл оюун ухаан гэж юу вэ? Хоёр өгүүлбэрээр тайлбарла.",
+      "injected": null,
+      "source": null,
+      "output": "Хиймэл оюун ухаан гэдэг нь компьютерыг хүний оюуныг дуурайлган сэтгэн бодох, суралцах чадвартай болгох технологи юм. Энэхүү систем нь өгөгдлийг шинжлэн, асуудалд шийдвэр гаргах болон шинэ мэдээлэл бүтээх чадвартай байдаг."
+    },
+    {
+      "id": "g20",
+      "task": "general",
+      "question": "Усны эргэлт (water cycle) гэж юу вэ?",
+      "injected": null,
+      "source": null,
+      "output": "Усны эргэлт гэдэг нь дэлхий дээрх усны нэг хэлбэрээс нөгөө хэлбэрт шилжиж, тасралтгүй эргэлдэх үйл явцыг хэлнэ. Энэхүү эргэлтийн явцад нарны халуунаар ус ууршиж, тэнгэрт өтгөрөл үүсэж, үүл болон бороо, цас хэлбэрээр газар бууж, дахин далай, гол мөрөнд нийлэн урсдаг."
+    },
+    {
+      "id": "w1",
+      "task": "weather",
+      "question": "Нью-Йорк-д одоо цаг агаар ямар байна?",
+      "injected": {
+        "location": "New York",
+        "temperature_c": -12,
+        "feels_like_c": -12,
+        "humidity_pct": 35,
+        "wind_kmh": 0,
+        "precipitation_mm": 0,
+        "condition": "clear sky"
+      },
+      "source": null,
+      "output": "Нью-Йорк хотод одоо минус арван хоёр хэмийн халуун байна. Тэнгэр цэлгэр байна."
+    },
+    {
+      "id": "w10",
+      "task": "weather",
+      "question": "Берлин-д одоо цаг агаар ямар байна?",
+      "injected": {
+        "location": "Berlin",
+        "temperature_c": -11,
+        "feels_like_c": -13,
+        "humidity_pct": 92,
+        "wind_kmh": 12,
+        "precipitation_mm": 0,
+        "condition": "light rain"
+      },
+      "source": null,
+      "output": "Берлинд одоо минус арван нэг градус, мэдрэгдэх байдлаар минус арван гурав градус байна. Бороо шиврэж байна."
+    },
+    {
+      "id": "w2",
+      "task": "weather",
+      "question": "Мөрөн-д одоо цаг агаар ямар байна?",
+      "injected": {
+        "location": "Мөрөн",
+        "temperature_c": 10,
+        "feels_like_c": 8,
+        "humidity_pct": 67,
+        "wind_kmh": 32,
+        "precipitation_mm": 0.8,
+        "condition": "overcast"
+      },
+      "source": null,
+      "output": "Мөрөн хотод одоо 10°C, мэдрэгдэх байдлаар 8°C байна. Тэнгэр бүрхэг байна."
+    },
+    {
+      "id": "w3",
+      "task": "weather",
+      "question": "Улаанбаатар хотод одоо бороо орж байна уу?",
+      "injected": {
+        "location": "Ulaanbaatar",
+        "temperature_c": -15,
+        "feels_like_c": -16,
+        "humidity_pct": 46,
+        "wind_kmh": 31,
+        "precipitation_mm": 0,
+        "condition": "fog"
+      },
+      "source": null,
+      "output": "Улаанбаатар хотод одоо бороо орохгүй байна. Цаг агаар манантай байна."
+    },
+    {
+      "id": "w4",
+      "task": "weather",
+      "question": "Нью-Йорк-гийн агаарын температур хэд байна вэ?",
+      "injected": {
+        "location": "New York",
+        "temperature_c": -12,
+        "feels_like_c": -12,
+        "humidity_pct": 35,
+        "wind_kmh": 0,
+        "precipitation_mm": 0,
+        "condition": "clear sky"
+      },
+      "source": null,
+      "output": "Нью-Йорк хотын агаарын температур минус арван хоёр хэмийн хэмжигдэхүүн байна. Тэнгэр цэлгэр байна."
+    },
+    {
+      "id": "w5",
+      "task": "weather",
+      "question": "Улаанбаатар-д одоо цаг агаар ямар байна?",
+      "injected": {
+        "location": "Ulaanbaatar",
+        "temperature_c": -15,
+        "feels_like_c": -16,
+        "humidity_pct": 46,
+        "wind_kmh": 31,
+        "precipitation_mm": 0,
+        "condition": "fog"
+      },
+      "source": null,
+      "output": "Улаанбаатарт одоо минус арван таван хэм байна, мэдрэгдэх байдлаар минус арван зургаан хэм байна. Цаг агаар манантай байна."
+    },
+    {
+      "id": "w6",
+      "task": "weather",
+      "question": "Лондон хотод одоо бороо орж байна уу?",
+      "injected": {
+        "location": "London",
+        "temperature_c": 17,
+        "feels_like_c": 15,
+        "humidity_pct": 42,
+        "wind_kmh": 32,
+        "precipitation_mm": 0,
+        "condition": "partly cloudy"
+      },
+      "source": null,
+      "output": "Лондон хотод одоо бороо оржээгүй байна. Тэнгэр багавтар үүлэрхэг, агаар 17°C байна."
+    },
+    {
+      "id": "w7",
+      "task": "weather",
+      "question": "Лондон-д одоо цаг агаар ямар байна?",
+      "injected": {
+        "location": "London",
+        "temperature_c": 17,
+        "feels_like_c": 15,
+        "humidity_pct": 42,
+        "wind_kmh": 32,
+        "precipitation_mm": 0,
+        "condition": "partly cloudy"
+      },
+      "source": null,
+      "output": "Лондонд одоо 17°C байна, мэдрэгдэх байдлаар 15°C байна. Тэнгэр багавтар үүлэрхэг байна."
+    },
+    {
+      "id": "w8",
+      "task": "weather",
+      "question": "Парис хотод одоо бороо орж байна уу?",
+      "injected": {
+        "location": "Paris",
+        "temperature_c": -16,
+        "feels_like_c": -19,
+        "humidity_pct": 43,
+        "wind_kmh": 33,
+        "precipitation_mm": 0.8,
+        "condition": "overcast"
+      },
+      "source": null,
+      "output": "Парис хотод одоо бороо орохгүй байна. Тэнгэр бүрхэг, харин агаар маш хүйтэн байна."
+    },
+    {
+      "id": "w9",
+      "task": "weather",
+      "question": "Парис-гийн агаарын температур хэд байна вэ?",
+      "injected": {
+        "location": "Paris",
+        "temperature_c": -16,
+        "feels_like_c": -19,
+        "humidity_pct": 43,
+        "wind_kmh": 33,
+        "precipitation_mm": 0.8,
+        "condition": "overcast"
+      },
+      "source": null,
+      "output": "Парист одоо хасах арван зургаан градус, мэдрэгдэх байдлаар хасах арван ес градус байна. Тэнгэр бүрхэг байна."
+    },
+    {
+      "id": "x21",
+      "task": "xsum",
+      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч.",
+      "injected": null,
+      "source": "[doc:401fc1a4]\n\n## Next.js — Data fetching in Server Components\nIn the App Router, data fetching is colocated inside async Server Components using the fetch API. The caching behavior is controlled per request. `fetch(url, { cache: 'force-cache' })` caches until manually invalidated (like getStaticProps) and is the default. `fetch(url, { cache: 'no-store' })` refetches on every request (like getServerSideProps). Time-based revalidation uses `fetch(url, { next: { revalidate: 10 } })` to cache with a 10-second lifetime.\n\nexport default async function Page() {\n  const staticData = await fetch('https://...', { cache: 'force-cache' })\n  const dynamicData = await fetch('https://...', { cache: 'no-store' })\n  const revalidated = await fetch('https://...', { next: { revalidate: 10 } })\n  return <div>...</div>\n}\n\n## React — useReducer with Context\nFor complex state, a parent manages it with useReducer while Context passes both state and dispatch deep into the tree, so any descendant can read state and dispatch actions without prop drilling.\n\nconst [tasks, dispatch] = useReducer(tasksReducer, initialTasks);\nfunction tasksReducer(tasks, action) {\n  switch (action.type) {\n    case 'added': return [...tasks, { id: action.id, text: action.text, done: false }];\n    case 'changed': return tasks.map(t => t.id === action.task.id ? action.task : t);\n    case 'deleted': return tasks.filter(t => t.id !== action.id);\n    default: throw Error('Unknown action: ' + action.type);\n  }\n}\n\n## vLLM — PagedAttention, batching and chunked prefill\nvLLM achieves high serving throughput through PagedAttention, which efficiently manages attention key/value memory, plus continuous batching of incoming requests, chunked prefill, and prefix caching. Chunked prefill improves inter-token latency (ITL) and decode by prioritizing decode requests and batching compute-bound prefill with memory-bound decode. Tuning max_num_batched_tokens trades off TTFT and ITL: smaller values improve ITL, larger values improve TTFT; values above 8192 are recommended for throughput on large GPUs.\n\n## vLLM — Conserving memory\nMemory usage can be reduced by limiting context length with max_model_len and the maximum batch size with max_num_seqs. This is useful under memory constraints or when sequences are short.\n\nfrom vllm import LLM\nllm = LLM(model=\"adept/fuyu-8b\", max_model_len=2048, max_num_seqs=2)\n\n## Next.js — Dynamic routes with params\nA dynamic segment like [slug] receives a params prop. In recent versions params is a Promise that must be awaited before use. The component fetches the matching record and renders it.\n\nexport default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {\n  const { slug } = await params\n  const post = await getPost(slug)\n  return (<div><h1>{post.title}</h1><p>{post.content}</p></div>)\n}\n\n## vLLM — OpenAI-compatible Chat API\nvLLM exposes an HTTP server implementing the OpenAI API protocol, acting as a drop-in replacement. POST /v1/chat/completions accepts messages (the conversation history), plus optional model, stream, max_tokens, temperature, top_p, and stop. The response contains choices and a usage object with prompt_tokens, completion_tokens, and total_tokens. parallel_tool_calls controls whether more than one tool call is allowed per request (default true).\n\n## Next.js — Server Actions for mutations\nMutations should be handled by Server Actions, invoked from a <form> so they only run on explicit user interaction (never as a side effect of rendering). This keeps mutation logic on the server and avoids accidental writes during render.\n\nimport { logout } from './actions'\nexport default function Page() {\n  return (<><UserProfile /><form action={logout}><button type=\"submit\">Logout</button></form></>)\n}\n\n## Next.js — Dynamic metadata\ngenerateMetadata lets a route fetch data and set its metadata dynamically — ideal when the title or description depends on route params or an external API.\n\nexport async function generateMetadata({ p",
+      "output": "Next.js нь Server Components-ийн fetch API-аар өгөгдөл татах, Server Actions-аар өөрчлөлт хийх болон динамик route болон metadata-г удирдах боломжийг олгодог. React-ийн useReducer болон Context-ийг ашиглан нарийн төвөгтэй төлөв байдлыг удирдан, prop drilling-ээс зайлсхийж болно. vLLM нь PagedAttention, continuous batching болон chunked prefill-ийн тусламжтайгаар өгөгдөл боловсруулах хурдыг нэмэгдүүлж, OpenAI-тэй нийцэх Chat API-г санал болгодог. Мөн vLLM нь max_model_len болон max_num_seqs-ийг тохируулан санах ойг хэмнэх боломжтой."
+    },
+    {
+      "id": "x22",
+      "task": "xsum",
+      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч.",
+      "injected": null,
+      "source": "[doc:ab6aad3f]\n\n## vLLM — Tensor parallelism\nTensor parallelism shards model parameters across multiple GPUs within each layer, which is essential for models too large to fit on a single GPU. Set tensor_parallel_size to the number of GPUs.\n\nfrom vllm import LLM\nllm = LLM(model=\"meta-llama/Llama-3.3-70B-Instruct\", tensor_parallel_size=4)\n\n## React — Built-in hook categories\nReact's built-in Hooks fall into categories. State Hooks: useState (direct updates) and useReducer (update logic in a reducer). Context Hooks: useContext reads and subscribes to a context. Ref Hooks: useRef and useImperativeHandle. Effect Hooks: useEffect connects to external systems, useLayoutEffect fires before paint, useInsertionEffect for libraries injecting CSS. Performance Hooks: useMemo caches expensive results, useCallback caches function definitions, useTransition and useDeferredValue keep the UI responsive. Other Hooks: useId, useSyncExternalStore, useActionState.\n\n## Next.js — Data fetching in Server Components\nIn the App Router, data fetching is colocated inside async Server Components using the fetch API. The caching behavior is controlled per request. `fetch(url, { cache: 'force-cache' })` caches until manually invalidated (like getStaticProps) and is the default. `fetch(url, { cache: 'no-store' })` refetches on every request (like getServerSideProps). Time-based revalidation uses `fetch(url, { next: { revalidate: 10 } })` to cache with a 10-second lifetime.\n\nexport default async function Page() {\n  const staticData = await fetch('https://...', { cache: 'force-cache' })\n  const dynamicData = await fetch('https://...', { cache: 'no-store' })\n  const revalidated = await fetch('https://...', { next: { revalidate: 10 } })\n  return <div>...</div>\n}\n\n## Next.js — Dynamic routes with params\nA dynamic segment like [slug] receives a params prop. In recent versions params is a Promise that must be awaited before use. The component fetches the matching record and renders it.\n\nexport default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {\n  const { slug } = await params\n  const post = await getPost(slug)\n  return (<div><h1>{post.title}</h1><p>{post.content}</p></div>)\n}\n\n## React — useReducer with Context\nFor complex state, a parent manages it with useReducer while Context passes both state and dispatch deep into the tree, so any descendant can read state and dispatch actions without prop drilling.\n\nconst [tasks, dispatch] = useReducer(tasksReducer, initialTasks);\nfunction tasksReducer(tasks, action) {\n  switch (action.type) {\n    case 'added': return [...tasks, { id: action.id, text: action.text, done: false }];\n    case 'changed': return tasks.map(t => t.id === action.task.id ? action.task : t);\n    case 'deleted': return tasks.filter(t => t.id !== action.id);\n    default: throw Error('Unknown action: ' + action.type);\n  }\n}\n\n## vLLM — Server endpoints overview\nThe server provides multiple OpenAI-compatible endpoints: /v1/completions for raw text generation, /v1/chat/completions for chat with message history and tools, /v1/embeddings for embeddings, and /v1/audio/transcriptions and /v1/audio/translations for speech. It hosts one model at a time and provides a models listing endpoint. The host and port default to localhost:8000 and are configurable with --host and --port.\n\n## Vercel AI SDK — useChat on the client\nThe useChat hook from @ai-sdk/react manages chat state on the client. It exposes messages and sendMessage; each message has parts that can be text or tool-call parts, which the UI renders accordingly.\n\nconst { messages, sendMessage } = useChat();\nmessages.map(m => m.parts.map((part, i) => part.type === 'text' ? <span key={i}>{part.text}</span> : <pre key={i}>{JSON.stringify(part, null, 2)}</pre>));\n\n## Next.js — Route handler with error handling\nA POST route handler should wrap work in try/catch, return appropriate HTTP status codes, and avoid leaking sensitive error detail to clients.\n\nimport { submit } from '@/l",
+      "output": "vLLM нь Tensor parallelism ашиглан загварын параметрийг олон GPU-д хувааж, OpenAI-тай нийцэх төрөл бүрийн сервер endpoint-уудыг санал болгодог. React нь төлөв, контекст, эффект, гүйцэтгэлийг удирдах төрөл бүрийн built-in hook-уудыг агуулдаг бөгөөд useReducer-ийг Context-тэй хамт ашиглан төлөвийг удирдах боломжтой. Next.js-ийн App Router нь Server Components дотор fetch API-г ашиглан өгөгдөл авах, кэшлэх болон динамик route-ийн params-ийг Promise хэлбэрээр авах боломжийг олгодог. Vercel AI SDK-ийн useChat hook нь клиент талд чатын төлөв болон мессежүүдийг удирдахыг хөнгөвчилнө."
+    },
+    {
+      "id": "x23",
+      "task": "xsum",
+      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч.",
+      "injected": null,
+      "source": "[doc:95562161]\n\n## Next.js — Dynamic routes with params\nA dynamic segment like [slug] receives a params prop. In recent versions params is a Promise that must be awaited before use. The component fetches the matching record and renders it.\n\nexport default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {\n  const { slug } = await params\n  const post = await getPost(slug)\n  return (<div><h1>{post.title}</h1><p>{post.content}</p></div>)\n}\n\n## vLLM — Server endpoints overview\nThe server provides multiple OpenAI-compatible endpoints: /v1/completions for raw text generation, /v1/chat/completions for chat with message history and tools, /v1/embeddings for embeddings, and /v1/audio/transcriptions and /v1/audio/translations for speech. It hosts one model at a time and provides a models listing endpoint. The host and port default to localhost:8000 and are configurable with --host and --port.\n\n## Vercel AI SDK — streamText and structured output\nstreamText streams text from a model and prompt; the output is available as a textStream, with a fullStream of typed parts and tool-call handling, retries, and telemetry built in. streamObject is deprecated in favor of streamText with the output setting and Output.object to stream structured data validated by a zod schema.\n\nconst { partialOutputStream } = streamText({ model, output: Output.object({ schema: z.object({ recipe: z.object({ name: z.string(), steps: z.array(z.string()) }) }) }), prompt: 'Generate a lasagna recipe.' });\nfor await (const partial of partialOutputStream) console.log(partial);\n\n## Next.js — Server Components passing data to Client Components\nA Server Component can fetch data directly with async/await and forward it to a Client Component as props. This replaces getServerSideProps and getStaticProps with a simpler pattern and keeps secrets on the server.\n\nimport HomePage from './home-page'\nasync function getPosts() {\n  const res = await fetch('https://...')\n  return res.json()\n}\nexport default async function Page() {\n  const recentPosts = await getPosts()\n  return <HomePage recentPosts={recentPosts} />\n}\n\n## Next.js — Server Actions for mutations\nMutations should be handled by Server Actions, invoked from a <form> so they only run on explicit user interaction (never as a side effect of rendering). This keeps mutation logic on the server and avoids accidental writes during render.\n\nimport { logout } from './actions'\nexport default function Page() {\n  return (<><UserProfile /><form action={logout}><button type=\"submit\">Logout</button></form></>)\n}\n\n## Vercel AI SDK — Multi-step streamText agent\nA multi-step agent chains streamText calls inside createUIMessageStream. Step 1 can force a tool call (toolChoice: 'required'); step 2 continues the workflow with a different model/system prompt and the messages from the previous step. Results are merged into one UI message stream, controlling start/finish events.\n\nconst result1 = streamText({ model: 'openai/gpt-4o-mini', system: 'Extract the user goal.', messages, toolChoice: 'required', tools: { extractGoal: tool({ inputSchema: z.object({ goal: z.string() }), execute: async ({ goal }) => goal }) } });\nwriter.merge(result1.toUIMessageStream({ sendFinish: false }));\nconst result2 = streamText({ model: 'openai/gpt-4o', system: 'Repeat the extracted goal.', messages: [...convertToModelMessages(messages), ...(await result1.response).messages] });\nwriter.merge(result2.toUIMessageStream({ sendStart: false }));\n\n## React — Effects with cleanup\nEffects that connect to an external system should return a cleanup function. A chat connection must disconnect on cleanup so connections do not accumulate. For data fetching, an \"ignore\" flag prevents a stale response from overwriting fresh state.\n\nuseEffect(() => {\n  let ignore = false;\n  async function start() { const json = await fetchTodos(userId); if (!ignore) setTodos(json); }\n  start();\n  return () => { ignore = true; };\n}, [userId]);\n\n## React — Built-in hook categor",
+      "output": "Энэхүү баримт бичиг нь Next.js-ийн динамик зам, сервер компонентууд болон сервер экшн ашиглах зааврыг багтаасан байна. vLLM-ийн сервер эндпоинтуудын болон Vercel AI SDK-ийн streamText, бүтцийн өгөгдөл, олон шатлалт агент үүсгэх боломжуудыг тайлбарласан. Мөн React-ийн useEffect hook-ийг ашиглан гаднах системтэй холбогдох болон цэвэрлэх функцийг хэрхэн хэрэглэх талаар зааварчилгаа өгсөн байна."
+    },
+    {
+      "id": "x24",
+      "task": "xsum",
+      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч.",
+      "injected": null,
+      "source": "[doc:1be7be0b]\n\n## Next.js — Route handler with error handling\nA POST route handler should wrap work in try/catch, return appropriate HTTP status codes, and avoid leaking sensitive error detail to clients.\n\nimport { submit } from '@/lib/submit'\nexport async function POST(request: Request) {\n  try {\n    await submit(request)\n    return new Response(null, { status: 204 })\n  } catch (reason) {\n    const message = reason instanceof Error ? reason.message : 'Unexpected error'\n    return new Response(message, { status: 500 })\n  }\n}\n\n## vLLM — Tensor parallelism\nTensor parallelism shards model parameters across multiple GPUs within each layer, which is essential for models too large to fit on a single GPU. Set tensor_parallel_size to the number of GPUs.\n\nfrom vllm import LLM\nllm = LLM(model=\"meta-llama/Llama-3.3-70B-Instruct\", tensor_parallel_size=4)\n\n## Next.js — Data fetching in Server Components\nIn the App Router, data fetching is colocated inside async Server Components using the fetch API. The caching behavior is controlled per request. `fetch(url, { cache: 'force-cache' })` caches until manually invalidated (like getStaticProps) and is the default. `fetch(url, { cache: 'no-store' })` refetches on every request (like getServerSideProps). Time-based revalidation uses `fetch(url, { next: { revalidate: 10 } })` to cache with a 10-second lifetime.\n\nexport default async function Page() {\n  const staticData = await fetch('https://...', { cache: 'force-cache' })\n  const dynamicData = await fetch('https://...', { cache: 'no-store' })\n  const revalidated = await fetch('https://...', { next: { revalidate: 10 } })\n  return <div>...</div>\n}\n\n## Next.js — Server Components passing data to Client Components\nA Server Component can fetch data directly with async/await and forward it to a Client Component as props. This replaces getServerSideProps and getStaticProps with a simpler pattern and keeps secrets on the server.\n\nimport HomePage from './home-page'\nasync function getPosts() {\n  const res = await fetch('https://...')\n  return res.json()\n}\nexport default async function Page() {\n  const recentPosts = await getPosts()\n  return <HomePage recentPosts={recentPosts} />\n}\n\n## Vercel AI SDK — useChat on the client\nThe useChat hook from @ai-sdk/react manages chat state on the client. It exposes messages and sendMessage; each message has parts that can be text or tool-call parts, which the UI renders accordingly.\n\nconst { messages, sendMessage } = useChat();\nmessages.map(m => m.parts.map((part, i) => part.type === 'text' ? <span key={i}>{part.text}</span> : <pre key={i}>{JSON.stringify(part, null, 2)}</pre>));\n\n## Next.js — Dynamic metadata\ngenerateMetadata lets a route fetch data and set its metadata dynamically — ideal when the title or description depends on route params or an external API.\n\nexport async function generateMetadata({ params }, parent): Promise<Metadata> {\n  const slug = (await params).slug\n  const post = await fetch(`https://api.vercel.app/blog/${slug}`).then(r => r.json())\n  return { title: post.title, description: post.description }\n}\n\n## Vercel AI SDK — Multi-step streamText agent\nA multi-step agent chains streamText calls inside createUIMessageStream. Step 1 can force a tool call (toolChoice: 'required'); step 2 continues the workflow with a different model/system prompt and the messages from the previous step. Results are merged into one UI message stream, controlling start/finish events.\n\nconst result1 = streamText({ model: 'openai/gpt-4o-mini', system: 'Extract the user goal.', messages, toolChoice: 'required', tools: { extractGoal: tool({ inputSchema: z.object({ goal: z.string() }), execute: async ({ goal }) => goal }) } });\nwriter.merge(result1.toUIMessageStream({ sendFinish: false }));\nconst result2 = streamText({ model: 'openai/gpt-4o', system: 'Repeat the extracted goal.', messages: [...convertToModelMessages(messages), ...(await result1.response).messages] });\nwriter.merge(result2.toUIMessageStream({ sendStart: false }",
+      "output": "Энэхүү баримт бичиг нь Next.js-ийн route handler, сервер компонентын өгөгдөл авах болон мета өгөгдлийг динамикаар тохируулах зааврыг багтсан болно. Мөн vLLM-ийн tensor parallelism ашиглан загварыг олон GPU-д хуваах болон Vercel AI SDK-ийн useChat hook болон олон шатлалт agent-ийн үйл ажиллагааг тайлбарласан байна. Ерөнхийдөө сервер болон клиент талын өгөгдлийн урсгал, алдааг шийдвэрлэх болон хиймэл оюун ухааны загварыг нэгтгэх техникийн шийдлүүдийг харуулжээ."
+    },
+    {
+      "id": "x25",
+      "task": "xsum",
+      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч.",
+      "injected": null,
+      "source": "[doc:95f098c7]\n\n## React — Built-in hook categories\nReact's built-in Hooks fall into categories. State Hooks: useState (direct updates) and useReducer (update logic in a reducer). Context Hooks: useContext reads and subscribes to a context. Ref Hooks: useRef and useImperativeHandle. Effect Hooks: useEffect connects to external systems, useLayoutEffect fires before paint, useInsertionEffect for libraries injecting CSS. Performance Hooks: useMemo caches expensive results, useCallback caches function definitions, useTransition and useDeferredValue keep the UI responsive. Other Hooks: useId, useSyncExternalStore, useActionState.\n\n## Next.js — Dynamic routes with params\nA dynamic segment like [slug] receives a params prop. In recent versions params is a Promise that must be awaited before use. The component fetches the matching record and renders it.\n\nexport default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {\n  const { slug } = await params\n  const post = await getPost(slug)\n  return (<div><h1>{post.title}</h1><p>{post.content}</p></div>)\n}\n\n## Vercel AI SDK — useChat on the client\nThe useChat hook from @ai-sdk/react manages chat state on the client. It exposes messages and sendMessage; each message has parts that can be text or tool-call parts, which the UI renders accordingly.\n\nconst { messages, sendMessage } = useChat();\nmessages.map(m => m.parts.map((part, i) => part.type === 'text' ? <span key={i}>{part.text}</span> : <pre key={i}>{JSON.stringify(part, null, 2)}</pre>));\n\n## Next.js — Streaming with Suspense\nReact's Suspense component enables streaming server rendering and selective hydration. Wrap components that perform async work and provide a fallback UI; the page streams in as each boundary resolves, improving perceived performance.\n\nimport { Suspense } from 'react'\nimport { PostFeed, Weather } from './Components'\nexport default function Posts() {\n  return (\n    <section>\n      <Suspense fallback={<p>Loading feed...</p>}><PostFeed /></Suspense>\n      <Suspense fallback={<p>Loading weather...</p>}><Weather /></Suspense>\n    </section>\n  )\n}\n\n## Next.js — Server Actions for mutations\nMutations should be handled by Server Actions, invoked from a <form> so they only run on explicit user interaction (never as a side effect of rendering). This keeps mutation logic on the server and avoids accidental writes during render.\n\nimport { logout } from './actions'\nexport default function Page() {\n  return (<><UserProfile /><form action={logout}><button type=\"submit\">Logout</button></form></>)\n}\n\n## Next.js — Route handler with error handling\nA POST route handler should wrap work in try/catch, return appropriate HTTP status codes, and avoid leaking sensitive error detail to clients.\n\nimport { submit } from '@/lib/submit'\nexport async function POST(request: Request) {\n  try {\n    await submit(request)\n    return new Response(null, { status: 204 })\n  } catch (reason) {\n    const message = reason instanceof Error ? reason.message : 'Unexpected error'\n    return new Response(message, { status: 500 })\n  }\n}\n\n## Next.js — Dynamic metadata\ngenerateMetadata lets a route fetch data and set its metadata dynamically — ideal when the title or description depends on route params or an external API.\n\nexport async function generateMetadata({ params }, parent): Promise<Metadata> {\n  const slug = (await params).slug\n  const post = await fetch(`https://api.vercel.app/blog/${slug}`).then(r => r.json())\n  return { title: post.title, description: post.description }\n}\n\n## vLLM — OpenAI-compatible Chat API\nvLLM exposes an HTTP server implementing the OpenAI API protocol, acting as a drop-in replacement. POST /v1/chat/completions accepts messages (the conversation history), plus optional model, stream, max_tokens, temperature, top_p, and stop. The response contains choices and a usage object with prompt_tokens, completion_tokens, and total_tokens. parallel_tool_calls controls whether more than one tool call is allowed per r",
+      "output": "Энэхүү баримт бичиг нь React-ийн hook-уудын ангилал болон Next.js-ийн динамик зам, Suspense-ийн тусламжтайгаар өгөгдөл урсгалжуулах, Server Actions болон route handler-ийн ашиглалтыг тайлбарласан болно. Мөн Vercel AI SDK-ийн useChat hook болон Next.js-ийн динамик мета өгөгдлийг үүсгэх аргачлалын талаар мэдээлэл өгсөн байна. Түүнчлээ vLLM нь OpenAI API-тай нийцэх чадвартай бөгөөд чат болон хэрэгслийн дуудлагыг дэмждэг HTTP сервер гэдгийг дурджээ."
+    },
+    {
+      "id": "x26",
+      "task": "xsum",
+      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч.",
+      "injected": null,
+      "source": "[doc:4ae84ee4]\n\n## Next.js — Server Actions for mutations\nMutations should be handled by Server Actions, invoked from a <form> so they only run on explicit user interaction (never as a side effect of rendering). This keeps mutation logic on the server and avoids accidental writes during render.\n\nimport { logout } from './actions'\nexport default function Page() {\n  return (<><UserProfile /><form action={logout}><button type=\"submit\">Logout</button></form></>)\n}\n\n## React — Effects with cleanup\nEffects that connect to an external system should return a cleanup function. A chat connection must disconnect on cleanup so connections do not accumulate. For data fetching, an \"ignore\" flag prevents a stale response from overwriting fresh state.\n\nuseEffect(() => {\n  let ignore = false;\n  async function start() { const json = await fetchTodos(userId); if (!ignore) setTodos(json); }\n  start();\n  return () => { ignore = true; };\n}, [userId]);\n\n## Next.js — Dynamic routes with params\nA dynamic segment like [slug] receives a params prop. In recent versions params is a Promise that must be awaited before use. The component fetches the matching record and renders it.\n\nexport default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {\n  const { slug } = await params\n  const post = await getPost(slug)\n  return (<div><h1>{post.title}</h1><p>{post.content}</p></div>)\n}\n\n## Next.js — Streaming with Suspense\nReact's Suspense component enables streaming server rendering and selective hydration. Wrap components that perform async work and provide a fallback UI; the page streams in as each boundary resolves, improving perceived performance.\n\nimport { Suspense } from 'react'\nimport { PostFeed, Weather } from './Components'\nexport default function Posts() {\n  return (\n    <section>\n      <Suspense fallback={<p>Loading feed...</p>}><PostFeed /></Suspense>\n      <Suspense fallback={<p>Loading weather...</p>}><Weather /></Suspense>\n    </section>\n  )\n}\n\n## React — useReducer with Context\nFor complex state, a parent manages it with useReducer while Context passes both state and dispatch deep into the tree, so any descendant can read state and dispatch actions without prop drilling.\n\nconst [tasks, dispatch] = useReducer(tasksReducer, initialTasks);\nfunction tasksReducer(tasks, action) {\n  switch (action.type) {\n    case 'added': return [...tasks, { id: action.id, text: action.text, done: false }];\n    case 'changed': return tasks.map(t => t.id === action.task.id ? action.task : t);\n    case 'deleted': return tasks.filter(t => t.id !== action.id);\n    default: throw Error('Unknown action: ' + action.type);\n  }\n}\n\n## Vercel AI SDK — useChat on the client\nThe useChat hook from @ai-sdk/react manages chat state on the client. It exposes messages and sendMessage; each message has parts that can be text or tool-call parts, which the UI renders accordingly.\n\nconst { messages, sendMessage } = useChat();\nmessages.map(m => m.parts.map((part, i) => part.type === 'text' ? <span key={i}>{part.text}</span> : <pre key={i}>{JSON.stringify(part, null, 2)}</pre>));\n\n## React — Built-in hook categories\nReact's built-in Hooks fall into categories. State Hooks: useState (direct updates) and useReducer (update logic in a reducer). Context Hooks: useContext reads and subscribes to a context. Ref Hooks: useRef and useImperativeHandle. Effect Hooks: useEffect connects to external systems, useLayoutEffect fires before paint, useInsertionEffect for libraries injecting CSS. Performance Hooks: useMemo caches expensive results, useCallback caches function definitions, useTransition and useDeferredValue keep the UI responsive. Other Hooks: useId, useSyncExternalStore, useActionState.\n\n## Next.js — Server Components passing data to Client Components\nA Server Component can fetch data directly with async/await and forward it to a Client Component as props. This replaces getServerSideProps and getStaticProps with a simpler pattern and keeps secrets on the server.\n\ni",
+      "output": "Энэхүү баримт бичигт Next.js болон React-ийн дэвшилтэт боломжуудыг тайлбарласан байна. Next.js-ийн Server Actions, Dynamic routes, Streaming болон Server Components-ийг ашиглан сервер талын үйлдлийг оновчтойгоор хэрэгжүүлэх зааварчилгааг багтаажээ. React-ийн useEffect, useReducer, useChat болон бусад төрлийн Hook-уудыг ашиглан төлөв болон гадаад системтэй холбогдох арга замыг заасан байна. Мөн Vercel AI SDK-ийг ашиглан чатны төлөвийг клиент талд хэрхэн удирдахыг харуулжээ."
+    },
+    {
+      "id": "x27",
+      "task": "xsum",
+      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч.",
+      "injected": null,
+      "source": "[doc:676e57e4]\n\n## Next.js — Route handler with error handling\nA POST route handler should wrap work in try/catch, return appropriate HTTP status codes, and avoid leaking sensitive error detail to clients.\n\nimport { submit } from '@/lib/submit'\nexport async function POST(request: Request) {\n  try {\n    await submit(request)\n    return new Response(null, { status: 204 })\n  } catch (reason) {\n    const message = reason instanceof Error ? reason.message : 'Unexpected error'\n    return new Response(message, { status: 500 })\n  }\n}\n\n## vLLM — OpenAI-compatible Chat API\nvLLM exposes an HTTP server implementing the OpenAI API protocol, acting as a drop-in replacement. POST /v1/chat/completions accepts messages (the conversation history), plus optional model, stream, max_tokens, temperature, top_p, and stop. The response contains choices and a usage object with prompt_tokens, completion_tokens, and total_tokens. parallel_tool_calls controls whether more than one tool call is allowed per request (default true).\n\n## Next.js — Server Components passing data to Client Components\nA Server Component can fetch data directly with async/await and forward it to a Client Component as props. This replaces getServerSideProps and getStaticProps with a simpler pattern and keeps secrets on the server.\n\nimport HomePage from './home-page'\nasync function getPosts() {\n  const res = await fetch('https://...')\n  return res.json()\n}\nexport default async function Page() {\n  const recentPosts = await getPosts()\n  return <HomePage recentPosts={recentPosts} />\n}\n\n## React — useReducer with Context\nFor complex state, a parent manages it with useReducer while Context passes both state and dispatch deep into the tree, so any descendant can read state and dispatch actions without prop drilling.\n\nconst [tasks, dispatch] = useReducer(tasksReducer, initialTasks);\nfunction tasksReducer(tasks, action) {\n  switch (action.type) {\n    case 'added': return [...tasks, { id: action.id, text: action.text, done: false }];\n    case 'changed': return tasks.map(t => t.id === action.task.id ? action.task : t);\n    case 'deleted': return tasks.filter(t => t.id !== action.id);\n    default: throw Error('Unknown action: ' + action.type);\n  }\n}\n\n## vLLM — Conserving memory\nMemory usage can be reduced by limiting context length with max_model_len and the maximum batch size with max_num_seqs. This is useful under memory constraints or when sequences are short.\n\nfrom vllm import LLM\nllm = LLM(model=\"adept/fuyu-8b\", max_model_len=2048, max_num_seqs=2)\n\n## React — Built-in hook categories\nReact's built-in Hooks fall into categories. State Hooks: useState (direct updates) and useReducer (update logic in a reducer). Context Hooks: useContext reads and subscribes to a context. Ref Hooks: useRef and useImperativeHandle. Effect Hooks: useEffect connects to external systems, useLayoutEffect fires before paint, useInsertionEffect for libraries injecting CSS. Performance Hooks: useMemo caches expensive results, useCallback caches function definitions, useTransition and useDeferredValue keep the UI responsive. Other Hooks: useId, useSyncExternalStore, useActionState.\n\n## Next.js — Streaming with Suspense\nReact's Suspense component enables streaming server rendering and selective hydration. Wrap components that perform async work and provide a fallback UI; the page streams in as each boundary resolves, improving perceived performance.\n\nimport { Suspense } from 'react'\nimport { PostFeed, Weather } from './Components'\nexport default function Posts() {\n  return (\n    <section>\n      <Suspense fallback={<p>Loading feed...</p>}><PostFeed /></Suspense>\n      <Suspense fallback={<p>Loading weather...</p>}><Weather /></Suspense>\n    </section>\n  )\n}\n\n## Vercel AI SDK — useChat on the client\nThe useChat hook from @ai-sdk/react manages chat state on the client. It exposes messages and sendMessage; each message has parts that can be text or tool-call parts, which the UI renders accordingly.\n\nconst { messages, sen",
+      "output": "Энэхүү баримт бичиг нь Next.js, React, vLLM болон Vercel AI SDK-ийн хөгжүүлэлтийн зарим чухал зааврыг багтаасан байна. Үүнд Next.js-ийн route handler, server components болон Suspense-ийг ашиглах арга, React-ийн useReducer, Context болон төрөл бүрийн hook-уудын ангиллыг тайлбарласан. Мөн vLLM-ийн OpenAI-тай нийцэх chat API болон санах ойг хэмнэх тохиргоо, Vercel AI SDK-ийн useChat hook-ийг ашиглах тухай мэдээллийг оруулжээ."
+    },
+    {
+      "id": "x28",
+      "task": "xsum",
+      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч.",
+      "injected": null,
+      "source": "[doc:02059941]\n\n## Next.js — Data fetching in Server Components\nIn the App Router, data fetching is colocated inside async Server Components using the fetch API. The caching behavior is controlled per request. `fetch(url, { cache: 'force-cache' })` caches until manually invalidated (like getStaticProps) and is the default. `fetch(url, { cache: 'no-store' })` refetches on every request (like getServerSideProps). Time-based revalidation uses `fetch(url, { next: { revalidate: 10 } })` to cache with a 10-second lifetime.\n\nexport default async function Page() {\n  const staticData = await fetch('https://...', { cache: 'force-cache' })\n  const dynamicData = await fetch('https://...', { cache: 'no-store' })\n  const revalidated = await fetch('https://...', { next: { revalidate: 10 } })\n  return <div>...</div>\n}\n\n## Next.js — Route handler with error handling\nA POST route handler should wrap work in try/catch, return appropriate HTTP status codes, and avoid leaking sensitive error detail to clients.\n\nimport { submit } from '@/lib/submit'\nexport async function POST(request: Request) {\n  try {\n    await submit(request)\n    return new Response(null, { status: 204 })\n  } catch (reason) {\n    const message = reason instanceof Error ? reason.message : 'Unexpected error'\n    return new Response(message, { status: 500 })\n  }\n}\n\n## vLLM — PagedAttention, batching and chunked prefill\nvLLM achieves high serving throughput through PagedAttention, which efficiently manages attention key/value memory, plus continuous batching of incoming requests, chunked prefill, and prefix caching. Chunked prefill improves inter-token latency (ITL) and decode by prioritizing decode requests and batching compute-bound prefill with memory-bound decode. Tuning max_num_batched_tokens trades off TTFT and ITL: smaller values improve ITL, larger values improve TTFT; values above 8192 are recommended for throughput on large GPUs.\n\n## Vercel AI SDK — streamText and structured output\nstreamText streams text from a model and prompt; the output is available as a textStream, with a fullStream of typed parts and tool-call handling, retries, and telemetry built in. streamObject is deprecated in favor of streamText with the output setting and Output.object to stream structured data validated by a zod schema.\n\nconst { partialOutputStream } = streamText({ model, output: Output.object({ schema: z.object({ recipe: z.object({ name: z.string(), steps: z.array(z.string()) }) }) }), prompt: 'Generate a lasagna recipe.' });\nfor await (const partial of partialOutputStream) console.log(partial);\n\n## vLLM — Conserving memory\nMemory usage can be reduced by limiting context length with max_model_len and the maximum batch size with max_num_seqs. This is useful under memory constraints or when sequences are short.\n\nfrom vllm import LLM\nllm = LLM(model=\"adept/fuyu-8b\", max_model_len=2048, max_num_seqs=2)\n\n## Next.js — Server Actions for mutations\nMutations should be handled by Server Actions, invoked from a <form> so they only run on explicit user interaction (never as a side effect of rendering). This keeps mutation logic on the server and avoids accidental writes during render.\n\nimport { logout } from './actions'\nexport default function Page() {\n  return (<><UserProfile /><form action={logout}><button type=\"submit\">Logout</button></form></>)\n}\n\n## vLLM — Server endpoints overview\nThe server provides multiple OpenAI-compatible endpoints: /v1/completions for raw text generation, /v1/chat/completions for chat with message history and tools, /v1/embeddings for embeddings, and /v1/audio/transcriptions and /v1/audio/translations for speech. It hosts one model at a time and provides a models listing endpoint. The host and port default to localhost:8000 and are configurable with --host and --port.\n\n## Next.js — Server Components passing data to Client Components\nA Server Component can fetch data directly with async/await and forward it to a Client Component as props. This replaces getServerSideProps and",
+      "output": "Энэхүү баримт бичигт Next.js-ийн өгөгдөл авах, алдааг шийдвэрлэх, Server Actions ашиглах болон Server Component-оос Client Component рүү өгөгдөл дамжуулах зааврыг тусгасан байна. vLLM-ийн PagedAttention, багцлах болон санах ойг хэмнэх арга, OpenAI-тай нийцэх сервер endpoint-уудын талаарх мэдээллийг багцалсан байна. Мөн Vercel AI SDK-ийн streamText функцийг ашиглан текст болон бүтэцлэгдсэн өгөгдлийг урсгал хэлбэрээр гаргах зааврыг өгөгдсөн байна."
+    },
+    {
+      "id": "x29",
+      "task": "xsum",
+      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч.",
+      "injected": null,
+      "source": "[doc:b852c6e2]\n\n## Next.js — Server Actions for mutations\nMutations should be handled by Server Actions, invoked from a <form> so they only run on explicit user interaction (never as a side effect of rendering). This keeps mutation logic on the server and avoids accidental writes during render.\n\nimport { logout } from './actions'\nexport default function Page() {\n  return (<><UserProfile /><form action={logout}><button type=\"submit\">Logout</button></form></>)\n}\n\n## Vercel AI SDK — Multi-step streamText agent\nA multi-step agent chains streamText calls inside createUIMessageStream. Step 1 can force a tool call (toolChoice: 'required'); step 2 continues the workflow with a different model/system prompt and the messages from the previous step. Results are merged into one UI message stream, controlling start/finish events.\n\nconst result1 = streamText({ model: 'openai/gpt-4o-mini', system: 'Extract the user goal.', messages, toolChoice: 'required', tools: { extractGoal: tool({ inputSchema: z.object({ goal: z.string() }), execute: async ({ goal }) => goal }) } });\nwriter.merge(result1.toUIMessageStream({ sendFinish: false }));\nconst result2 = streamText({ model: 'openai/gpt-4o', system: 'Repeat the extracted goal.', messages: [...convertToModelMessages(messages), ...(await result1.response).messages] });\nwriter.merge(result2.toUIMessageStream({ sendStart: false }));\n\n## Next.js — Dynamic metadata\ngenerateMetadata lets a route fetch data and set its metadata dynamically — ideal when the title or description depends on route params or an external API.\n\nexport async function generateMetadata({ params }, parent): Promise<Metadata> {\n  const slug = (await params).slug\n  const post = await fetch(`https://api.vercel.app/blog/${slug}`).then(r => r.json())\n  return { title: post.title, description: post.description }\n}\n\n## React — Built-in hook categories\nReact's built-in Hooks fall into categories. State Hooks: useState (direct updates) and useReducer (update logic in a reducer). Context Hooks: useContext reads and subscribes to a context. Ref Hooks: useRef and useImperativeHandle. Effect Hooks: useEffect connects to external systems, useLayoutEffect fires before paint, useInsertionEffect for libraries injecting CSS. Performance Hooks: useMemo caches expensive results, useCallback caches function definitions, useTransition and useDeferredValue keep the UI responsive. Other Hooks: useId, useSyncExternalStore, useActionState.\n\n## Next.js — Server Components passing data to Client Components\nA Server Component can fetch data directly with async/await and forward it to a Client Component as props. This replaces getServerSideProps and getStaticProps with a simpler pattern and keeps secrets on the server.\n\nimport HomePage from './home-page'\nasync function getPosts() {\n  const res = await fetch('https://...')\n  return res.json()\n}\nexport default async function Page() {\n  const recentPosts = await getPosts()\n  return <HomePage recentPosts={recentPosts} />\n}\n\n## Next.js — Data fetching in Server Components\nIn the App Router, data fetching is colocated inside async Server Components using the fetch API. The caching behavior is controlled per request. `fetch(url, { cache: 'force-cache' })` caches until manually invalidated (like getStaticProps) and is the default. `fetch(url, { cache: 'no-store' })` refetches on every request (like getServerSideProps). Time-based revalidation uses `fetch(url, { next: { revalidate: 10 } })` to cache with a 10-second lifetime.\n\nexport default async function Page() {\n  const staticData = await fetch('https://...', { cache: 'force-cache' })\n  const dynamicData = await fetch('https://...', { cache: 'no-store' })\n  const revalidated = await fetch('https://...', { next: { revalidate: 10 } })\n  return <div>...</div>\n}\n\n## React — Effects with cleanup\nEffects that connect to an external system should return a cleanup function. A chat connection must disconnect on cleanup so connections do not accumulate. For data fetching, an \"i",
+      "output": "Энэхүү баримт бичиг нь Next.js, React болон Vercel AI SDK-ийн техникийн боломжуудыг тайлбарласан болно. Next.js-ийн Server Components, Server Actions болон динамик мета өгөгдлийг удирдах аргачлалыг заасан байна. React-ийн Hooks-ийг зориулалтынအар нь ангилж, useEffect-ийн цэвэрлэх функцийг хэрхэглэхийг зааварласан байна. Мөн Vercel AI SDK-ийг ашиглан олон шатлалт agent-ийг хэрхэн бүтээх талаарх мэдээллийг багтаасан болно."
+    },
+    {
+      "id": "x30",
+      "task": "xsum",
+      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч.",
+      "injected": null,
+      "source": "[doc:cff76849]\n\n## Next.js — Dynamic routes with params\nA dynamic segment like [slug] receives a params prop. In recent versions params is a Promise that must be awaited before use. The component fetches the matching record and renders it.\n\nexport default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {\n  const { slug } = await params\n  const post = await getPost(slug)\n  return (<div><h1>{post.title}</h1><p>{post.content}</p></div>)\n}\n\n## vLLM — Conserving memory\nMemory usage can be reduced by limiting context length with max_model_len and the maximum batch size with max_num_seqs. This is useful under memory constraints or when sequences are short.\n\nfrom vllm import LLM\nllm = LLM(model=\"adept/fuyu-8b\", max_model_len=2048, max_num_seqs=2)\n\n## React — Built-in hook categories\nReact's built-in Hooks fall into categories. State Hooks: useState (direct updates) and useReducer (update logic in a reducer). Context Hooks: useContext reads and subscribes to a context. Ref Hooks: useRef and useImperativeHandle. Effect Hooks: useEffect connects to external systems, useLayoutEffect fires before paint, useInsertionEffect for libraries injecting CSS. Performance Hooks: useMemo caches expensive results, useCallback caches function definitions, useTransition and useDeferredValue keep the UI responsive. Other Hooks: useId, useSyncExternalStore, useActionState.\n\n## Vercel AI SDK — streamText and structured output\nstreamText streams text from a model and prompt; the output is available as a textStream, with a fullStream of typed parts and tool-call handling, retries, and telemetry built in. streamObject is deprecated in favor of streamText with the output setting and Output.object to stream structured data validated by a zod schema.\n\nconst { partialOutputStream } = streamText({ model, output: Output.object({ schema: z.object({ recipe: z.object({ name: z.string(), steps: z.array(z.string()) }) }) }), prompt: 'Generate a lasagna recipe.' });\nfor await (const partial of partialOutputStream) console.log(partial);\n\n## Next.js — Data fetching in Server Components\nIn the App Router, data fetching is colocated inside async Server Components using the fetch API. The caching behavior is controlled per request. `fetch(url, { cache: 'force-cache' })` caches until manually invalidated (like getStaticProps) and is the default. `fetch(url, { cache: 'no-store' })` refetches on every request (like getServerSideProps). Time-based revalidation uses `fetch(url, { next: { revalidate: 10 } })` to cache with a 10-second lifetime.\n\nexport default async function Page() {\n  const staticData = await fetch('https://...', { cache: 'force-cache' })\n  const dynamicData = await fetch('https://...', { cache: 'no-store' })\n  const revalidated = await fetch('https://...', { next: { revalidate: 10 } })\n  return <div>...</div>\n}\n\n## Next.js — Route handler with error handling\nA POST route handler should wrap work in try/catch, return appropriate HTTP status codes, and avoid leaking sensitive error detail to clients.\n\nimport { submit } from '@/lib/submit'\nexport async function POST(request: Request) {\n  try {\n    await submit(request)\n    return new Response(null, { status: 204 })\n  } catch (reason) {\n    const message = reason instanceof Error ? reason.message : 'Unexpected error'\n    return new Response(message, { status: 500 })\n  }\n}\n\n## Next.js — Server Actions for mutations\nMutations should be handled by Server Actions, invoked from a <form> so they only run on explicit user interaction (never as a side effect of rendering). This keeps mutation logic on the server and avoids accidental writes during render.\n\nimport { logout } from './actions'\nexport default function Page() {\n  return (<><UserProfile /><form action={logout}><button type=\"submit\">Logout</button></form></>)\n}\n\n## React — Effects with cleanup\nEffects that connect to an external system should return a cleanup function. A chat connection must disconnect on cleanup so connections do not",
+      "output": "Энэхүү баримт бичиг нь Next.js-ийн динамик зам, өгөгдөл татах, серверт үйлдлэх болон алдаа зохицуулах аргуудын талаар зааварчилгаа өгсөн байна. React-ийн хугт Hook-уудын ангилал болон Effect-ийн цэвэрлэгээний функцийг тайлбарласан байна. Мөн vLLM-ийн санах ойг хэмнэх арга болон Vercel AI SDK-ийн streamText-ийг ашиглан бүтэцлэгдсэн өгөгдөл урсгалжуулах тухай мэдээллүүдийг багтсан байна."
+    }
+  ]
+}

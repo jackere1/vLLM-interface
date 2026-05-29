@@ -1,0 +1,16 @@
+{
+  "id": "w6",
+  "task": "weather",
+  "question": "Лондон хотод одоо бороо орж байна уу?",
+  "injected": {
+    "location": "London",
+    "temperature_c": 17,
+    "feels_like_c": 15,
+    "humidity_pct": 42,
+    "wind_kmh": 32,
+    "precipitation_mm": 0,
+    "condition": "partly cloudy"
+  },
+  "source": null,
+  "output": "Лондонд одоо бороо орохгүй байна. Тэнгэр багавтар үүлэрхэг байна."
+}

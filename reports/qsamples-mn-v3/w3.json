@@ -1,0 +1,16 @@
+{
+  "id": "w3",
+  "task": "weather",
+  "question": "Улаанбаатар хотод одоо бороо орж байна уу?",
+  "injected": {
+    "location": "Ulaanbaatar",
+    "temperature_c": -15,
+    "feels_like_c": -16,
+    "humidity_pct": 46,
+    "wind_kmh": 31,
+    "precipitation_mm": 0,
+    "condition": "fog"
+  },
+  "source": null,
+  "output": "Улаанбаатар хотод одоо бороо орохгүй байна. Цаг агаар манантай байна."
+}

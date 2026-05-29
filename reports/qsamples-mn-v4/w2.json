@@ -1,0 +1,16 @@
+{
+  "id": "w2",
+  "task": "weather",
+  "question": "Мөрөн-д одоо цаг агаар ямар байна?",
+  "injected": {
+    "location": "Мөрөн",
+    "temperature_c": 10,
+    "feels_like_c": 8,
+    "humidity_pct": 67,
+    "wind_kmh": 32,
+    "precipitation_mm": 0.8,
+    "condition": "overcast"
+  },
+  "source": null,
+  "output": "Мөрөн хотод одоо 10°C, мэдрэгдэх байдлаар 8°C байна. Тэнгэр бүрхэг байна."
+}

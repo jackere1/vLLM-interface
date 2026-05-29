@@ -1,0 +1,16 @@
+{
+  "id": "w8",
+  "task": "weather",
+  "question": "Парис хотод одоо бороо орж байна уу?",
+  "injected": {
+    "location": "Paris",
+    "temperature_c": -16,
+    "feels_like_c": -19,
+    "humidity_pct": 43,
+    "wind_kmh": 33,
+    "precipitation_mm": 0.8,
+    "condition": "overcast"
+  },
+  "source": null,
+  "output": "Парист одоо -16°C, мэдрэгдэх байдлаар -19°C байна. Тэнгэр бүрхэг байна."
+}

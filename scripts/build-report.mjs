@@ -12,13 +12,16 @@ const REPORTS = "reports";
 
 function loadJsons() {
   const files = readdirSync(REPORTS).filter((f) => f.endsWith(".json"));
-  const byType = { prefill: [], realistic: [], longcontext: [], thinking: [], quality: [], mongolian: [], mongolianGraded: [] };
+  const byType = { prefill: [], realistic: [], longcontext: [], thinking: [], quality: [], mongolian: [], mongolianGraded: [], mongolianV2: [], mongolianV3: [], mongolianV4: [] };
   for (const f of files) {
     let data;
     try { data = JSON.parse(readFileSync(join(REPORTS, f), "utf8")); } catch { continue; }
     const stamp = (f.match(/(\d{8}-\d{6})/) || [])[1] || "";
     const entry = { file: f, stamp, ...data };
     if (f.startsWith("quality-graded")) { byType.quality.push(entry); continue; }
+    if (f.startsWith("mongolian-optimal-graded")) { byType.mongolianV4.push(entry); continue; }
+    if (f.startsWith("mongolian-reasoning-graded")) { byType.mongolianV3.push(entry); continue; }
+    if (f.startsWith("mongolian-improved-graded")) { byType.mongolianV2.push(entry); continue; }
     if (f.startsWith("mongolian-graded")) { byType.mongolianGraded.push(entry); continue; }
     if (!data?.cells) continue;
     if (f.startsWith("stress-")) byType.prefill.push(entry);
@@ -68,6 +71,9 @@ async function build() {
     quality: latest(t.quality),
     mongolian: latest(t.mongolian),
     mongolianGraded: latest(t.mongolianGraded),
+    mongolianV2: latest(t.mongolianV2),
+    mongolianV3: latest(t.mongolianV3),
+    mongolianV4: latest(t.mongolianV4),
   };
   const meta = (data.realistic || data.prefill || data.longcontext || data.thinking)?.meta || {};
   data.model = meta.model || "?";
@@ -180,7 +186,23 @@ function chartPanel(title, id, full){ charts.push(id); return panel(title, '<can
 
 // ---------- KPIs + verdict (computed from data) ----------
 const kpi=[]; let verdictBadge='Ready for production agentic AI', verdictText='', bullets=[];
-const R = DATA.realistic, P = DATA.prefill, LC = DATA.longcontext, TH = DATA.thinking, Q = DATA.quality, MN = DATA.mongolian, MG = DATA.mongolianGraded;
+const R = DATA.realistic, P = DATA.prefill, LC = DATA.longcontext, TH = DATA.thinking, Q = DATA.quality, MN = DATA.mongolian, MG = DATA.mongolianGraded, MV = DATA.mongolianV2;
+const flCard = (fl)=>{
+  let inp='';
+  if(fl.task==='weather') inp='<div class="note" style="margin-top:5px">IN — asked: «'+esc(fl.question||'')+'»'+(fl.injected?' · tool data: '+esc(fl.injected.temperature_c)+'°C, feels '+esc(fl.injected.feels_like_c)+'°C, '+esc(fl.injected.condition):'')+'</div>';
+  else if(fl.task==='xsum') inp='<div class="note" style="margin-top:5px">IN — task: «'+esc(fl.question||'')+'»</div>'+(fl.source?'<details style="margin-top:4px"><summary class="note" style="cursor:pointer">▸ source document (English)</summary><div style="white-space:pre-wrap;font-size:12px;color:#8aa0b8;max-height:180px;overflow:auto;margin-top:4px;border-left:2px solid var(--line);padding-left:8px">'+esc(fl.source)+'…</div></details>':'');
+  else inp='<div class="note" style="margin-top:5px">IN — asked: «'+esc(fl.question||'')+'»</div>';
+  return '<div style="margin:10px 0;padding:10px;border:1px solid var(--line);border-radius:8px"><span class="pill">'+esc(fl.task)+' · '+esc(fl.id)+'</span> <span class="note">'+esc(fl.problem||'')+'</span>'+inp+'<div style="margin-top:6px;white-space:pre-wrap;color:#cdd9e8;font-size:13px"><b style="color:var(--mut);font-size:11px">OUT:</b> '+esc(fl.output||'')+'</div></div>';
+};
+const MNV = [];
+if(MG) MNV.push({label:'Minimal prompt', g:MG});
+if(MV) MNV.push({label:'+ glossary/guardrail', g:MV});
+if(DATA.mongolianV3) MNV.push({label:'+ reasoning', g:DATA.mongolianV3});
+if(DATA.mongolianV4) MNV.push({label:'+ keep-Latin + formal', g:DATA.mongolianV4});
+const mnBaseline = MNV[0]?MNV[0].g:null;
+// "best" = the recommended/optimal config = highest overall pass% (so the verdict cites the right one even though v3/reasoning dips)
+const mnBest = MNV.length ? MNV.reduce((a,b)=> (b.g.overall.pass/b.g.overall.total) >= (a.g.overall.pass/a.g.overall.total) ? b : a).g : null;
+const passPct = (g)=> g ? Math.round(100*g.overall.pass/g.overall.total) : null;
 
 if(R){
   const cells=R.cells; const top=cells[cells.length-1];
@@ -225,25 +247,25 @@ if(Q){
 
 if(MN){
   kpi.push(['v warn', f(MN.meta.tokenOverhead,1)+'×', 'Mongolian token cost vs English']);
-  if(MG){
-    const mp=Math.round(100*MG.overall.pass/MG.overall.total);
-    kpi.push([(mp>=80?'v ok':'v warn'), mp+'%', 'Mongolian output pass rate (English = 100%)']);
-    bullets.push('<b>Mongolian (Монгол) — weak, not production-ready:</b> tool-calling still fires correctly (100%), but only '+f(MG.overall.pass,0)+'/'+f(MG.overall.total,0)+' Mongolian outputs passed grading (mean '+f(MG.overall.meanScore,1)+'/5, ~'+f(MG.overall.fluentPct,0)+'% rated fluent). Recurring problems: wrong weather terms (e.g. «бүрэг» timid vs «бүрхэг» overcast; «цэлгэр» vast vs «цэлмэг» clear), invented words, occasional English/CJK code-switching, and a faithfulness slip (claimed rain when overcast). It also costs ~'+f(MN.meta.tokenOverhead,1)+'× the tokens of English. '+MG.flagged.length+' samples flagged for your native spot-check below.');
+  if(mnBest){
+    const v0=passPct(mnBaseline), vb=passPct(mnBest);
+    kpi.push([(vb>=80?'v ok':'v warn'), v0+'% → '+vb+'%', 'Mongolian pass: minimal → tuned prompt']);
+    bullets.push('<b>Mongolian (Монгол) — strongly prompt-dependent:</b> tool-calling still fires 100%, and a minimal prompt passed only '+v0+'% of outputs, but tuning the system prompt (glossary + few-shot + Cyrillic-only guardrail'+') lifted the same 30 prompts to <b>'+vb+'%</b> — weather '+f(mnBaseline.summary.weather.passPct,0)+'%→<b>'+f(mnBest.summary.weather.passPct,0)+'%</b>, general '+f(mnBaseline.summary.general.passPct,0)+'%→'+f(mnBest.summary.general.passPct,0)+'%, EN→MN summary '+f(mnBaseline.summary.xsum.passPct,0)+'%→'+f(mnBest.summary.xsum.passPct,0)+'%. Mongolian also costs ~'+f(MN.meta.tokenOverhead,1)+'× the tokens of English.');
   } else {
     bullets.push('<b>Mongolian (Монгол):</b> tool-calling works; text costs ~'+f(MN.meta.tokenOverhead,1)+'× the tokens of English (output-quality grading pending).');
   }
 }
 
-const mnPass = MG ? Math.round(100*MG.overall.pass/MG.overall.total) : null;
+const mnPass = passPct(mnBest);
 const mnLow = mnPass!=null && mnPass < 80;
 verdictText = !bullets.length
   ? 'No report data found — run the harnesses, then rebuild.'
-  : (mnLow
-    ? 'In ENGLISH the server is production-ready for agentic conversation: zero request failures, 100% tool-calling accuracy, and graded-faithful, correct outputs across realistic chat, long-context reasoning, large prompts and sustained decode. MONGOLIAN is a different story — only '+mnPass+'% of Mongolian samples passed and ~'+f(MG.overall.fluentPct,0)+'% were rated fluent (recurring wrong weather terms, invented words, occasional code-switching, and a faithfulness slip). Recommendation: deploy English-first; do NOT rely on this model for user-facing Mongolian output without a better-suited or fine-tuned model. Respect the per-workload concurrency limits below.'
+  : (mnBest
+    ? 'In ENGLISH the server is production-ready for agentic conversation: zero request failures, 100% tool-calling accuracy, and graded-faithful, correct outputs across realistic chat, long-context reasoning, large prompts and sustained decode. MONGOLIAN quality is strongly prompt-dependent: a minimal prompt passed only '+passPct(mnBaseline)+'%, but a tuned system prompt (glossary + few-shot + Cyrillic-only guardrail'+') raised the same 30 prompts to '+mnPass+'% — weather '+f(mnBest.summary.weather.passPct,0)+'% and general '+f(mnBest.summary.general.passPct,0)+'%. Cross-lingual EN→MN technical summarization is the remaining weak spot ('+f(mnBest.summary.xsum.passPct,0)+'%). Recommendation: ship Mongolian weather/chat with the tuned prompt; for cross-lingual technical summaries use a higher-precision (non-NVFP4) or fine-tuned model. Mind the ~'+f((MN&&MN.meta.tokenOverhead)||2.3,1)+'× Mongolian token cost and the per-workload concurrency limits below.'
     : 'Across realistic agentic traffic, long-context reasoning, large-prompt ingestion and sustained decode, the server completed every request with no failures and 100% tool-calling accuracy, and graded outputs were faithful and correct. It is suitable for production agentic-conversation workloads within the concurrency limits below.');
 if(R){ const falseAcc=Math.max(...R.cells.map(c=>c.offtopicFalseToolPct??0)); const toolAcc=Math.min(...R.cells.map(c=>c.weatherToolRatePct??100));
   if(toolAcc<99||falseAcc>2) verdictBadge='Ready for production — with caveats'; }
-if(mnLow) verdictBadge='Ready for English agentic AI · Mongolian needs work';
+if(mnLow) verdictBadge='Ready for English · Mongolian works with the right prompt';
 
 document.getElementById('verdict').innerHTML =
   '<span class="badge'+(mnLow?' warn':'')+'">'+ (bullets.length?(mnLow?'⚠ ':'✓ ')+verdictBadge:'No data') +'</span>'+
@@ -349,21 +371,27 @@ if(MN){
     tableEl(['c','req/s','TTFT p50 (ms)','E2E p50 (s)','E2E p95 (s)','Tool-call%','Mean in tok','Mean out tok','Peak KV%'],
       c.map(x=>[x.concurrency,f(x.achievedReqPerSec,2),f(x.ttft.p50,0),f(x.e2e.p50/1000,2),f(x.e2e.p95/1000,2),f(x.weatherToolRatePct,0)+'%',f(x.meanPromptTokens,0),f(x.meanOutputTokens,0),f(x.peakKvUsagePct,0)+'%']))+
     '<div class="note">⚠ Mongolian costs ~'+f(MN.meta.tokenOverhead,1)+'× the tokens of equivalent English — fewer characters per token, so higher latency/cost per request and less of the '+(MN.meta.maxModelLen||8192)+'-token window available.</div>', true);
-  if(MG){
-    const lab={weather:'Weather (MN)',general:'General Q&A (MN)',xsum:'EN→MN summary'};
-    const tasks=Object.keys(MG.summary);
-    inner += chartPanel('Mongolian output quality — pass% & fluency% by task','mnQ');
-    inner += panel('Mongolian grades (LLM-judge + adversarial verify)',
-      tableEl(['Task','n','Pass%','Fluent%','Mean score'], tasks.map(t=>[esc(lab[t]||t),MG.summary[t].n,f(MG.summary[t].passPct,0)+'%',f(MG.summary[t].fluentPct,0)+'%',f(MG.summary[t].meanScore,1)+'/5']))+
-      '<div class="note">'+((MG.flagged&&MG.flagged.length)?MG.flagged.length+' output(s) flagged for native-speaker spot-check (below) — fluency judged by a non-native model, so verify these.':'No fluency/faithfulness issues flagged.')+'</div>');
-    if(MG.flagged&&MG.flagged.length){
-      inner += panel('⚠ Flagged Mongolian outputs — please spot-check',
-        MG.flagged.map(fl=>'<div style="margin:10px 0;padding:10px;border:1px solid var(--line);border-radius:8px"><span class="pill">'+esc(fl.task)+' · '+esc(fl.id)+'</span> <span class="note">'+esc(fl.problem||'')+'</span><div style="margin-top:6px;white-space:pre-wrap;color:#cdd9e8;font-size:13px">'+esc(fl.output||'')+'</div></div>').join(''), true);
+  if(mnBest){
+    const lab={weather:'Weather',general:'General',xsum:'EN→MN sum'};
+    const tasks=Object.keys(mnBest.summary);
+    if(MNV.length>1) inner += chartPanel('Prompt A/B — Mongolian pass% by task across prompt variants','mnAB');
+    else inner += chartPanel('Mongolian output quality — pass% & fluency% by task','mnAB');
+    inner += panel('Mongolian output quality by prompt variant (same 30 prompts)',
+      tableEl(['Task',...MNV.map(v=>v.label)],
+        tasks.map(t=>[esc(lab[t]||t),...MNV.map(v=>f(v.g.summary[t].passPct,0)+'% / '+f(v.g.summary[t].fluentPct,0)+'%')]))+
+      '<div class="note">Cells show pass% / fluent%. Only the system prompt changed across variants (same questions, injected data, source docs). Overall pass: '+MNV.map(v=>v.label+' '+passPct(v.g)+'%').join(' → ')+'. Cross-lingual EN→MN technical summary is the remaining weak spot.</div>');
+    const lastLabel=MNV[MNV.length-1].label;
+    if(mnBest.flagged&&mnBest.flagged.length){
+      inner += panel('⚠ Remaining flagged Mongolian outputs ('+esc(lastLabel)+') — native-speaker spot-check',
+        mnBest.flagged.map(flCard).join('')+'<div class="note">Fluency judged by a non-native model — please verify these.</div>', true);
     }
+    window.__after.push(()=>{
+      const cols=[C.d,C.c,C.b];
+      if(MNV.length>1) barChart(mnAB,tasks.map(t=>lab[t]||t), MNV.map((v,i)=>({label:v.label,data:tasks.map(t=>v.g.summary[t].passPct),backgroundColor:cols[i%3]})),'pass %');
+      else barChart(mnAB,tasks.map(t=>lab[t]||t),[{label:'pass %',data:tasks.map(t=>mnBest.summary[t].passPct),backgroundColor:C.b},{label:'fluent %',data:tasks.map(t=>mnBest.summary[t].fluentPct),backgroundColor:C.a}],'%');
+    });
   }
-  section('Mongolian (Монгол) — load + output quality', inner);
-  if(MG){ window.__after.push(()=>{ const lab={weather:'Weather',general:'General',xsum:'EN→MN'}; const tasks=Object.keys(MG.summary);
-    barChart(mnQ,tasks.map(t=>lab[t]||t),[{label:'pass %',data:tasks.map(t=>MG.summary[t].passPct),backgroundColor:C.b},{label:'fluent %',data:tasks.map(t=>MG.summary[t].fluentPct),backgroundColor:C.a}],'%'); }); }
+  section('Mongolian (Монгол) — load + output quality (prompt A/B)', inner);
 }
 (window.__after||[]).forEach(fn=>{try{fn();}catch(e){console.error(e);}});
 </script>

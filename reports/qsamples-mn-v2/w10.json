@@ -1,0 +1,16 @@
+{
+  "id": "w10",
+  "task": "weather",
+  "question": "Берлин-д одоо цаг агаар ямар байна?",
+  "injected": {
+    "location": "Berlin",
+    "temperature_c": -11,
+    "feels_like_c": -13,
+    "humidity_pct": 92,
+    "wind_kmh": 12,
+    "precipitation_mm": 0,
+    "condition": "light rain"
+  },
+  "source": null,
+  "output": "Берлинд одоо -11°C, мэдрэгдэх байдлаар -13°C байна. Бороо шивэрнэ."
+}
