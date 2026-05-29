@@ -1,0 +1,18 @@
+{
+  "id": "w1",
+  "task": "weather",
+  "question": "What's the weather in Tokyo right now?",
+  "injected": {
+    "location": "Tokyo",
+    "temperature_c": 24,
+    "feels_like_c": 23,
+    "humidity_pct": 52,
+    "wind_kmh": 27,
+    "precipitation_mm": 0,
+    "is_day": false,
+    "condition": "Fog"
+  },
+  "toolCalled": true,
+  "location": "Tokyo",
+  "output": "It's currently 24°C in Tokyo and feels like 23°C, with foggy conditions."
+}

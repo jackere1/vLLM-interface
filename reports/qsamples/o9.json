@@ -1,0 +1,7 @@
+{
+  "id": "o9",
+  "task": "offtopic",
+  "question": "Explain the difference between TCP and UDP in two sentences.",
+  "toolCalled": false,
+  "output": "TCP is a connection-oriented protocol that ensures reliable, ordered delivery of data through error-checking and acknowledgments. UDP is a connectionless protocol that prioritizes speed and efficiency by sending data without verifying if it was received."
+}

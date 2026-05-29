@@ -1,0 +1,18 @@
+{
+  "id": "w2",
+  "task": "weather",
+  "question": "What's the weather in Paris right now?",
+  "injected": {
+    "location": "Paris",
+    "temperature_c": -1,
+    "feels_like_c": -1,
+    "humidity_pct": 43,
+    "wind_kmh": 33,
+    "precipitation_mm": 0,
+    "is_day": true,
+    "condition": "Light snow"
+  },
+  "toolCalled": true,
+  "location": "Paris",
+  "output": "It is currently -1°C in Paris, which also feels like -1°C, with light snow."
+}

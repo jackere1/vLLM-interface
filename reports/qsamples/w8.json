@@ -1,0 +1,18 @@
+{
+  "id": "w8",
+  "task": "weather",
+  "question": "How are conditions in Lima at the moment?",
+  "injected": {
+    "location": "Lima",
+    "temperature_c": 11,
+    "feels_like_c": 11,
+    "humidity_pct": 51,
+    "wind_kmh": 11,
+    "precipitation_mm": 0,
+    "is_day": true,
+    "condition": "Moderate rain"
+  },
+  "toolCalled": true,
+  "location": "Lima",
+  "output": "It's currently 11°C in Lima, which also feels like 11°C, with moderate rain."
+}

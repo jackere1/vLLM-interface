@@ -1,0 +1,18 @@
+{
+  "id": "w7",
+  "task": "weather",
+  "question": "Is it cold in Mumbai today, and will I need a jacket?",
+  "injected": {
+    "location": "Mumbai",
+    "temperature_c": 31,
+    "feels_like_c": 29,
+    "humidity_pct": 53,
+    "wind_kmh": 18,
+    "precipitation_mm": 0,
+    "is_day": true,
+    "condition": "Moderate rain"
+  },
+  "toolCalled": true,
+  "location": "Mumbai",
+  "output": "It's currently 31°C (feeling like 29°C) with moderate rain in Mumbai. You won't need a jacket for the cold, but you might want an umbrella!"
+}

@@ -6,7 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "stress": "node scripts/stress-test.mjs",
+    "stress:think": "node scripts/stress-test-thinking.mjs",
+    "stress:real": "node scripts/stress-test-realistic.mjs",
+    "stress:longctx": "node scripts/stress-test-longcontext.mjs",
+    "stress:mn": "node scripts/stress-test-mongolian.mjs",
+    "report": "node scripts/build-report.mjs"
   },
   "dependencies": {
     "@ai-sdk/openai-compatible": "^1.0.20",

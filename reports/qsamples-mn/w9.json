@@ -1,0 +1,16 @@
+{
+  "id": "w9",
+  "task": "weather",
+  "question": "Парис-гийн агаарын температур хэд байна вэ?",
+  "injected": {
+    "location": "Paris",
+    "temperature_c": -16,
+    "feels_like_c": -19,
+    "humidity_pct": 43,
+    "wind_kmh": 33,
+    "precipitation_mm": 0.8,
+    "condition": "overcast"
+  },
+  "source": null,
+  "output": "Парисийн агаар одоогоор -16°C байгаа бөгөөд -19°C мэт мэдрэгдэж, бүхэлдээ бүрэг байна."
+}

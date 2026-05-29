@@ -1,0 +1,7 @@
+{
+  "id": "o16",
+  "task": "offtopic",
+  "question": "Give me a simple analogy for how DNS works.",
+  "toolCalled": false,
+  "output": "DNS is like the \"Contacts\" app on your phone. Instead of memorizing a person's exact phone number (the IP address), you just look up their name (the domain name), and the app connects you to the right number automatically."
+}

@@ -1,0 +1,7 @@
+{
+  "id": "o12",
+  "task": "offtopic",
+  "question": "In plain terms, what is a race condition in concurrent code?",
+  "toolCalled": false,
+  "output": "A race condition occurs when two or more threads try to access and change shared data at the same time. Because the final outcome depends on the unpredictable timing of which thread \"wins the race\" to finish first, it can lead to inconsistent data or unexpected crashes."
+}

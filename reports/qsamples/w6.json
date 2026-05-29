@@ -1,0 +1,18 @@
+{
+  "id": "w6",
+  "task": "weather",
+  "question": "How are conditions in Toronto at the moment?",
+  "injected": {
+    "location": "Toronto",
+    "temperature_c": 31,
+    "feels_like_c": 29,
+    "humidity_pct": 45,
+    "wind_kmh": 15,
+    "precipitation_mm": 1,
+    "is_day": true,
+    "condition": "Partly cloudy"
+  },
+  "toolCalled": true,
+  "location": "Toronto",
+  "output": "It's currently 31°C in Toronto, though it feels like 29°C. The weather is partly cloudy."
+}

@@ -1,0 +1,7 @@
+{
+  "id": "o10",
+  "task": "offtopic",
+  "question": "Write a one-line haiku about debugging.",
+  "toolCalled": false,
+  "output": "Code breaks, then it works,\nWhy? I have no clue at all,\nFixed by a comma."
+}

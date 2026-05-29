@@ -1,0 +1,18 @@
+{
+  "id": "w3",
+  "task": "weather",
+  "question": "Is it cold in Reykjavik today, and will I need a jacket?",
+  "injected": {
+    "location": "Reykjavik",
+    "temperature_c": 18,
+    "feels_like_c": 17,
+    "humidity_pct": 88,
+    "wind_kmh": 13,
+    "precipitation_mm": 0,
+    "is_day": false,
+    "condition": "Fog"
+  },
+  "toolCalled": true,
+  "location": "Reykjavik",
+  "output": "It is currently 18°C (feels like 17°C) and foggy in Reykjavik. While it's relatively mild, a light jacket would be a good idea given the damp, foggy conditions."
+}

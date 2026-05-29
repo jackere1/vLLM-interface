@@ -1,0 +1,18 @@
+{
+  "id": "w4",
+  "task": "weather",
+  "question": "How are conditions in Nairobi at the moment?",
+  "injected": {
+    "location": "Nairobi",
+    "temperature_c": 26,
+    "feels_like_c": 25,
+    "humidity_pct": 52,
+    "wind_kmh": 22,
+    "precipitation_mm": 0,
+    "is_day": false,
+    "condition": "Partly cloudy"
+  },
+  "toolCalled": true,
+  "location": "Nairobi",
+  "output": "It's currently 26°C (feels like 25°C) and partly cloudy in Nairobi."
+}

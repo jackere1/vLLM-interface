@@ -1,0 +1,18 @@
+{
+  "id": "w5",
+  "task": "weather",
+  "question": "Is it cold in Sydney today, and will I need a jacket?",
+  "injected": {
+    "location": "Sydney",
+    "temperature_c": 4,
+    "feels_like_c": 3,
+    "humidity_pct": 68,
+    "wind_kmh": 13,
+    "precipitation_mm": 0,
+    "is_day": false,
+    "condition": "Fog"
+  },
+  "toolCalled": true,
+  "location": "Sydney",
+  "output": "It's currently 4°C (feels like 3°C) and foggy in Sydney. Yes, you will definitely need a jacket!"
+}

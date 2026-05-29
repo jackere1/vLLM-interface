@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "generatedAt": "2026-05-29",
+    "model": "gemma-4-31b",
+    "method": "LLM-as-judge (strict grade) + adversarial verification, one pair of agents per sample",
+    "judges": 64,
+    "samplesPerTask": 8
+  },
+  "overall": { "total": 32, "pass": 32, "meanScore": 5 },
+  "summary": {
+    "weather": { "n": 8, "pass": 8, "passPct": 100, "meanScore": 5 },
+    "offtopic": { "n": 8, "pass": 8, "passPct": 100, "meanScore": 5 },
+    "summarize": { "n": 8, "pass": 8, "passPct": 100, "meanScore": 5 },
+    "longctx": { "n": 8, "pass": 8, "passPct": 100, "meanScore": 5 }
+  },
+  "fails": []
+}

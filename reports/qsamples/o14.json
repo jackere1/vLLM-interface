@@ -1,0 +1,7 @@
+{
+  "id": "o14",
+  "task": "offtopic",
+  "question": "What's the capital of Australia, and one fact about it?",
+  "toolCalled": false,
+  "output": "The capital of Australia is Canberra. It was selected as a compromise location between the rival cities of Sydney and Melbourne."
+}
