@@ -1,0 +1,15 @@
+{
+  "set": "mn-v4",
+  "lang": "mn",
+  "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+  "target": "mongolian-optimal-graded.json",
+  "id": "g16",
+  "task": "general",
+  "question": "Хиймэл оюун ухаан гэж юу вэ? Хоёр өгүүлбэрээр тайлбарла.",
+  "instruction": null,
+  "injected": null,
+  "location": null,
+  "source": null,
+  "toolCalled": null,
+  "output": "Хиймэл оюун ухаан гэдэг нь компьютерыг хүнийг acreageгт адилбоо сэтгэн бодох, суралцах чадвартай болгох технологи юм. Энэхүү систем нь өгөгдлийг боловсруулж, асуудалд шийдэл олох болон шинэ мэдээлэл бүтээх чадвартай байдаг."
+}

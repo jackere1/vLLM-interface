@@ -1,0 +1,15 @@
+{
+  "set": "mn-v3",
+  "lang": "mn",
+  "variant": "improved + reasoning + formal + keep-latin",
+  "target": "mongolian-reasoning-graded.json",
+  "id": "g20",
+  "task": "general",
+  "question": "Усны эргэлт (water cycle) гэж юу вэ?",
+  "instruction": null,
+  "injected": null,
+  "location": null,
+  "source": null,
+  "toolCalled": null,
+  "output": "Усны эргэлт гэдэг нь дэлхий дээрх усны тогтмол хөдөлгөөнийг хэлнэ. Энэхүү үйл явц нь нарны халуунаар ус ууршиж, агаар мандалд үүл болон хувирч, дараа нь тунадас хэлбэрээр газар дээр бууж, дахин урсгалаар цугларч эргэлдэх үйл явцыг багтаана."
+}

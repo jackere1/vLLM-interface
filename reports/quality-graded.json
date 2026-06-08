@@ -1,17 +1,42 @@
 {
   "meta": {
-    "generatedAt": "2026-05-29",
+    "generatedAt": "2026-06-08",
     "model": "gemma-4-31b",
+    "modelRoot": "RedHatAI/gemma-4-31B-it-NVFP4",
     "method": "LLM-as-judge (strict grade) + adversarial verification, one pair of agents per sample",
     "judges": 64,
     "samplesPerTask": 8
   },
-  "overall": { "total": 32, "pass": 32, "meanScore": 5 },
+  "overall": {
+    "total": 32,
+    "pass": 32,
+    "meanScore": 4.9
+  },
   "summary": {
-    "weather": { "n": 8, "pass": 8, "passPct": 100, "meanScore": 5 },
-    "offtopic": { "n": 8, "pass": 8, "passPct": 100, "meanScore": 5 },
-    "summarize": { "n": 8, "pass": 8, "passPct": 100, "meanScore": 5 },
-    "longctx": { "n": 8, "pass": 8, "passPct": 100, "meanScore": 5 }
+    "weather": {
+      "n": 8,
+      "pass": 8,
+      "passPct": 100,
+      "meanScore": 5
+    },
+    "offtopic": {
+      "n": 8,
+      "pass": 8,
+      "passPct": 100,
+      "meanScore": 4.9
+    },
+    "summarize": {
+      "n": 8,
+      "pass": 8,
+      "passPct": 100,
+      "meanScore": 4.9
+    },
+    "longctx": {
+      "n": 8,
+      "pass": 8,
+      "passPct": 100,
+      "meanScore": 4.9
+    }
   },
   "fails": []
 }

@@ -1,0 +1,15 @@
+{
+  "set": "mn-v3",
+  "lang": "mn",
+  "variant": "improved + reasoning + formal + keep-latin",
+  "target": "mongolian-reasoning-graded.json",
+  "id": "g16",
+  "task": "general",
+  "question": "Хиймэл оюун ухаан гэж юу вэ? Хоёр өгүүлбэрээр тайлбарла.",
+  "instruction": null,
+  "injected": null,
+  "location": null,
+  "source": null,
+  "toolCalled": null,
+  "output": "Хиймэл оюун ухаан нь машиныг хүний сэтгэх чадварыг дуурайлгах замаар ажиллахыг зориулсан технологи юм. Энэхүү систем нь өгөгдөлд үндэслэн суралцаж, нарийн төвөгтэй асуудлыг шийдвэрлэх чадвартай."
+}

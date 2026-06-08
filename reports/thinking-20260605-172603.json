@@ -1,0 +1,299 @@
+{
+  "meta": {
+    "generatedAt": "2026-06-05T09:26:03.132Z",
+    "baseUrl": "https://clean-hostels-holdem-election.trycloudflare.com/v1",
+    "model": "gemma-4-31b",
+    "modelRoot": "RedHatAI/gemma-4-31B-it-NVFP4",
+    "maxModelLen": 16384,
+    "serverFingerprint": "vllm-0.21.0-81cc15f0",
+    "inputSize": 2000,
+    "outputTokens": 2048,
+    "reqsPerConc": 3,
+    "concurrencies": [
+      3,
+      5,
+      10,
+      15
+    ],
+    "modes": [
+      "think",
+      "nothink"
+    ],
+    "node": "v24.13.1",
+    "quick": false
+  },
+  "cells": [
+    {
+      "mode": "think",
+      "concurrency": 3,
+      "requested": 9,
+      "succeeded": 9,
+      "failed": 0,
+      "successPct": 100,
+      "meanPromptTokens": 2016,
+      "meanCompletionTokens": 2048,
+      "meanReasoningFrac": 0.830289193302892,
+      "ttft": {
+        "mean": 1468.8196943333346,
+        "p50": 1420.6092519999947,
+        "p90": 1644.4817969999858,
+        "p95": 1644.4817969999858,
+        "p99": 1644.4817969999858
+      },
+      "e2e": {
+        "mean": 91155.52356133334,
+        "p50": 70655.79734300001,
+        "p95": 139111.05497199995,
+        "p99": 139111.05497199995
+      },
+      "tpot": {
+        "mean": 43.81372929506594,
+        "p50": 33.82213197606253,
+        "p99": 67.31393489252562
+      },
+      "decodeTpsPerReq": 25.174464251590592,
+      "aggOutputTps": 66.16078458495053,
+      "achievedReqPerSec": 0.03230507059812038,
+      "cellDurationS": 278.59403596299995,
+      "errorsSample": []
+    },
+    {
+      "mode": "think",
+      "concurrency": 5,
+      "requested": 15,
+      "succeeded": 15,
+      "failed": 0,
+      "successPct": 100,
+      "meanPromptTokens": 2016,
+      "meanCompletionTokens": 2048,
+      "meanReasoningFrac": 0.686333985649054,
+      "ttft": {
+        "mean": 1878.6382299333268,
+        "p50": 1908.4255879999837,
+        "p90": 2112.210953999893,
+        "p95": 2113.0028119999915,
+        "p99": 2113.0028119999915
+      },
+      "e2e": {
+        "mean": 71827.34259166667,
+        "p50": 71870.72329699993,
+        "p95": 73527.3056330001,
+        "p99": 73527.3056330001
+      },
+      "tpot": {
+        "mean": 34.17132601941053,
+        "p50": 34.078413455300456,
+        "p99": 35.11418472007818
+      },
+      "decodeTpsPerReq": 29.29205100211606,
+      "aggOutputTps": 142.56165146045313,
+      "achievedReqPerSec": 0.06961018137717438,
+      "cellDurationS": 215.48571923299994,
+      "errorsSample": []
+    },
+    {
+      "mode": "think",
+      "concurrency": 10,
+      "requested": 30,
+      "succeeded": 30,
+      "failed": 0,
+      "successPct": 100,
+      "meanPromptTokens": 2016,
+      "meanCompletionTokens": 2048,
+      "meanReasoningFrac": 0.7356653620352251,
+      "ttft": {
+        "mean": 16581.797253999994,
+        "p50": 2052.839205999975,
+        "p90": 74765.48114000005,
+        "p95": 75025.14703999995,
+        "p99": 75957.83039999998
+      },
+      "e2e": {
+        "mean": 88842.96619026666,
+        "p50": 74608.96183199994,
+        "p95": 148551.54594600003,
+        "p99": 148555.61697099998
+      },
+      "tpot": {
+        "mean": 35.30101071630028,
+        "p50": 35.38061213678554,
+        "p99": 35.97993619736204
+      },
+      "decodeTpsPerReq": 28.34533174340232,
+      "aggOutputTps": 208.15886718439228,
+      "achievedReqPerSec": 0.10164007186737904,
+      "cellDurationS": 295.15917736800003,
+      "errorsSample": []
+    },
+    {
+      "mode": "think",
+      "concurrency": 15,
+      "requested": 45,
+      "succeeded": 45,
+      "failed": 0,
+      "successPct": 100,
+      "meanPromptTokens": 2016,
+      "meanCompletionTokens": 2048,
+      "meanReasoningFrac": 0.8561208958469232,
+      "ttft": {
+        "mean": 54925.03384897779,
+        "p50": 73360.02380999993,
+        "p90": 76495.34756000014,
+        "p95": 76862.05502700014,
+        "p99": 76904.85427300003
+      },
+      "e2e": {
+        "mean": 126017.07712968886,
+        "p50": 143335.13015800016,
+        "p95": 148892.98856800003,
+        "p99": 148951.58452200005
+      },
+      "tpot": {
+        "mean": 34.72986970235031,
+        "p50": 34.37536907816316,
+        "p99": 36.25580207230084
+      },
+      "decodeTpsPerReq": 28.822229038526746,
+      "aggOutputTps": 211.85250858583532,
+      "achievedReqPerSec": 0.1034436077079274,
+      "cellDurationS": 435.019630474,
+      "errorsSample": []
+    },
+    {
+      "mode": "nothink",
+      "concurrency": 3,
+      "requested": 9,
+      "succeeded": 9,
+      "failed": 0,
+      "successPct": 100,
+      "meanPromptTokens": 2013,
+      "meanCompletionTokens": 2048,
+      "meanReasoningFrac": 0,
+      "ttft": {
+        "mean": 1103.5410345554765,
+        "p50": 1125.4679279997945,
+        "p90": 1235.2952059998643,
+        "p95": 1235.2952059998643,
+        "p99": 1235.2952059998643
+      },
+      "e2e": {
+        "mean": 71164.32945066661,
+        "p50": 71101.36927799997,
+        "p95": 72045.99971499993,
+        "p99": 72045.99971499993
+      },
+      "tpot": {
+        "mean": 34.22608129756284,
+        "p50": 34.16000845725455,
+        "p99": 34.69476277576944
+      },
+      "decodeTpsPerReq": 29.234421812161884,
+      "aggOutputTps": 86.3346125408218,
+      "achievedReqPerSec": 0.04215557252969814,
+      "cellDurationS": 213.494906128,
+      "errorsSample": []
+    },
+    {
+      "mode": "nothink",
+      "concurrency": 5,
+      "requested": 15,
+      "succeeded": 15,
+      "failed": 0,
+      "successPct": 100,
+      "meanPromptTokens": 2013,
+      "meanCompletionTokens": 2048,
+      "meanReasoningFrac": 0,
+      "ttft": {
+        "mean": 1450.575476400073,
+        "p50": 1602.9103769999929,
+        "p90": 1657.4560980000533,
+        "p95": 1695.823419000022,
+        "p99": 1695.823419000022
+      },
+      "e2e": {
+        "mean": 70940.45993586669,
+        "p50": 70754.57591600018,
+        "p95": 72267.18567499984,
+        "p99": 72267.18567499984
+      },
+      "tpot": {
+        "mean": 33.94718341937792,
+        "p50": 33.9501174362481,
+        "p99": 34.773529125549516
+      },
+      "decodeTpsPerReq": 29.47850835902485,
+      "aggOutputTps": 144.34456142839244,
+      "achievedReqPerSec": 0.07048074288495725,
+      "cellDurationS": 212.82409046800015,
+      "errorsSample": []
+    },
+    {
+      "mode": "nothink",
+      "concurrency": 10,
+      "requested": 30,
+      "succeeded": 30,
+      "failed": 0,
+      "successPct": 100,
+      "meanPromptTokens": 2013,
+      "meanCompletionTokens": 2048,
+      "meanReasoningFrac": 0,
+      "ttft": {
+        "mean": 15608.877251533271,
+        "p50": 1610.251736999955,
+        "p90": 72452.3512289999,
+        "p95": 72524.30975200003,
+        "p99": 72534.92854199978
+      },
+      "e2e": {
+        "mean": 85751.41221559995,
+        "p50": 71971.80886300001,
+        "p95": 144380.42222000007,
+        "p99": 144384.00532000023
+      },
+      "tpot": {
+        "mean": 34.26601610359877,
+        "p50": 34.28120935417684,
+        "p99": 35.139660022960605
+      },
+      "decodeTpsPerReq": 29.202631134071154,
+      "aggOutputTps": 215.5367825398941,
+      "achievedReqPerSec": 0.10524256959955766,
+      "cellDurationS": 285.0557537139999,
+      "errorsSample": []
+    },
+    {
+      "mode": "nothink",
+      "concurrency": 15,
+      "requested": 45,
+      "succeeded": 45,
+      "failed": 0,
+      "successPct": 100,
+      "meanPromptTokens": 2013,
+      "meanCompletionTokens": 2048,
+      "meanReasoningFrac": 0,
+      "ttft": {
+        "mean": 53772.50585142225,
+        "p50": 72370.27348900028,
+        "p90": 73623.2560940003,
+        "p95": 73780.67243199982,
+        "p99": 73827.88785700034
+      },
+      "e2e": {
+        "mean": 124677.35369117778,
+        "p50": 143427.6755520003,
+        "p95": 144580.2446940001,
+        "p99": 144948.67024500016
+      },
+      "tpot": {
+        "mean": 34.63842102577212,
+        "p50": 34.6033587830972,
+        "p99": 35.401808893014135
+      },
+      "decodeTpsPerReq": 28.887848641665734,
+      "aggOutputTps": 213.73200894933484,
+      "achievedReqPerSec": 0.1043613324947924,
+      "cellDurationS": 431.194187773,
+      "errorsSample": []
+    }
+  ]
+}

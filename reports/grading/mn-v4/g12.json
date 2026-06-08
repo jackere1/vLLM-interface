@@ -1,0 +1,15 @@
+{
+  "set": "mn-v4",
+  "lang": "mn",
+  "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+  "target": "mongolian-optimal-graded.json",
+  "id": "g12",
+  "task": "general",
+  "question": "Фотосинтез гэж юу вэ? Энгийнээр тайлбарлаач.",
+  "instruction": null,
+  "injected": null,
+  "location": null,
+  "source": null,
+  "toolCalled": null,
+  "output": "Фотосинтез гэдэг нь ургамал нарны гэрлийг ашиглан өөрт хэрэгцээтэй тэжээл болох сахар бүтээх үйл явц юм. Ургамал нь агаараас нүүрсхүчлийн хийг, хөрснөөс усыг шингээж, нарны гэрлийн тусламжтайгаар тэжээл болон хүчилтөрөгчийг ялгаруулдаг."
+}

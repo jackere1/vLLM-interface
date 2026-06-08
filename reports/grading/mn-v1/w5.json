@@ -1,0 +1,23 @@
+{
+  "set": "mn-v1",
+  "lang": "mn",
+  "variant": "minimal-prompt (baseline)",
+  "target": "mongolian-graded.json",
+  "id": "w5",
+  "task": "weather",
+  "question": "Улаанбаатар-д одоо цаг агаар ямар байна?",
+  "instruction": null,
+  "injected": {
+    "location": "Ulaanbaatar",
+    "temperature_c": -15,
+    "feels_like_c": -16,
+    "humidity_pct": 46,
+    "wind_kmh": 31,
+    "precipitation_mm": 0,
+    "condition": "fog"
+  },
+  "location": null,
+  "source": null,
+  "toolCalled": null,
+  "output": "Улаанбаатар хотод одоо -15°C байна, мэдрэгдэх температур -16°Ц байна. Ерөнхий нөхцөл манантай бөгөөд салхи хүчтэй (31 км/ц) байна."
+}

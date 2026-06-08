@@ -1,0 +1,15 @@
+{
+  "set": "mn-v2",
+  "lang": "mn",
+  "variant": "improved-system-prompt",
+  "target": "mongolian-improved-graded.json",
+  "id": "g14",
+  "task": "general",
+  "question": "TCP болон UDP протоколын гол ялгаа юу вэ?",
+  "instruction": null,
+  "injected": null,
+  "location": null,
+  "source": null,
+  "toolCalled": null,
+  "output": "Тэсгэмийн хяналтын протокол нь өгөгдлийг найдвартай, дарааллын дагуу хүргэдэг бол хэрэглэгчийн датаграм протокол нь хурдас, гэвч найдваргүй аргаар өгөгдлийг дамжуулдаг."
+}

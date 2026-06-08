@@ -1,0 +1,23 @@
+{
+  "set": "mn-v4",
+  "lang": "mn",
+  "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+  "target": "mongolian-optimal-graded.json",
+  "id": "w6",
+  "task": "weather",
+  "question": "Лондон хотод одоо бороо орж байна уу?",
+  "instruction": null,
+  "injected": {
+    "location": "London",
+    "temperature_c": 17,
+    "feels_like_c": 15,
+    "humidity_pct": 42,
+    "wind_kmh": 32,
+    "precipitation_mm": 0,
+    "condition": "partly cloudy"
+  },
+  "location": null,
+  "source": null,
+  "toolCalled": null,
+  "output": "Лондон хотод одоо бороо оржээгүй байна. Тэнгэр багавтар үүлэрхэг, агаарын температур 17°C байна."
+}

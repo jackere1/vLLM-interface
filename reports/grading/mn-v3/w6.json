@@ -1,0 +1,23 @@
+{
+  "set": "mn-v3",
+  "lang": "mn",
+  "variant": "improved + reasoning + formal + keep-latin",
+  "target": "mongolian-reasoning-graded.json",
+  "id": "w6",
+  "task": "weather",
+  "question": "Лондон хотод одоо бороо орж байна уу?",
+  "instruction": null,
+  "injected": {
+    "location": "London",
+    "temperature_c": 17,
+    "feels_like_c": 15,
+    "humidity_pct": 42,
+    "wind_kmh": 32,
+    "precipitation_mm": 0,
+    "condition": "partly cloudy"
+  },
+  "location": null,
+  "source": null,
+  "toolCalled": null,
+  "output": "Лондон хотод одоо бороо орохгүй байна. Тэнгэр багавтар үүлэрхэг байна."
+}

@@ -1,0 +1,23 @@
+{
+  "set": "mn-v3",
+  "lang": "mn",
+  "variant": "improved + reasoning + formal + keep-latin",
+  "target": "mongolian-reasoning-graded.json",
+  "id": "w4",
+  "task": "weather",
+  "question": "Нью-Йорк-гийн агаарын температур хэд байна вэ?",
+  "instruction": null,
+  "injected": {
+    "location": "New York",
+    "temperature_c": -12,
+    "feels_like_c": -12,
+    "humidity_pct": 35,
+    "wind_kmh": 0,
+    "precipitation_mm": 0,
+    "condition": "clear sky"
+  },
+  "location": null,
+  "source": null,
+  "toolCalled": null,
+  "output": "Нью-Йорк хотод одоо -12°C, мэдрэгдэх байдлаар -12°C байна. Тэнгэр цэлмэг байна."
+}

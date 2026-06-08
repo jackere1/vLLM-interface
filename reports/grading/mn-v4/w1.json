@@ -1,0 +1,23 @@
+{
+  "set": "mn-v4",
+  "lang": "mn",
+  "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+  "target": "mongolian-optimal-graded.json",
+  "id": "w1",
+  "task": "weather",
+  "question": "Нью-Йорк-д одоо цаг агаар ямар байна?",
+  "instruction": null,
+  "injected": {
+    "location": "New York",
+    "temperature_c": -12,
+    "feels_like_c": -12,
+    "humidity_pct": 35,
+    "wind_kmh": 0,
+    "precipitation_mm": 0,
+    "condition": "clear sky"
+  },
+  "location": null,
+  "source": null,
+  "toolCalled": null,
+  "output": "Нью-Йорк хотод одоо минус арван хоёр градус байна. Тэнгэр цэлмэг байна."
+}

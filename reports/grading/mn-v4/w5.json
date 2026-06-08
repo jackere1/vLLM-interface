@@ -1,0 +1,23 @@
+{
+  "set": "mn-v4",
+  "lang": "mn",
+  "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+  "target": "mongolian-optimal-graded.json",
+  "id": "w5",
+  "task": "weather",
+  "question": "Улаанбаатар-д одоо цаг агаар ямар байна?",
+  "instruction": null,
+  "injected": {
+    "location": "Ulaanbaatar",
+    "temperature_c": -15,
+    "feels_like_c": -16,
+    "humidity_pct": 46,
+    "wind_kmh": 31,
+    "precipitation_mm": 0,
+    "condition": "fog"
+  },
+  "location": null,
+  "source": null,
+  "toolCalled": null,
+  "output": "Улаанбаатарт одоо хасах арван таван хэртэй, мэдрэгдэх байдлаар хасах арван зургаа байна. Цаг агаар манантай байна."
+}

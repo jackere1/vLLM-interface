@@ -1,0 +1,15 @@
+{
+  "set": "mn-v1",
+  "lang": "mn",
+  "variant": "minimal-prompt (baseline)",
+  "target": "mongolian-graded.json",
+  "id": "g13",
+  "task": "general",
+  "question": "Дэлхийн хамгийн өндөр уул аль вэ?",
+  "instruction": null,
+  "injected": null,
+  "location": null,
+  "source": null,
+  "toolCalled": null,
+  "output": "Дэлхийн хамгийн өндөр уул бол Эверест уул юм."
+}

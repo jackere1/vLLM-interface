@@ -1,119 +1,171 @@
 {
   "meta": {
-    "generatedAt": "2026-05-29",
+    "generatedAt": "2026-06-08",
     "model": "gemma-4-31b",
+    "modelRoot": "RedHatAI/gemma-4-31B-it-NVFP4",
     "language": "Mongolian (mn)",
     "variant": "improved-system-prompt",
-    "method": "LLM-judge + adversarial verify"
+    "method": "LLM-judge + adversarial verify (faithfulness, correctness, fluency)",
+    "samplesPerTask": 10
   },
   "overall": {
     "total": 30,
-    "pass": 22,
+    "pass": 20,
+    "passPct": 67,
     "fluentPct": 73,
-    "meanScore": 4
+    "meanScore": 4.1
   },
   "summary": {
-    "weather": {
-      "n": 10,
-      "pass": 10,
-      "passPct": 100,
-      "fluentPct": 100,
-      "meanScore": 4.9
-    },
     "general": {
       "n": 10,
       "pass": 8,
       "passPct": 80,
-      "fluentPct": 80,
-      "meanScore": 4.3
+      "meanScore": 4.4,
+      "fluentPct": 80
+    },
+    "weather": {
+      "n": 10,
+      "pass": 8,
+      "passPct": 80,
+      "meanScore": 4.5,
+      "fluentPct": 90
     },
     "xsum": {
       "n": 10,
       "pass": 4,
       "passPct": 40,
-      "fluentPct": 40,
-      "meanScore": 2.8
+      "meanScore": 3.3,
+      "fluentPct": 50
     }
   },
   "flagged": [
     {
+      "task": "general",
       "id": "g14",
-      "task": "general",
-      "problem": "Тэжэвчлэлт — invented non-word; it does not mean 'Transmission Control'. 'Transmission Control Protocol' should be e.g. 'Дамжуулалтыг хянах протокол' (control = хяналт/удирдах), so 'Тэжэвчлэлт дамжуулалтын протокол' is a garbled mistranslation of the TCP name.; 'Тэжэвчлэлт' is an invented non-word and not valid Mongolian; it is a garbled attempt to render 'Transmission Control' (TCP). 'Control' should be 'хяналт/удирдах', e.g. 'Дамжуулалтыг хянах протокол'.; 'Тэжэвчлэлт дамжуулалтын протокол' is a structurally garbled mistranslation of the TCP name (non-word for 'control' plus mangled word order).",
-      "output": "Тэжэвчлэлт дамжуулалтын протокол нь өгөгдлийг найдвартай, дарааллын дагуу хүргэж, хүлээн авсан эсэхийг баталгаажуулдаг. Харин хэрэглэгчийн датаграм протокол нь өгөгдлийг хурдан дамжуулахыг эрхэмлэдэг бөгөөд хүлээн авсан эсэхийг шалгадаггүй.",
+      "problem": "The output contains an invented/garbled Mongolian non-word: \"Тэсгэмийн хяналтын протокол\" is meant to render TCP = \"Transmission Control Protocol.\" The word \"Тэсгэм/Тэсгэмийн\" is not a real Mongolian word and does not mean \"transmission\" (correct would be \"дамжуулал/дамжуулалт\"), making it a hallucinated non-word that mistranslates the protocol name. Additionally, \"хурдас\" (in \"хурдас, гэвч найдваргүй аргаар\") is a malformed/non-native form; the correct adjective is \"хурдан\" (fast). These are concrete defects in a short answer whose entire purpose is to correctly explain TCP vs UDP.",
       "question": "TCP болон UDP протоколын гол ялгаа юу вэ?",
-      "injected": null
+      "injected": null,
+      "source": null,
+      "output": "Тэсгэмийн хяналтын протокол нь өгөгдлийг найдвартай, дарааллын дагуу хүргэдэг бол хэрэглэгчийн датаграм протокол нь хурдас, гэвч найдваргүй аргаар өгөгдлийг дамжуулдаг.",
+      "score": 2,
+      "pass": false,
+      "fluent": false
     },
     {
-      "id": "g20",
       "task": "general",
-      "problem": "конденсаци (унтрах) — 'унтрах' (to extinguish / fall asleep) is a wrong gloss for condensation; condensation is 'конденсац / өтгөрөл / нягтрал'; хэлбэржлэн — malformed/non-standard word; correct would be 'хэлбэрээ өөрчлөн' or 'хувирч'; үе шаруудаас — misspelling of 'үе шатуудаас' ('шат' = stage); 'шаруудаас' is a non-word; FACTUAL/HALLUCINATION: 'конденсаци (унтрах)' glosses condensation as 'унтрах' (to extinguish / fall asleep) — wrong, fabricated definition; should be 'конденсац / өтгөрөл / нягтрал'.; FLUENCY/NON-WORD: 'хэлбэржлэн' is malformed/mis-conjugated; correct would be 'хэлбэрээ өөрчлөн' or 'хувирч' (or converb 'хэлбэржин').; FLUENCY/REDUNDANT-AWKWARD: 'хэлбэржлэн хувирч' is semantically redundant and unnatural.",
-      "output": "Усны эргэлт гэдэг нь дэлхий дээрх усны хэмжээ тогтмол байх бөгөөд ус нь ууршиг, үүл болон бороо, цасны хэлбэрээр байнга эргэлдэж, хувирч байх процессыг хэлнэ.",
-      "question": "Усны эргэлт (water cycle) гэж юу вэ?",
-      "injected": null
+      "id": "g16",
+      "problem": "The first sentence contains the garbled non-word \"сэтгэнзүйн\", which is not a valid Mongolian word. The intended word is \"сэтгэхүйн\" (cognitive/of-thinking, from сэтгэхүй) or the two-word \"сэтгэл зүйн\" (psychological). \"сэтгэнзүй/сэтгэнзүйн\" is an invented, garbled blend that does not exist in Mongolian — a concrete lexical defect. Additionally, \"компьютерын\" is a misspelled genitive; standard Mongolian orthography requires \"компьютерийн\". The primary garbled-word (\"сэтгэнзүйн\") makes the answer non-native/incorrect and should fail.",
+      "question": "Хиймэл оюун ухаан гэж юу вэ? Хоёр өгүүлбэрээр тайлбарла.",
+      "injected": null,
+      "source": null,
+      "output": "Хиймэл оюун ухаан гэдэг нь хүний сэтгэнзүйн чадварыг дуурайлган бүтээсэн компьютерын систем юм. Энэхүү систем нь мэдээлэл боловсруулж, суралцаж, асуудлыг шийдвэрлэх чадвартай байдаг.",
+      "score": 2,
+      "pass": false,
+      "fluent": false
     },
     {
+      "task": "weather",
+      "id": "w5",
+      "problem": "The output garbles the injected temperature of -15°C. It renders it as \"минус арван давгаараа хэм\". \"давгаараа\" is an invented, garbled non-word — it is not a valid Mongolian word and matches no Mongolian numeral. The correct rendering of fifteen is \"арван таван\" (арав=10 + тав/таван=5). As written, \"арван давгаараа\" does not express the number 15 at all, so the injected temperature_c=-15 is not faithfully represented (the actual numeric value 15 is effectively corrupted/missing). Notably the feels-like value is rendered correctly as \"минус арван зургаа хэм\" (-16), which highlights that the -15 rendering is a real defect rather than a stylistic variant. This is both a hallucinated/garbled non-word and an unfaithfulness to the source data, which should make the output FAIL.",
+      "question": "Улаанбаатар-д одоо цаг агаар ямар байна?",
+      "injected": {
+        "temperature_c": -15,
+        "feels_like_c": -16,
+        "condition": "fog"
+      },
+      "source": null,
+      "output": "Улаанбаатарт одоо минус арван давгаараа хэм байна, мэдрэгдэх байдлаар минус арван зургаа хэм байна. Гадаа манан байна.",
+      "score": 2,
+      "pass": false,
+      "fluent": false
+    },
+    {
+      "task": "weather",
+      "id": "w8",
+      "problem": "Non-responsive / unfaithful answer that ignores the central question. The user asked a direct yes/no question: \"Парис хотод одоо бороо орж байна уу?\" (Is it raining in Paris right now?). The output (\"...минус арван зургаа градус, мэдрэгдэх байдлаар минус арван ес градус байна. Тэнгэр бүрхэг байна.\") only reports temperature (-16), feels-like (-19), and that the sky is overcast (бүрхэг). It never mentions rain (бороо) or precipitation (хур тунадас) at all and never answers the yes/no question. Critically, the injected data contains precipitation_mm: 0.8 — a non-zero value that is the single most relevant field to the rain question — yet the answer completely omits it. Reporting only \"overcast\" while there is measurable precipitation, and failing to state whether it is raining, makes the response unfaithful to the source data and non-responsive to the prompt. (The Mongolian language itself is native/correct and the temperatures match, but the answer does not address what was asked.)",
+      "question": "Парис хотод одоо бороо орж байна уу?",
+      "injected": {
+        "temperature_c": -16,
+        "feels_like_c": -19,
+        "condition": "overcast"
+      },
+      "source": null,
+      "output": "Парис хотод одоо минус арван зургаа градус, мэдрэгдэх байдлаар минус арван ес градус байна. Тэнгэр бүрхэг байна.",
+      "score": 4,
+      "pass": false,
+      "fluent": true
+    },
+    {
+      "task": "xsum",
       "id": "x21",
-      "task": "xsum",
-      "problem": "FAITHFULNESS hallucination: 'React-ийн төлөв удирдлага, эффектүүдийн талаарх' claims the doc covers React effects/useEffect; the source React section is exclusively useReducer-with-Context state management — effects are never mentioned. 'эффектүүд' is fabricated.; \"React-ийн төлөв удирдлага, эффектүүдийн талаарх\" — claims the document covers React effects (useEffect). The source's React section is exclusively about useReducer with Context for state management; there is no mention of effects/useEffect anywhere in the document. \"эффектүүд\" is an invented detail.",
-      "output": "Энэхүү баримт бичигт Некст-жейс болон вэ-эл-эл-эм-ийн талаарх техникийн зааварчилгааг багтаасан байна. Некст-жейс дээр өгөгдөл татах, динамик зам болон серверт үйлдлэх функцүүдийг хэрхэн ашиглахыг тайлбарлажээ. Вэ-эл-эл-эл-эм-ийн хэсэгт санах ойг удирдах, хурдыг нэмэгдүүлэх болон эй-ай хаягтай ажиллах аргуудыг заасан байна. Мөн Реактын төвлөрсөн төлөв удирдлагын тухай мэдээллийг оруулжээ.",
+      "problem": "The Mongolian summary contains garbled/invented non-words and a mistranslation that make it unfaithful and non-native. Specific defects: (1) \"сервер бүрэлхээ\" — \"бүрэлхээ\" is not a real Mongolian word; it is a garbled attempt at rendering \"Server Components\" (correct would be \"бүрэлдэхүүн\"). (2) \"аргаясуудыг\" — a garbled non-word; the intended plural of \"арга\" (method) is \"аргуудыг\"/\"арга замуудыг\", not \"аргаясуудыг\" (the stem \"аргаяс\" does not exist). (3) \"реактын төлөөллийн удирдлага\" mistranslates the source: React's useReducer+Context section is about STATE management (төлөв байдлын удирдлага), but \"төлөөлөл\" means representation/delegation, not state — a factual misrepresentation of the source. These garbled non-words and the mistranslation justify a failing grade.",
       "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч.",
       "injected": null,
-      "source": "[doc:401fc1a4]\n\n## Next.js — Data fetching in Server Components\nIn the App Router, data fetching is colocated inside async Server Components using the fetch API. The caching behavior is controlled per request. `fetch(url, { cache: 'force-cache' })` caches until manually invalidated (like getStaticProps) and is the default. `fetch(url, { cache: 'no-store' })` refetches on every request (like getServerSideProps). Time-based revalidation uses `fetch(url, { next: { revalidate: 10 } })` to cache with a 10-second lifetime.\n\nexport default async function Page() {\n  const staticData = await fetch('https://...', { cache: 'force-cache' })\n  const dynamicData = await fetch('https://...', { cache: 'no-store' })\n  const revalidated = await fetch('https://...', { next: { revalidate: 10 } })\n  return <div>...</div>\n}\n\n## React — useReducer with Context\nFor complex state, a parent manages it with useReducer while Context passes both state and dispatch deep into the tree, so any descendant can read state and dispatch actions without prop drilling.\n\nconst [tasks, dispatch] = useReducer(tasksReducer, initialTasks);\nfunction tasksReducer(tasks, action) {\n  switch (action.type) {\n    case 'added': return [...tasks, { id: action.id, text: action.text, done: false }];\n    case 'changed': return tasks.map(t => t.id === action.task.id ? action.task : t);\n    case 'deleted': return tasks.filter(t => t.i"
+      "source": "[doc:401fc1a4]\n\n## Next.js — Data fetching in Server Components\nIn the App Router, data fetching is colocated inside async Server Components using the fetch API. The caching behavior is controlled per request. `fetch(url, { cache: 'force-cache' })` caches until manually invalidated (like getStaticProps) and is the default. `fetch(url, { cache: 'no-store' })` refetches on every request (like getServerSideProps). Time-based revalidation uses `fetch(url, { next: { revalidate: 10 } })` to cache with a 10-second lifetime.\n\nexport default async function Page() {\n  const staticData = await fetch('https://...', { cache: 'force-cache' })\n  const dynamicData = await fetch('https://...', { cache: 'no-store' })\n  const revalidated = await fetch('https://...', { next: { revalidate: 10 } })\n  return <div>...</div>\n}\n\n## React — useReducer with Context\nFor complex state, a parent manages it with useReducer while Context passes both state and dispatch deep into the tree, so any descendant can read state and dispatch actions without prop drilling.\n\nconst [tasks, dispatch] = useReducer(tasksReducer, initialTasks);\nfunction tasksReducer(tasks, action) {\n  switch (action.type) {\n    case 'added': retu",
+      "output": "Энэхүү баримт бичиг нь некст дөтийн сервер бүрэлхээ, динамик зам болон серверт үйлдэл хийх аргачлалын тухай тайлбарласан байна. Мөн реактын төлөөллийн удирдлага болон вэ ллэм-ийн санах ойг оптималь болгох, өгөгдөл боловсруулах техникүүдийг авч үзжээ. Үүнд вэ ллэм-ийн оупен аи-тай нийцэх хаяг болон гүйцэтгэлийг нэмэгдүүлэх аргаясуудыг тусгасан байна.",
+      "score": 2,
+      "pass": false,
+      "fluent": false
     },
     {
+      "task": "xsum",
       "id": "x22",
-      "task": "xsum",
-      "problem": "вэ л л эмтэй — garbled letter-by-letter phonetic spelling of 'vLLM' that also reads as the meaningless 'эмтэй' (having medicine); broken non-word rendering of a proper noun; некст джиэс — awkward/non-standard phonetic transliteration of 'Next.js'; версел эй ай эс — garbled letter-by-letter transliteration of 'Vercel AI' (spelled out A-I-S); Түүнчлээ — misspelling/mis-conjugation; correct form is 'Түүнчлэн'; реактын / хук-уудыг — inconsistent lowercase phonetic rendering of technical terms; FLUENCY: 'вэ л л эмтэй' — garbled letter-by-letter spelling of 'vLLM' colliding with the real word 'эмтэй' (having medicine)",
-      "output": "Энэхүү баримт бичиг нь вэ л л эмтэй загварыг олон график процессор дээр хувааж ашиглах болон түүний сервер endpoints-ын талаарх мэдээллийг өгүүлжээ. Мөн реактын төрөл бүрийн хук-уудыг ашиглах арга, некст джиэс-ийн өгөгдөл татах болон динамик зам үүсгэх зааврыг багтаасан байна. Түүнчлээ версел эй ай эс дээрх чат удирдах функц болон маршрутын удирдлагын талаарх техникийн тайлбарыг тусгасан болно.",
+      "problem": "Multiple concrete defects in the Mongolian summary justify failure. (1) \"сервер төгдөлүүдийн\" is a garbled non-word: the source describes \"server endpoints\", whose correct Mongolian is \"төгсгөлүүд\"; \"төгдөлүүд\" is a corrupted invented word (missing letters). (2) \"Реактын хугцаат функцүүд\" mistranslates and garbles React's built-in Hooks: \"хугцаат\" is a misspelled form of \"хугацаат\" (meaning \"term/time-limited\") and is semantically unrelated to \"hooks\" (correct term: дэгээ) — a factual mischaracterization of the source content. (3) \"вэ л л эм\" is a garbled phonetic transliteration of the brand \"vLLM\" with nonsensical split spacing (letters scattered as \"вэ л л эм\"), rather than the Latin brand name \"vLLM\". These garbled non-words and the incorrect rendering of \"Hooks\" make the output unfaithful and non-native.",
       "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч.",
       "injected": null,
-      "source": "[doc:ab6aad3f]\n\n## vLLM — Tensor parallelism\nTensor parallelism shards model parameters across multiple GPUs within each layer, which is essential for models too large to fit on a single GPU. Set tensor_parallel_size to the number of GPUs.\n\nfrom vllm import LLM\nllm = LLM(model=\"meta-llama/Llama-3.3-70B-Instruct\", tensor_parallel_size=4)\n\n## React — Built-in hook categories\nReact's built-in Hooks fall into categories. State Hooks: useState (direct updates) and useReducer (update logic in a reducer). Context Hooks: useContext reads and subscribes to a context. Ref Hooks: useRef and useImperativeHandle. Effect Hooks: useEffect connects to external systems, useLayoutEffect fires before paint, useInsertionEffect for libraries injecting CSS. Performance Hooks: useMemo caches expensive results, useCallback caches function definitions, useTransition and useDeferredValue keep the UI responsive. Other Hooks: useId, useSyncExternalStore, useActionState.\n\n## Next.js — Data fetching in Server Components\nIn the App Router, data fetching is colocated inside async Server Components using the fetch API. The caching behavior is controlled per request. `fetch(url, { cache: 'force-cache' })` caches until manually invalidated (like getStaticProps) and is the default. `fetch(url, { cache: 'no-store' })` refetches on every request (like getServerSideProps). Time-based revalidation uses `fetch(url, { "
+      "source": "[doc:ab6aad3f]\n\n## vLLM — Tensor parallelism\nTensor parallelism shards model parameters across multiple GPUs within each layer, which is essential for models too large to fit on a single GPU. Set tensor_parallel_size to the number of GPUs.\n\nfrom vllm import LLM\nllm = LLM(model=\"meta-llama/Llama-3.3-70B-Instruct\", tensor_parallel_size=4)\n\n## React — Built-in hook categories\nReact's built-in Hooks fall into categories. State Hooks: useState (direct updates) and useReducer (update logic in a reducer). Context Hooks: useContext reads and subscribes to a context. Ref Hooks: useRef and useImperativeHandle. Effect Hooks: useEffect connects to external systems, useLayoutEffect fires before paint, useInsertionEffect for libraries injecting CSS. Performance Hooks: useMemo caches expensive results, useCallback caches function definitions, useTransition and useDeferredValue keep the UI responsive. Other Hooks: useId, useSyncExternalStore, useActionState.\n\n## Next.js — Data fetching in Server Components\nIn the App Router, data fetching is colocated inside async Server Components using the fetch API. The caching behavior is controlled per request. `fetch(url, { cache: 'force-cache' })` caches un",
+      "output": "Энэхүү баримт бичигт вэ л л эм-ийн тензор параллелизм болон сервер төгдөлүүдийн талаарх мэдээллийг багтаасан байна. Реактын хугцаат функцүүдийн ангилал болон контекст ашиглах аргуудыг тайлбарласан. Мөн некст джиэс-ийн өгөгдөл татах, динамик зам болон алдааг шийдвэрлэх заавруудыг оруулжээ. Түүнчлэн версел хиймэлийн хэрэгслийн чат-ын функцийг хэрэглэх заавар байна.",
+      "score": 2,
+      "pass": false,
+      "fluent": false
     },
     {
+      "task": "xsum",
+      "id": "x23",
+      "problem": "Non-native garbled phonetic transliteration of generic (non-brand) English technical terms into Cyrillic. The third sentence contains \"стрэкчерд аутпут\" — a phonetic Cyrillic rendering of the English phrase \"structured output,\" which is NOT on the allowed brand-name list (Next.js/React/vLLM/Vercel/SDK/TCP/UDP/DNS). This is garbled, non-native phrasing: a native Mongolian technical writer would either keep \"structured output\" in Latin or translate it (e.g. \"бүтэцлэгдсэн гаралт\"). The defect is compounded because the very same sentence then correctly translates the concept as \"бүтэцлэгдсэн өгөгдөл\" (structured data), so \"стрэкчерд аутпут\" is redundant garbled filler. Likewise \"стрим-текст\" phonetically transliterates the API method name streamText instead of preserving the identifier. (Content faithfulness is otherwise fine — Next.js/React components, Vercel AI SDK, vLLM endpoints, streamText/structured output, agents all match the source — but the Mongolian quality fails on these garbled, non-native, non-brand transliterations.)",
+      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч.",
+      "injected": null,
+      "source": "[doc:95562161]\n\n## Next.js — Dynamic routes with params\nA dynamic segment like [slug] receives a params prop. In recent versions params is a Promise that must be awaited before use. The component fetches the matching record and renders it.\n\nexport default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {\n  const { slug } = await params\n  const post = await getPost(slug)\n  return (<div><h1>{post.title}</h1><p>{post.content}</p></div>)\n}\n\n## vLLM — Server endpoints overview\nThe server provides multiple OpenAI-compatible endpoints: /v1/completions for raw text generation, /v1/chat/completions for chat with message history and tools, /v1/embeddings for embeddings, and /v1/audio/transcriptions and /v1/audio/translations for speech. It hosts one model at a time and provides a models listing endpoint. The host and port default to localhost:8000 and are configurable with --host and --port.\n\n## Vercel AI SDK — streamText and structured output\nstreamText streams text from a model and prompt; the output is available as a textStream, with a fullStream of typed parts and tool-call handling, retries, and telemetry built in. streamObject is deprecated in favor of st",
+      "output": "Энэхүү баримт бичигт Некст-жейс болон Реактын сервер болон клиент бүрэлдэхүүн хэсгүүдийн ажиллах зарчим, өгөгдөл авах аргуудыг тайлбарласан байна. Версел-ийн хиймэл оюун ухааны хэрэгсэл болон вэ-эл-эл-эмийн сервер хаягуудын талаарх мэдээллийг багтаажээ. Мөн стрим-текст болон стрэкчерд аутпут ашиглан бүтэцлэгдсэн өгөгдөл урсгалах болон агент үүсгэх зааврыг өгсөн байна.",
+      "score": 3,
+      "pass": false,
+      "fluent": false
+    },
+    {
+      "task": "xsum",
       "id": "x24",
-      "task": "xsum",
-      "problem": "\"том хэмжээснүүдийг\" — uses \"хэмжээс\" (dimension/size) where the source means \"models\" (\"models too large to fit on a single GPU\"); slightly inaccurate word choice, should be \"том загваруудыг\"; \"тухай зааварчилгааг багтсан байна\" — case/voice mismatch; natural form would be \"зааварчилгаа багтсан байна\" or \"зааварчилгааг багтаасан байна\"; \"Некст-дүс хүрээний\" — awkward transliteration of Next.js; acceptable but unnatural; \"вэ-эл-эл-эм\" — spelled-out vLLM, awkward but understandable; see above",
-      "output": "Энэхүү баримт бичиг нь Некст-дүс хүрээний сервер бүрэлдэхүүн, өгөгдөл татах, алдааг зохицуулах болон мета өгөгдлийг динамикаар үүсгэх аргуудын тухай зааварчилгааг багтсан байна. Мөн вэ-эл-эл-эм ашиглан тензорын параллелизмийг тохируулж, том хэмжээснүүдийг олон график процессорт хуваах арга замыг тайлбарласан. Түүнчлэн Версел хиймэл оюуны хөгжүүлэлтийн багж хэрэгслээр чат болон олон шатлалын агент үүсгэх боломжтойг зааж өгсөн байна.",
+      "problem": "Garbled/invented non-word: the output writes \"алдааг зохимаглах аргуудын\" where \"зохимаглах\" is not a valid Mongolian word. The intended meaning is \"error handling\", whose correct Mongolian verb is \"зохицуулах\" (handle/regulate) or \"боловсруулах\". \"Зохимаглах\" does not exist in Mongolian and appears to be a corruption of \"зохицуулах\". This non-native, non-word coinage is a concrete defect that should fail the sample. (Content is otherwise faithful to the source and uses all-Cyrillic script.)",
       "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч.",
       "injected": null,
-      "source": "[doc:1be7be0b]\n\n## Next.js — Route handler with error handling\nA POST route handler should wrap work in try/catch, return appropriate HTTP status codes, and avoid leaking sensitive error detail to clients.\n\nimport { submit } from '@/lib/submit'\nexport async function POST(request: Request) {\n  try {\n    await submit(request)\n    return new Response(null, { status: 204 })\n  } catch (reason) {\n    const message = reason instanceof Error ? reason.message : 'Unexpected error'\n    return new Response(message, { status: 500 })\n  }\n}\n\n## vLLM — Tensor parallelism\nTensor parallelism shards model parameters across multiple GPUs within each layer, which is essential for models too large to fit on a single GPU. Set tensor_parallel_size to the number of GPUs.\n\nfrom vllm import LLM\nllm = LLM(model=\"meta-llama/Llama-3.3-70B-Instruct\", tensor_parallel_size=4)\n\n## Next.js — Data fetching in Server Components\nIn the App Router, data fetching is colocated inside async Server Components using the fetch API. The caching behavior is controlled per request. `fetch(url, { cache: 'force-cache' })` caches until manually invalidated (like getStaticProps) and is the default. `fetch(url, { cache: 'no-store' })` refetches on every request (like getServerSideProps). Time-based revalidation uses `fetch(url, { next: { revalidate: 10 } })` to cache with a 10-second lifetime.\n\nexport default async function Page("
+      "source": "[doc:1be7be0b]\n\n## Next.js — Route handler with error handling\nA POST route handler should wrap work in try/catch, return appropriate HTTP status codes, and avoid leaking sensitive error detail to clients.\n\nimport { submit } from '@/lib/submit'\nexport async function POST(request: Request) {\n  try {\n    await submit(request)\n    return new Response(null, { status: 204 })\n  } catch (reason) {\n    const message = reason instanceof Error ? reason.message : 'Unexpected error'\n    return new Response(message, { status: 500 })\n  }\n}\n\n## vLLM — Tensor parallelism\nTensor parallelism shards model parameters across multiple GPUs within each layer, which is essential for models too large to fit on a single GPU. Set tensor_parallel_size to the number of GPUs.\n\nfrom vllm import LLM\nllm = LLM(model=\"meta-llama/Llama-3.3-70B-Instruct\", tensor_parallel_size=4)\n\n## Next.js — Data fetching in Server Components\nIn the App Router, data fetching is colocated inside async Server Components using the fetch API. The caching behavior is controlled per request. `fetch(url, { cache: 'force-cache' })` caches until manually invalidated (like getStaticProps) and is the default. `fetch(url, { cache: 'no-store' })",
+      "output": "Энэхүү баримт бичигт Некст-Джей-Эс-ийн сервер бүрэлдэхүүн хэсгүүд, өгөгдөл татах болон алдааг зохимаглах аргуудын талаарх зааврыг тусгасан байна. Мөн Ви-Эл-Эл-Эм-ийн тензор параллелизмийн тохиргоо болон Версел-ийн хиймэл оюун ухааны хэрэгслийн чат болон агент ашиглах зааврыг багтаажээ. Ерөнхийдөө программ хангамжийн хөгжүүлэлтийн техник болон өгөгдлийг удирдах аргачлалыг тайлбарласан байна.",
+      "score": 2,
+      "pass": false,
+      "fluent": false
     },
     {
+      "task": "xsum",
       "id": "x25",
-      "task": "xsum",
-      "problem": "Мөнルートхендлерийн — Japanese katakana 'ルート' (route) is spliced into the middle of a Mongolian word, producing a broken mixed-script non-word; should be 'Мөн рут хендлер/маршрут хендлерийн'; transliterations like 'Реактын', 'Некст', 'Версел Эй Ай Эс Ди Кей', 'Ви Эл Эл Эм', 'Оупен Эй Ай' are awkward/unidiomatic for technical names though intelligible; see above",
-      "output": "Энэхүү баримт бичигт Реактын хукнуудын ангилал болон Некст-ийн динамик зам, серверт үйлдлүүд, стриминг болон мета өгөгдлийг удирдах аргуудыг тайлбарласан байна. Версел Эй Ай Эс Ди Кей-ийн чат удирдлага болон Ви Эл Эл Эм-ийн Оупен Эй Ай-тай нийцэх интерфэйсийн талаар мэдээлэл өгсөн байна. Мөнルート хендлерийн алдааг хэрхэн зохицуулах зааврыг багтаажээ.",
+      "problem": "The Mongolian summary contains a clear grammatical error and garbled non-words that mark it as non-native/defective. (1) \"...зааварчилгааг тусгаасны байна\" is ungrammatical: the genitive verbal-noun form \"тусгаасны\" cannot combine with \"байна\"; the correct construction is \"тусгасан байна\". (2) \"опэн эй ий\" is a garbled letter-by-letter Cyrillic spelling-out of \"OpenAI\" (reading as \"Open A E/I\") that is nonsensical as a term; likewise \"ви эл эл эм\" spells vLLM out letter-by-letter awkwardly. (3) \"серверт үйлдлүүлэх функц\" uses the invented/non-standard verb form \"үйлдлүүлэх\" for \"Server Actions\". These constitute non-native phrasing plus invented/garbled words, justifying a FAIL.",
       "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч.",
       "injected": null,
-      "source": "[doc:95f098c7]\n\n## React — Built-in hook categories\nReact's built-in Hooks fall into categories. State Hooks: useState (direct updates) and useReducer (update logic in a reducer). Context Hooks: useContext reads and subscribes to a context. Ref Hooks: useRef and useImperativeHandle. Effect Hooks: useEffect connects to external systems, useLayoutEffect fires before paint, useInsertionEffect for libraries injecting CSS. Performance Hooks: useMemo caches expensive results, useCallback caches function definitions, useTransition and useDeferredValue keep the UI responsive. Other Hooks: useId, useSyncExternalStore, useActionState.\n\n## Next.js — Dynamic routes with params\nA dynamic segment like [slug] receives a params prop. In recent versions params is a Promise that must be awaited before use. The component fetches the matching record and renders it.\n\nexport default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {\n  const { slug } = await params\n  const post = await getPost(slug)\n  return (<div><h1>{post.title}</h1><p>{post.content}</p></div>)\n}\n\n## Vercel AI SDK — useChat on the client\nThe useChat hook from @ai-sdk/react manages chat state on the client. It exposes messages and sendMessage; each message has parts that can be text or tool-call parts, which the UI renders accordingly.\n\nconst { messages, sendMessage } = useChat();\nmessages.map(m => m.pa"
+      "source": "[doc:95f098c7]\n\n## React — Built-in hook categories\nReact's built-in Hooks fall into categories. State Hooks: useState (direct updates) and useReducer (update logic in a reducer). Context Hooks: useContext reads and subscribes to a context. Ref Hooks: useRef and useImperativeHandle. Effect Hooks: useEffect connects to external systems, useLayoutEffect fires before paint, useInsertionEffect for libraries injecting CSS. Performance Hooks: useMemo caches expensive results, useCallback caches function definitions, useTransition and useDeferredValue keep the UI responsive. Other Hooks: useId, useSyncExternalStore, useActionState.\n\n## Next.js — Dynamic routes with params\nA dynamic segment like [slug] receives a params prop. In recent versions params is a Promise that must be awaited before use. The component fetches the matching record and renders it.\n\nexport default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {\n  const { slug } = await params\n  const post = await getPost(slug)\n  return (<div><h1>{post.title}</h1><p>{post.content}</p></div>)\n}\n\n## Vercel AI SDK — useChat on the client\nThe useChat hook from @ai-sdk/react manages chat state on the client.",
+      "output": "Энэхүү баримт бичигт реактын төрөл бүрийн хук болон некст жиэсийн динамик зам, серверт үйлдлүүлэх функц, урсгал дамжуулах болон мета өгөгдөл үүсгэх аргуудын талаарх зааварчилгааг тусгаасны байна. Мөн версел хиймэл оюун ухааны хэрэглэгчийн талын чат удирдлага болон ви эл эл эм-ийн опэн эй ий-тэй нийцэх хаягт суурилсан интерфэйсийн талаарх мэдээллийг багтаасан байна. Энэ нь вэб хөгжүүлэлтийн орчин үеийн техникүүдийг ашиглан өгөгдөл боловсруулах, алдааг засах болон гүйцэтгэлийг сайжруулах арга замыг зааж байна.",
+      "score": 2,
+      "pass": false,
+      "fluent": false
     },
     {
-      "id": "x28",
       "task": "xsum",
-      "problem": "багшийн текст — \"teacher's text\", a nonsensical mistranslation; the source refers to the AI SDK's streamText, not a teacher; хаягнүүдийн — malformed plural of хаяг (endpoint); correct Mongolian plural is хаягууд/хаягуудын, this is a mis-conjugation; серверт үйлдлүүдийг — awkward dative case where nominative 'сервер үйлдлүүд' (Server Actions) is intended; Некст-жейс / Вил-эл-эл-эм / Версел — clumsy phonetic Cyrillic transliterations of Next.js, vLLM, Vercel (stylistically poor); FLUENCY/MISTRANSLATION: 'багшийн текст' = \"teacher's text\" (багш = teacher), a nonsensical mis-rendering of streamText — clearly broken Mongolian.; FLUENCY/GRAMMAR: 'хаягнүүдийн' is a malformed plural of хаяг (endpoint); correct form is хаягууд/хаягуудын. Confirmed хаягууд is not present.",
-      "output": "Энэхүү баримт бичигт Некст-жейс-ийн сервер бүрэлдэхүүн хэсгүүд, өгөгдөл татах болон серверт үйлдлүүдийг хэрхэн ашиглах зааврыг тусгажээ. Вил-эл-эл-эм-ийн санах ойг удирдах, гүйцэтгэлийг сайжруулах болон төрөл бүрийн хаягнүүдийн талаарх мэдээллийг багтаасан байна. Мөн Версел-ийн хиймэл оюун ухааны хөгжүүлэлтийн багшийн текст болон бүтэцлэгдсэн өгөгдлийг урсгалаар дамжуулах боломжийг тайлбарласан байна.",
+      "id": "x27",
+      "problem": "Garbled/invented brand-name transliterations into Cyrillic. \"Некст-дүс\" is meant to render \"Next.js\", but \"дүс\" is a non-word that does not correspond to \".js\" in any standard Mongolian/Cyrillic reading (which would be \"жэй-эс\"/\"дот жэй эс\"); it is an invented garbled token. Likewise \"Версел ай-эс-дэк\" garbles \"Vercel AI SDK\" — \"ай-эс-дэк\" conflates and corrupts \"AI\" (эй-ай) and \"SDK\" (эс-дэ-кэй), with \"дэк\" being a non-standard, garbled rendering. The instructions explicitly allow these brand names (Next.js/Vercel/SDK) in Latin script, so the model instead produced corrupted phonetic non-words. While the document's overall content (Next.js, React, vLLM, Vercel AI SDK topics: error handling, server/client components, useReducer state, memory conservation, chat) is faithfully summarized, these garbled non-words are a concrete quality/faithfulness defect (misrepresenting the brand names) that warrants failing the output.",
       "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч.",
       "injected": null,
-      "source": "[doc:02059941]\n\n## Next.js — Data fetching in Server Components\nIn the App Router, data fetching is colocated inside async Server Components using the fetch API. The caching behavior is controlled per request. `fetch(url, { cache: 'force-cache' })` caches until manually invalidated (like getStaticProps) and is the default. `fetch(url, { cache: 'no-store' })` refetches on every request (like getServerSideProps). Time-based revalidation uses `fetch(url, { next: { revalidate: 10 } })` to cache with a 10-second lifetime.\n\nexport default async function Page() {\n  const staticData = await fetch('https://...', { cache: 'force-cache' })\n  const dynamicData = await fetch('https://...', { cache: 'no-store' })\n  const revalidated = await fetch('https://...', { next: { revalidate: 10 } })\n  return <div>...</div>\n}\n\n## Next.js — Route handler with error handling\nA POST route handler should wrap work in try/catch, return appropriate HTTP status codes, and avoid leaking sensitive error detail to clients.\n\nimport { submit } from '@/lib/submit'\nexport async function POST(request: Request) {\n  try {\n    await submit(request)\n    return new Response(null, { status: 204 })\n  } catch (reason) {\n    const message = reason instanceof Error ? reason.message : 'Unexpected error'\n    return new Response(message, { status: 500 })\n  }\n}\n\n## vLLM — PagedAttention, batching and chunked prefill\nvLLM achieves"
-    },
-    {
-      "id": "x29",
-      "task": "xsum",
-      "problem": "бүрэлхэзүүд — broken non-word; intended бүрэлдэхүүн (Server Components). The 'х...з' sequence is not a real Mongolian word, it is a garbled mis-spelling.; Эс-Ди-Эйкэйн — garbled Cyrillic transliteration of 'SDK' (should be Эс-Ди-Кэй); the inserted 'Эй' is spurious.; Heavy/awkward Cyrillic transliteration of brand names (Некст-Джей-Эс, Версел Эй-Ай) reads unnaturally for technical content.; FLUENCY (broken non-word): 'бүрэлхэзүүд' (б-ү-р-э-л-х-э-з-ү-ү-д) is not a real Mongolian word. It is a garbled mis-spelling of 'бүрэлдэхүүн(үүд)' (the rendering of 'Server Components'); the 'х-э-з' sequence corrupts the word. This is a clear fluency failure.; FLUENCY (garbled transliteration): 'Эс-Ди-Эйкэйн' is a corrupted Cyrillic transliteration of 'SDK'. The correct form is 'Эс-Ди-Кэй'; the inserted 'Эй' syllable is spurious, producing a non-standard token.; FLUENCY (awkward, minor): Wholesale Cyrillic transliteration of brand names ('Некст-Джей-Эс' for Next.js, 'Версел Эй-Ай' for Vercel AI, 'Реактын' for React's) reads unnaturally for technical documentation, where the Latin names are conventionally kept; awkward but not independently disqualifying.",
-      "output": "Энэхүү баримт бичиг нь Некст-Джей-Эс болон Реактын боломжуудын тухай зааварчилгаа юм. Үүнд сервер бүрэлхэзүүд, өгөгдөл татах, динамик мета өгөгдөл тохируулах болон төрөл бүрийн хук ашиглах зааврыг багтаасан байна. Мөн Версел Эй-Ай Эс-Ди-Эйкэйн олон шатлалт агент ашиглах талаарх мэдээллийг өгсөн байна.",
-      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч.",
-      "injected": null,
-      "source": "[doc:b852c6e2]\n\n## Next.js — Server Actions for mutations\nMutations should be handled by Server Actions, invoked from a <form> so they only run on explicit user interaction (never as a side effect of rendering). This keeps mutation logic on the server and avoids accidental writes during render.\n\nimport { logout } from './actions'\nexport default function Page() {\n  return (<><UserProfile /><form action={logout}><button type=\"submit\">Logout</button></form></>)\n}\n\n## Vercel AI SDK — Multi-step streamText agent\nA multi-step agent chains streamText calls inside createUIMessageStream. Step 1 can force a tool call (toolChoice: 'required'); step 2 continues the workflow with a different model/system prompt and the messages from the previous step. Results are merged into one UI message stream, controlling start/finish events.\n\nconst result1 = streamText({ model: 'openai/gpt-4o-mini', system: 'Extract the user goal.', messages, toolChoice: 'required', tools: { extractGoal: tool({ inputSchema: z.object({ goal: z.string() }), execute: async ({ goal }) => goal }) } });\nwriter.merge(result1.toUIMessageStream({ sendFinish: false }));\nconst result2 = streamText({ model: 'openai/gpt-4o', system: 'Repeat the extracted goal.', messages: [...convertToModelMessages(messages), ...(await result1.response).messages] });\nwriter.merge(result2.toUIMessageStream({ sendStart: false }));\n\n## Next.js — Dynam"
-    },
-    {
-      "id": "x30",
-      "task": "xsum",
-      "problem": "багтгасан — malformed; correct form is 'багтаасан' (included), a mis-conjugation/non-word; бүрэлхэц — invented non-word used for 'server component'; correct is 'бүрэлдэхүүн хэсэг'; урсгалах — malformed derivation; correct is 'урсгах' (to stream); Некст-жэс — awkward phonetic transliteration of 'Next.js'; 'жэс' for 'js' is non-standard/invented; вэл-эл-эм — awkward letter-by-letter transliteration of 'vLLM'; Реактын / Версел — non-standard transliterations of React/Vercel",
-      "output": "Энэхүү баримт бичигт Некст-жэс болон Реактын хөгжүүлэлтийн зааврыг багтгасан байна. Үүнд сервер бүрэлхэц, өгөгдөл татах, алдааг зохицуулах болон төрөл бүрийн хук ашиглах заавар багтсан. Мөн вэл-эл-эм болон Версел хиймэл оюуны багцыг ашиглан санах ойг хэмнэх, бүтэцлэгдсэн өгөгдөл урсгалах аргуудыг тайлбарласан байна.",
-      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч.",
-      "injected": null,
-      "source": "[doc:cff76849]\n\n## Next.js — Dynamic routes with params\nA dynamic segment like [slug] receives a params prop. In recent versions params is a Promise that must be awaited before use. The component fetches the matching record and renders it.\n\nexport default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {\n  const { slug } = await params\n  const post = await getPost(slug)\n  return (<div><h1>{post.title}</h1><p>{post.content}</p></div>)\n}\n\n## vLLM — Conserving memory\nMemory usage can be reduced by limiting context length with max_model_len and the maximum batch size with max_num_seqs. This is useful under memory constraints or when sequences are short.\n\nfrom vllm import LLM\nllm = LLM(model=\"adept/fuyu-8b\", max_model_len=2048, max_num_seqs=2)\n\n## React — Built-in hook categories\nReact's built-in Hooks fall into categories. State Hooks: useState (direct updates) and useReducer (update logic in a reducer). Context Hooks: useContext reads and subscribes to a context. Ref Hooks: useRef and useImperativeHandle. Effect Hooks: useEffect connects to external systems, useLayoutEffect fires before paint, useInsertionEffect for libraries injecting CSS. Performance Hooks: useMemo caches expensive results, useCallback caches function definitions, useTransition and useDeferredValue keep the UI responsive. Other Hooks: useId, useSyncExternalStore, useActionState.\n\n#"
+      "source": "[doc:676e57e4]\n\n## Next.js — Route handler with error handling\nA POST route handler should wrap work in try/catch, return appropriate HTTP status codes, and avoid leaking sensitive error detail to clients.\n\nimport { submit } from '@/lib/submit'\nexport async function POST(request: Request) {\n  try {\n    await submit(request)\n    return new Response(null, { status: 204 })\n  } catch (reason) {\n    const message = reason instanceof Error ? reason.message : 'Unexpected error'\n    return new Response(message, { status: 500 })\n  }\n}\n\n## vLLM — OpenAI-compatible Chat API\nvLLM exposes an HTTP server implementing the OpenAI API protocol, acting as a drop-in replacement. POST /v1/chat/completions accepts messages (the conversation history), plus optional model, stream, max_tokens, temperature, top_p, and stop. The response contains choices and a usage object with prompt_tokens, completion_tokens, and total_tokens. parallel_tool_calls controls whether more than one tool call is allowed per request (default true).\n\n## Next.js — Server Components passing data to Client Components\nA Server Component can fetch data directly with async/await and forward it to a Client Component as props. This repla",
+      "output": "Энэхүү баримт бичиг нь Некст-дүс, Реактаас гадна вэ-эл-эл-эм болон Версел ай-эс-дэк технологийн талаарх зааварчилгааг агуулсан байна. Үүнд сервер болон клиент бүрэлдэхүүн хэсгүүдийн өгөгдөл дамжуулах, алдааг зохицуулах, төлөвийг удирдах аргуудыг тайлбарласан байна. Мөн хиймэл оюун ухааны загварыг ашиглах, санах ойг хэмнэх болон чатлах функц хэрэглэх зааврыг тусгажээ.",
+      "score": 4,
+      "pass": false,
+      "fluent": true
     }
   ]
 }

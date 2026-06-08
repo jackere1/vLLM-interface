@@ -12,7 +12,7 @@ const VLLM_BASE_URL = "https://clean-hostels-holdem-election.trycloudflare.com/v
 const VLLM_API_KEY =
   "a39e4fb12f8062efbb56dbb5be6fc8d3b58af30629afae586aaa8850c5ea8a0c";
 // Model id as exposed by /v1/models on the vLLM server.
-// (Underlying weights: LilaRest/gemma-4-31B-it-NVFP4-turbo)
+// (Underlying weights: RedHatAI/gemma-4-31B-it-NVFP4)
 const MODEL = "gemma-4-31b";
 
 const SYSTEM_PROMPT = `You are a friendly, concise weather assistant.

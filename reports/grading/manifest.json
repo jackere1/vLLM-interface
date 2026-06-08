@@ -1,0 +1,1370 @@
+[
+  {
+    "set": "english",
+    "lang": "en",
+    "variant": "english",
+    "target": "quality-graded.json",
+    "id": "w1",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/english/w1.json"
+  },
+  {
+    "set": "english",
+    "lang": "en",
+    "variant": "english",
+    "target": "quality-graded.json",
+    "id": "w2",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/english/w2.json"
+  },
+  {
+    "set": "english",
+    "lang": "en",
+    "variant": "english",
+    "target": "quality-graded.json",
+    "id": "w3",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/english/w3.json"
+  },
+  {
+    "set": "english",
+    "lang": "en",
+    "variant": "english",
+    "target": "quality-graded.json",
+    "id": "w4",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/english/w4.json"
+  },
+  {
+    "set": "english",
+    "lang": "en",
+    "variant": "english",
+    "target": "quality-graded.json",
+    "id": "w5",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/english/w5.json"
+  },
+  {
+    "set": "english",
+    "lang": "en",
+    "variant": "english",
+    "target": "quality-graded.json",
+    "id": "w6",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/english/w6.json"
+  },
+  {
+    "set": "english",
+    "lang": "en",
+    "variant": "english",
+    "target": "quality-graded.json",
+    "id": "w7",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/english/w7.json"
+  },
+  {
+    "set": "english",
+    "lang": "en",
+    "variant": "english",
+    "target": "quality-graded.json",
+    "id": "w8",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/english/w8.json"
+  },
+  {
+    "set": "english",
+    "lang": "en",
+    "variant": "english",
+    "target": "quality-graded.json",
+    "id": "o9",
+    "task": "offtopic",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/english/o9.json"
+  },
+  {
+    "set": "english",
+    "lang": "en",
+    "variant": "english",
+    "target": "quality-graded.json",
+    "id": "o10",
+    "task": "offtopic",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/english/o10.json"
+  },
+  {
+    "set": "english",
+    "lang": "en",
+    "variant": "english",
+    "target": "quality-graded.json",
+    "id": "o11",
+    "task": "offtopic",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/english/o11.json"
+  },
+  {
+    "set": "english",
+    "lang": "en",
+    "variant": "english",
+    "target": "quality-graded.json",
+    "id": "o12",
+    "task": "offtopic",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/english/o12.json"
+  },
+  {
+    "set": "english",
+    "lang": "en",
+    "variant": "english",
+    "target": "quality-graded.json",
+    "id": "o13",
+    "task": "offtopic",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/english/o13.json"
+  },
+  {
+    "set": "english",
+    "lang": "en",
+    "variant": "english",
+    "target": "quality-graded.json",
+    "id": "o14",
+    "task": "offtopic",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/english/o14.json"
+  },
+  {
+    "set": "english",
+    "lang": "en",
+    "variant": "english",
+    "target": "quality-graded.json",
+    "id": "o15",
+    "task": "offtopic",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/english/o15.json"
+  },
+  {
+    "set": "english",
+    "lang": "en",
+    "variant": "english",
+    "target": "quality-graded.json",
+    "id": "o16",
+    "task": "offtopic",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/english/o16.json"
+  },
+  {
+    "set": "english",
+    "lang": "en",
+    "variant": "english",
+    "target": "quality-graded.json",
+    "id": "s17",
+    "task": "summarize",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/english/s17.json"
+  },
+  {
+    "set": "english",
+    "lang": "en",
+    "variant": "english",
+    "target": "quality-graded.json",
+    "id": "s18",
+    "task": "summarize",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/english/s18.json"
+  },
+  {
+    "set": "english",
+    "lang": "en",
+    "variant": "english",
+    "target": "quality-graded.json",
+    "id": "s19",
+    "task": "summarize",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/english/s19.json"
+  },
+  {
+    "set": "english",
+    "lang": "en",
+    "variant": "english",
+    "target": "quality-graded.json",
+    "id": "s20",
+    "task": "summarize",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/english/s20.json"
+  },
+  {
+    "set": "english",
+    "lang": "en",
+    "variant": "english",
+    "target": "quality-graded.json",
+    "id": "s21",
+    "task": "summarize",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/english/s21.json"
+  },
+  {
+    "set": "english",
+    "lang": "en",
+    "variant": "english",
+    "target": "quality-graded.json",
+    "id": "s22",
+    "task": "summarize",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/english/s22.json"
+  },
+  {
+    "set": "english",
+    "lang": "en",
+    "variant": "english",
+    "target": "quality-graded.json",
+    "id": "s23",
+    "task": "summarize",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/english/s23.json"
+  },
+  {
+    "set": "english",
+    "lang": "en",
+    "variant": "english",
+    "target": "quality-graded.json",
+    "id": "s24",
+    "task": "summarize",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/english/s24.json"
+  },
+  {
+    "set": "english",
+    "lang": "en",
+    "variant": "english",
+    "target": "quality-graded.json",
+    "id": "l25",
+    "task": "longctx",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/english/l25.json"
+  },
+  {
+    "set": "english",
+    "lang": "en",
+    "variant": "english",
+    "target": "quality-graded.json",
+    "id": "l26",
+    "task": "longctx",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/english/l26.json"
+  },
+  {
+    "set": "english",
+    "lang": "en",
+    "variant": "english",
+    "target": "quality-graded.json",
+    "id": "l27",
+    "task": "longctx",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/english/l27.json"
+  },
+  {
+    "set": "english",
+    "lang": "en",
+    "variant": "english",
+    "target": "quality-graded.json",
+    "id": "l28",
+    "task": "longctx",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/english/l28.json"
+  },
+  {
+    "set": "english",
+    "lang": "en",
+    "variant": "english",
+    "target": "quality-graded.json",
+    "id": "l29",
+    "task": "longctx",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/english/l29.json"
+  },
+  {
+    "set": "english",
+    "lang": "en",
+    "variant": "english",
+    "target": "quality-graded.json",
+    "id": "l30",
+    "task": "longctx",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/english/l30.json"
+  },
+  {
+    "set": "english",
+    "lang": "en",
+    "variant": "english",
+    "target": "quality-graded.json",
+    "id": "l31",
+    "task": "longctx",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/english/l31.json"
+  },
+  {
+    "set": "english",
+    "lang": "en",
+    "variant": "english",
+    "target": "quality-graded.json",
+    "id": "l32",
+    "task": "longctx",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/english/l32.json"
+  },
+  {
+    "set": "mn-v1",
+    "lang": "mn",
+    "variant": "minimal-prompt (baseline)",
+    "target": "mongolian-graded.json",
+    "id": "g11",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v1/g11.json"
+  },
+  {
+    "set": "mn-v1",
+    "lang": "mn",
+    "variant": "minimal-prompt (baseline)",
+    "target": "mongolian-graded.json",
+    "id": "g12",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v1/g12.json"
+  },
+  {
+    "set": "mn-v1",
+    "lang": "mn",
+    "variant": "minimal-prompt (baseline)",
+    "target": "mongolian-graded.json",
+    "id": "g13",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v1/g13.json"
+  },
+  {
+    "set": "mn-v1",
+    "lang": "mn",
+    "variant": "minimal-prompt (baseline)",
+    "target": "mongolian-graded.json",
+    "id": "g14",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v1/g14.json"
+  },
+  {
+    "set": "mn-v1",
+    "lang": "mn",
+    "variant": "minimal-prompt (baseline)",
+    "target": "mongolian-graded.json",
+    "id": "g15",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v1/g15.json"
+  },
+  {
+    "set": "mn-v1",
+    "lang": "mn",
+    "variant": "minimal-prompt (baseline)",
+    "target": "mongolian-graded.json",
+    "id": "g16",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v1/g16.json"
+  },
+  {
+    "set": "mn-v1",
+    "lang": "mn",
+    "variant": "minimal-prompt (baseline)",
+    "target": "mongolian-graded.json",
+    "id": "g17",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v1/g17.json"
+  },
+  {
+    "set": "mn-v1",
+    "lang": "mn",
+    "variant": "minimal-prompt (baseline)",
+    "target": "mongolian-graded.json",
+    "id": "g18",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v1/g18.json"
+  },
+  {
+    "set": "mn-v1",
+    "lang": "mn",
+    "variant": "minimal-prompt (baseline)",
+    "target": "mongolian-graded.json",
+    "id": "g19",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v1/g19.json"
+  },
+  {
+    "set": "mn-v1",
+    "lang": "mn",
+    "variant": "minimal-prompt (baseline)",
+    "target": "mongolian-graded.json",
+    "id": "g20",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v1/g20.json"
+  },
+  {
+    "set": "mn-v1",
+    "lang": "mn",
+    "variant": "minimal-prompt (baseline)",
+    "target": "mongolian-graded.json",
+    "id": "w1",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v1/w1.json"
+  },
+  {
+    "set": "mn-v1",
+    "lang": "mn",
+    "variant": "minimal-prompt (baseline)",
+    "target": "mongolian-graded.json",
+    "id": "w10",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v1/w10.json"
+  },
+  {
+    "set": "mn-v1",
+    "lang": "mn",
+    "variant": "minimal-prompt (baseline)",
+    "target": "mongolian-graded.json",
+    "id": "w2",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v1/w2.json"
+  },
+  {
+    "set": "mn-v1",
+    "lang": "mn",
+    "variant": "minimal-prompt (baseline)",
+    "target": "mongolian-graded.json",
+    "id": "w3",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v1/w3.json"
+  },
+  {
+    "set": "mn-v1",
+    "lang": "mn",
+    "variant": "minimal-prompt (baseline)",
+    "target": "mongolian-graded.json",
+    "id": "w4",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v1/w4.json"
+  },
+  {
+    "set": "mn-v1",
+    "lang": "mn",
+    "variant": "minimal-prompt (baseline)",
+    "target": "mongolian-graded.json",
+    "id": "w5",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v1/w5.json"
+  },
+  {
+    "set": "mn-v1",
+    "lang": "mn",
+    "variant": "minimal-prompt (baseline)",
+    "target": "mongolian-graded.json",
+    "id": "w6",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v1/w6.json"
+  },
+  {
+    "set": "mn-v1",
+    "lang": "mn",
+    "variant": "minimal-prompt (baseline)",
+    "target": "mongolian-graded.json",
+    "id": "w7",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v1/w7.json"
+  },
+  {
+    "set": "mn-v1",
+    "lang": "mn",
+    "variant": "minimal-prompt (baseline)",
+    "target": "mongolian-graded.json",
+    "id": "w8",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v1/w8.json"
+  },
+  {
+    "set": "mn-v1",
+    "lang": "mn",
+    "variant": "minimal-prompt (baseline)",
+    "target": "mongolian-graded.json",
+    "id": "w9",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v1/w9.json"
+  },
+  {
+    "set": "mn-v1",
+    "lang": "mn",
+    "variant": "minimal-prompt (baseline)",
+    "target": "mongolian-graded.json",
+    "id": "x21",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v1/x21.json"
+  },
+  {
+    "set": "mn-v1",
+    "lang": "mn",
+    "variant": "minimal-prompt (baseline)",
+    "target": "mongolian-graded.json",
+    "id": "x22",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v1/x22.json"
+  },
+  {
+    "set": "mn-v1",
+    "lang": "mn",
+    "variant": "minimal-prompt (baseline)",
+    "target": "mongolian-graded.json",
+    "id": "x23",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v1/x23.json"
+  },
+  {
+    "set": "mn-v1",
+    "lang": "mn",
+    "variant": "minimal-prompt (baseline)",
+    "target": "mongolian-graded.json",
+    "id": "x24",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v1/x24.json"
+  },
+  {
+    "set": "mn-v1",
+    "lang": "mn",
+    "variant": "minimal-prompt (baseline)",
+    "target": "mongolian-graded.json",
+    "id": "x25",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v1/x25.json"
+  },
+  {
+    "set": "mn-v1",
+    "lang": "mn",
+    "variant": "minimal-prompt (baseline)",
+    "target": "mongolian-graded.json",
+    "id": "x26",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v1/x26.json"
+  },
+  {
+    "set": "mn-v1",
+    "lang": "mn",
+    "variant": "minimal-prompt (baseline)",
+    "target": "mongolian-graded.json",
+    "id": "x27",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v1/x27.json"
+  },
+  {
+    "set": "mn-v1",
+    "lang": "mn",
+    "variant": "minimal-prompt (baseline)",
+    "target": "mongolian-graded.json",
+    "id": "x28",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v1/x28.json"
+  },
+  {
+    "set": "mn-v1",
+    "lang": "mn",
+    "variant": "minimal-prompt (baseline)",
+    "target": "mongolian-graded.json",
+    "id": "x29",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v1/x29.json"
+  },
+  {
+    "set": "mn-v1",
+    "lang": "mn",
+    "variant": "minimal-prompt (baseline)",
+    "target": "mongolian-graded.json",
+    "id": "x30",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v1/x30.json"
+  },
+  {
+    "set": "mn-v2",
+    "lang": "mn",
+    "variant": "improved-system-prompt",
+    "target": "mongolian-improved-graded.json",
+    "id": "g11",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v2/g11.json"
+  },
+  {
+    "set": "mn-v2",
+    "lang": "mn",
+    "variant": "improved-system-prompt",
+    "target": "mongolian-improved-graded.json",
+    "id": "g12",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v2/g12.json"
+  },
+  {
+    "set": "mn-v2",
+    "lang": "mn",
+    "variant": "improved-system-prompt",
+    "target": "mongolian-improved-graded.json",
+    "id": "g13",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v2/g13.json"
+  },
+  {
+    "set": "mn-v2",
+    "lang": "mn",
+    "variant": "improved-system-prompt",
+    "target": "mongolian-improved-graded.json",
+    "id": "g14",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v2/g14.json"
+  },
+  {
+    "set": "mn-v2",
+    "lang": "mn",
+    "variant": "improved-system-prompt",
+    "target": "mongolian-improved-graded.json",
+    "id": "g15",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v2/g15.json"
+  },
+  {
+    "set": "mn-v2",
+    "lang": "mn",
+    "variant": "improved-system-prompt",
+    "target": "mongolian-improved-graded.json",
+    "id": "g16",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v2/g16.json"
+  },
+  {
+    "set": "mn-v2",
+    "lang": "mn",
+    "variant": "improved-system-prompt",
+    "target": "mongolian-improved-graded.json",
+    "id": "g17",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v2/g17.json"
+  },
+  {
+    "set": "mn-v2",
+    "lang": "mn",
+    "variant": "improved-system-prompt",
+    "target": "mongolian-improved-graded.json",
+    "id": "g18",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v2/g18.json"
+  },
+  {
+    "set": "mn-v2",
+    "lang": "mn",
+    "variant": "improved-system-prompt",
+    "target": "mongolian-improved-graded.json",
+    "id": "g19",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v2/g19.json"
+  },
+  {
+    "set": "mn-v2",
+    "lang": "mn",
+    "variant": "improved-system-prompt",
+    "target": "mongolian-improved-graded.json",
+    "id": "g20",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v2/g20.json"
+  },
+  {
+    "set": "mn-v2",
+    "lang": "mn",
+    "variant": "improved-system-prompt",
+    "target": "mongolian-improved-graded.json",
+    "id": "w1",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v2/w1.json"
+  },
+  {
+    "set": "mn-v2",
+    "lang": "mn",
+    "variant": "improved-system-prompt",
+    "target": "mongolian-improved-graded.json",
+    "id": "w10",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v2/w10.json"
+  },
+  {
+    "set": "mn-v2",
+    "lang": "mn",
+    "variant": "improved-system-prompt",
+    "target": "mongolian-improved-graded.json",
+    "id": "w2",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v2/w2.json"
+  },
+  {
+    "set": "mn-v2",
+    "lang": "mn",
+    "variant": "improved-system-prompt",
+    "target": "mongolian-improved-graded.json",
+    "id": "w3",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v2/w3.json"
+  },
+  {
+    "set": "mn-v2",
+    "lang": "mn",
+    "variant": "improved-system-prompt",
+    "target": "mongolian-improved-graded.json",
+    "id": "w4",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v2/w4.json"
+  },
+  {
+    "set": "mn-v2",
+    "lang": "mn",
+    "variant": "improved-system-prompt",
+    "target": "mongolian-improved-graded.json",
+    "id": "w5",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v2/w5.json"
+  },
+  {
+    "set": "mn-v2",
+    "lang": "mn",
+    "variant": "improved-system-prompt",
+    "target": "mongolian-improved-graded.json",
+    "id": "w6",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v2/w6.json"
+  },
+  {
+    "set": "mn-v2",
+    "lang": "mn",
+    "variant": "improved-system-prompt",
+    "target": "mongolian-improved-graded.json",
+    "id": "w7",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v2/w7.json"
+  },
+  {
+    "set": "mn-v2",
+    "lang": "mn",
+    "variant": "improved-system-prompt",
+    "target": "mongolian-improved-graded.json",
+    "id": "w8",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v2/w8.json"
+  },
+  {
+    "set": "mn-v2",
+    "lang": "mn",
+    "variant": "improved-system-prompt",
+    "target": "mongolian-improved-graded.json",
+    "id": "w9",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v2/w9.json"
+  },
+  {
+    "set": "mn-v2",
+    "lang": "mn",
+    "variant": "improved-system-prompt",
+    "target": "mongolian-improved-graded.json",
+    "id": "x21",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v2/x21.json"
+  },
+  {
+    "set": "mn-v2",
+    "lang": "mn",
+    "variant": "improved-system-prompt",
+    "target": "mongolian-improved-graded.json",
+    "id": "x22",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v2/x22.json"
+  },
+  {
+    "set": "mn-v2",
+    "lang": "mn",
+    "variant": "improved-system-prompt",
+    "target": "mongolian-improved-graded.json",
+    "id": "x23",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v2/x23.json"
+  },
+  {
+    "set": "mn-v2",
+    "lang": "mn",
+    "variant": "improved-system-prompt",
+    "target": "mongolian-improved-graded.json",
+    "id": "x24",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v2/x24.json"
+  },
+  {
+    "set": "mn-v2",
+    "lang": "mn",
+    "variant": "improved-system-prompt",
+    "target": "mongolian-improved-graded.json",
+    "id": "x25",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v2/x25.json"
+  },
+  {
+    "set": "mn-v2",
+    "lang": "mn",
+    "variant": "improved-system-prompt",
+    "target": "mongolian-improved-graded.json",
+    "id": "x26",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v2/x26.json"
+  },
+  {
+    "set": "mn-v2",
+    "lang": "mn",
+    "variant": "improved-system-prompt",
+    "target": "mongolian-improved-graded.json",
+    "id": "x27",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v2/x27.json"
+  },
+  {
+    "set": "mn-v2",
+    "lang": "mn",
+    "variant": "improved-system-prompt",
+    "target": "mongolian-improved-graded.json",
+    "id": "x28",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v2/x28.json"
+  },
+  {
+    "set": "mn-v2",
+    "lang": "mn",
+    "variant": "improved-system-prompt",
+    "target": "mongolian-improved-graded.json",
+    "id": "x29",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v2/x29.json"
+  },
+  {
+    "set": "mn-v2",
+    "lang": "mn",
+    "variant": "improved-system-prompt",
+    "target": "mongolian-improved-graded.json",
+    "id": "x30",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v2/x30.json"
+  },
+  {
+    "set": "mn-v3",
+    "lang": "mn",
+    "variant": "improved + reasoning + formal + keep-latin",
+    "target": "mongolian-reasoning-graded.json",
+    "id": "g11",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v3/g11.json"
+  },
+  {
+    "set": "mn-v3",
+    "lang": "mn",
+    "variant": "improved + reasoning + formal + keep-latin",
+    "target": "mongolian-reasoning-graded.json",
+    "id": "g12",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v3/g12.json"
+  },
+  {
+    "set": "mn-v3",
+    "lang": "mn",
+    "variant": "improved + reasoning + formal + keep-latin",
+    "target": "mongolian-reasoning-graded.json",
+    "id": "g13",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v3/g13.json"
+  },
+  {
+    "set": "mn-v3",
+    "lang": "mn",
+    "variant": "improved + reasoning + formal + keep-latin",
+    "target": "mongolian-reasoning-graded.json",
+    "id": "g14",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v3/g14.json"
+  },
+  {
+    "set": "mn-v3",
+    "lang": "mn",
+    "variant": "improved + reasoning + formal + keep-latin",
+    "target": "mongolian-reasoning-graded.json",
+    "id": "g15",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v3/g15.json"
+  },
+  {
+    "set": "mn-v3",
+    "lang": "mn",
+    "variant": "improved + reasoning + formal + keep-latin",
+    "target": "mongolian-reasoning-graded.json",
+    "id": "g16",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v3/g16.json"
+  },
+  {
+    "set": "mn-v3",
+    "lang": "mn",
+    "variant": "improved + reasoning + formal + keep-latin",
+    "target": "mongolian-reasoning-graded.json",
+    "id": "g17",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v3/g17.json"
+  },
+  {
+    "set": "mn-v3",
+    "lang": "mn",
+    "variant": "improved + reasoning + formal + keep-latin",
+    "target": "mongolian-reasoning-graded.json",
+    "id": "g18",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v3/g18.json"
+  },
+  {
+    "set": "mn-v3",
+    "lang": "mn",
+    "variant": "improved + reasoning + formal + keep-latin",
+    "target": "mongolian-reasoning-graded.json",
+    "id": "g19",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v3/g19.json"
+  },
+  {
+    "set": "mn-v3",
+    "lang": "mn",
+    "variant": "improved + reasoning + formal + keep-latin",
+    "target": "mongolian-reasoning-graded.json",
+    "id": "g20",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v3/g20.json"
+  },
+  {
+    "set": "mn-v3",
+    "lang": "mn",
+    "variant": "improved + reasoning + formal + keep-latin",
+    "target": "mongolian-reasoning-graded.json",
+    "id": "w1",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v3/w1.json"
+  },
+  {
+    "set": "mn-v3",
+    "lang": "mn",
+    "variant": "improved + reasoning + formal + keep-latin",
+    "target": "mongolian-reasoning-graded.json",
+    "id": "w10",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v3/w10.json"
+  },
+  {
+    "set": "mn-v3",
+    "lang": "mn",
+    "variant": "improved + reasoning + formal + keep-latin",
+    "target": "mongolian-reasoning-graded.json",
+    "id": "w2",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v3/w2.json"
+  },
+  {
+    "set": "mn-v3",
+    "lang": "mn",
+    "variant": "improved + reasoning + formal + keep-latin",
+    "target": "mongolian-reasoning-graded.json",
+    "id": "w3",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v3/w3.json"
+  },
+  {
+    "set": "mn-v3",
+    "lang": "mn",
+    "variant": "improved + reasoning + formal + keep-latin",
+    "target": "mongolian-reasoning-graded.json",
+    "id": "w4",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v3/w4.json"
+  },
+  {
+    "set": "mn-v3",
+    "lang": "mn",
+    "variant": "improved + reasoning + formal + keep-latin",
+    "target": "mongolian-reasoning-graded.json",
+    "id": "w5",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v3/w5.json"
+  },
+  {
+    "set": "mn-v3",
+    "lang": "mn",
+    "variant": "improved + reasoning + formal + keep-latin",
+    "target": "mongolian-reasoning-graded.json",
+    "id": "w6",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v3/w6.json"
+  },
+  {
+    "set": "mn-v3",
+    "lang": "mn",
+    "variant": "improved + reasoning + formal + keep-latin",
+    "target": "mongolian-reasoning-graded.json",
+    "id": "w7",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v3/w7.json"
+  },
+  {
+    "set": "mn-v3",
+    "lang": "mn",
+    "variant": "improved + reasoning + formal + keep-latin",
+    "target": "mongolian-reasoning-graded.json",
+    "id": "w8",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v3/w8.json"
+  },
+  {
+    "set": "mn-v3",
+    "lang": "mn",
+    "variant": "improved + reasoning + formal + keep-latin",
+    "target": "mongolian-reasoning-graded.json",
+    "id": "w9",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v3/w9.json"
+  },
+  {
+    "set": "mn-v3",
+    "lang": "mn",
+    "variant": "improved + reasoning + formal + keep-latin",
+    "target": "mongolian-reasoning-graded.json",
+    "id": "x21",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v3/x21.json"
+  },
+  {
+    "set": "mn-v3",
+    "lang": "mn",
+    "variant": "improved + reasoning + formal + keep-latin",
+    "target": "mongolian-reasoning-graded.json",
+    "id": "x22",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v3/x22.json"
+  },
+  {
+    "set": "mn-v3",
+    "lang": "mn",
+    "variant": "improved + reasoning + formal + keep-latin",
+    "target": "mongolian-reasoning-graded.json",
+    "id": "x23",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v3/x23.json"
+  },
+  {
+    "set": "mn-v3",
+    "lang": "mn",
+    "variant": "improved + reasoning + formal + keep-latin",
+    "target": "mongolian-reasoning-graded.json",
+    "id": "x24",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v3/x24.json"
+  },
+  {
+    "set": "mn-v3",
+    "lang": "mn",
+    "variant": "improved + reasoning + formal + keep-latin",
+    "target": "mongolian-reasoning-graded.json",
+    "id": "x25",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v3/x25.json"
+  },
+  {
+    "set": "mn-v3",
+    "lang": "mn",
+    "variant": "improved + reasoning + formal + keep-latin",
+    "target": "mongolian-reasoning-graded.json",
+    "id": "x26",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v3/x26.json"
+  },
+  {
+    "set": "mn-v3",
+    "lang": "mn",
+    "variant": "improved + reasoning + formal + keep-latin",
+    "target": "mongolian-reasoning-graded.json",
+    "id": "x27",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v3/x27.json"
+  },
+  {
+    "set": "mn-v3",
+    "lang": "mn",
+    "variant": "improved + reasoning + formal + keep-latin",
+    "target": "mongolian-reasoning-graded.json",
+    "id": "x28",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v3/x28.json"
+  },
+  {
+    "set": "mn-v3",
+    "lang": "mn",
+    "variant": "improved + reasoning + formal + keep-latin",
+    "target": "mongolian-reasoning-graded.json",
+    "id": "x29",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v3/x29.json"
+  },
+  {
+    "set": "mn-v3",
+    "lang": "mn",
+    "variant": "improved + reasoning + formal + keep-latin",
+    "target": "mongolian-reasoning-graded.json",
+    "id": "x30",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v3/x30.json"
+  },
+  {
+    "set": "mn-v4",
+    "lang": "mn",
+    "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+    "target": "mongolian-optimal-graded.json",
+    "id": "g11",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v4/g11.json"
+  },
+  {
+    "set": "mn-v4",
+    "lang": "mn",
+    "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+    "target": "mongolian-optimal-graded.json",
+    "id": "g12",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v4/g12.json"
+  },
+  {
+    "set": "mn-v4",
+    "lang": "mn",
+    "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+    "target": "mongolian-optimal-graded.json",
+    "id": "g13",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v4/g13.json"
+  },
+  {
+    "set": "mn-v4",
+    "lang": "mn",
+    "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+    "target": "mongolian-optimal-graded.json",
+    "id": "g14",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v4/g14.json"
+  },
+  {
+    "set": "mn-v4",
+    "lang": "mn",
+    "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+    "target": "mongolian-optimal-graded.json",
+    "id": "g15",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v4/g15.json"
+  },
+  {
+    "set": "mn-v4",
+    "lang": "mn",
+    "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+    "target": "mongolian-optimal-graded.json",
+    "id": "g16",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v4/g16.json"
+  },
+  {
+    "set": "mn-v4",
+    "lang": "mn",
+    "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+    "target": "mongolian-optimal-graded.json",
+    "id": "g17",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v4/g17.json"
+  },
+  {
+    "set": "mn-v4",
+    "lang": "mn",
+    "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+    "target": "mongolian-optimal-graded.json",
+    "id": "g18",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v4/g18.json"
+  },
+  {
+    "set": "mn-v4",
+    "lang": "mn",
+    "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+    "target": "mongolian-optimal-graded.json",
+    "id": "g19",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v4/g19.json"
+  },
+  {
+    "set": "mn-v4",
+    "lang": "mn",
+    "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+    "target": "mongolian-optimal-graded.json",
+    "id": "g20",
+    "task": "general",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v4/g20.json"
+  },
+  {
+    "set": "mn-v4",
+    "lang": "mn",
+    "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+    "target": "mongolian-optimal-graded.json",
+    "id": "w1",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v4/w1.json"
+  },
+  {
+    "set": "mn-v4",
+    "lang": "mn",
+    "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+    "target": "mongolian-optimal-graded.json",
+    "id": "w10",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v4/w10.json"
+  },
+  {
+    "set": "mn-v4",
+    "lang": "mn",
+    "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+    "target": "mongolian-optimal-graded.json",
+    "id": "w2",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v4/w2.json"
+  },
+  {
+    "set": "mn-v4",
+    "lang": "mn",
+    "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+    "target": "mongolian-optimal-graded.json",
+    "id": "w3",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v4/w3.json"
+  },
+  {
+    "set": "mn-v4",
+    "lang": "mn",
+    "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+    "target": "mongolian-optimal-graded.json",
+    "id": "w4",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v4/w4.json"
+  },
+  {
+    "set": "mn-v4",
+    "lang": "mn",
+    "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+    "target": "mongolian-optimal-graded.json",
+    "id": "w5",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v4/w5.json"
+  },
+  {
+    "set": "mn-v4",
+    "lang": "mn",
+    "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+    "target": "mongolian-optimal-graded.json",
+    "id": "w6",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v4/w6.json"
+  },
+  {
+    "set": "mn-v4",
+    "lang": "mn",
+    "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+    "target": "mongolian-optimal-graded.json",
+    "id": "w7",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v4/w7.json"
+  },
+  {
+    "set": "mn-v4",
+    "lang": "mn",
+    "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+    "target": "mongolian-optimal-graded.json",
+    "id": "w8",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v4/w8.json"
+  },
+  {
+    "set": "mn-v4",
+    "lang": "mn",
+    "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+    "target": "mongolian-optimal-graded.json",
+    "id": "w9",
+    "task": "weather",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v4/w9.json"
+  },
+  {
+    "set": "mn-v4",
+    "lang": "mn",
+    "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+    "target": "mongolian-optimal-graded.json",
+    "id": "x21",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v4/x21.json"
+  },
+  {
+    "set": "mn-v4",
+    "lang": "mn",
+    "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+    "target": "mongolian-optimal-graded.json",
+    "id": "x22",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v4/x22.json"
+  },
+  {
+    "set": "mn-v4",
+    "lang": "mn",
+    "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+    "target": "mongolian-optimal-graded.json",
+    "id": "x23",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v4/x23.json"
+  },
+  {
+    "set": "mn-v4",
+    "lang": "mn",
+    "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+    "target": "mongolian-optimal-graded.json",
+    "id": "x24",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v4/x24.json"
+  },
+  {
+    "set": "mn-v4",
+    "lang": "mn",
+    "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+    "target": "mongolian-optimal-graded.json",
+    "id": "x25",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v4/x25.json"
+  },
+  {
+    "set": "mn-v4",
+    "lang": "mn",
+    "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+    "target": "mongolian-optimal-graded.json",
+    "id": "x26",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v4/x26.json"
+  },
+  {
+    "set": "mn-v4",
+    "lang": "mn",
+    "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+    "target": "mongolian-optimal-graded.json",
+    "id": "x27",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v4/x27.json"
+  },
+  {
+    "set": "mn-v4",
+    "lang": "mn",
+    "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+    "target": "mongolian-optimal-graded.json",
+    "id": "x28",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v4/x28.json"
+  },
+  {
+    "set": "mn-v4",
+    "lang": "mn",
+    "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+    "target": "mongolian-optimal-graded.json",
+    "id": "x29",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v4/x29.json"
+  },
+  {
+    "set": "mn-v4",
+    "lang": "mn",
+    "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+    "target": "mongolian-optimal-graded.json",
+    "id": "x30",
+    "task": "xsum",
+    "path": "/home/enkhbold/temp-pls/nextjs-vllm-demo/reports/grading/mn-v4/x30.json"
+  }
+]

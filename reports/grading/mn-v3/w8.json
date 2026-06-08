@@ -1,0 +1,23 @@
+{
+  "set": "mn-v3",
+  "lang": "mn",
+  "variant": "improved + reasoning + formal + keep-latin",
+  "target": "mongolian-reasoning-graded.json",
+  "id": "w8",
+  "task": "weather",
+  "question": "Парис хотод одоо бороо орж байна уу?",
+  "instruction": null,
+  "injected": {
+    "location": "Paris",
+    "temperature_c": -16,
+    "feels_like_c": -19,
+    "humidity_pct": 43,
+    "wind_kmh": 33,
+    "precipitation_mm": 0.8,
+    "condition": "overcast"
+  },
+  "location": null,
+  "source": null,
+  "toolCalled": null,
+  "output": ""
+}

@@ -1,0 +1,23 @@
+{
+  "set": "mn-v1",
+  "lang": "mn",
+  "variant": "minimal-prompt (baseline)",
+  "target": "mongolian-graded.json",
+  "id": "w7",
+  "task": "weather",
+  "question": "Лондон-д одоо цаг агаар ямар байна?",
+  "instruction": null,
+  "injected": {
+    "location": "London",
+    "temperature_c": 17,
+    "feels_like_c": 15,
+    "humidity_pct": 42,
+    "wind_kmh": 32,
+    "precipitation_mm": 0,
+    "condition": "partly cloudy"
+  },
+  "location": null,
+  "source": null,
+  "toolCalled": null,
+  "output": "Лондонд одоо бүдэг бүрэнхэн үүлэрхэг, 17°C байна (мэдрэгдэх температур 15°C). Салхи 32 км/ц-тай байна."
+}

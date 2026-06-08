@@ -1,0 +1,23 @@
+{
+  "set": "mn-v1",
+  "lang": "mn",
+  "variant": "minimal-prompt (baseline)",
+  "target": "mongolian-graded.json",
+  "id": "w4",
+  "task": "weather",
+  "question": "Нью-Йорк-гийн агаарын температур хэд байна вэ?",
+  "instruction": null,
+  "injected": {
+    "location": "New York",
+    "temperature_c": -12,
+    "feels_like_c": -12,
+    "humidity_pct": 35,
+    "wind_kmh": 0,
+    "precipitation_mm": 0,
+    "condition": "clear sky"
+  },
+  "location": null,
+  "source": null,
+  "toolCalled": null,
+  "output": "Нью-Йорк хотод одоогоор -12°C байна, мэдрэгдэх температур нь мөн адил -12°C бөгөөд тэнгэр цэлгэр байна."
+}

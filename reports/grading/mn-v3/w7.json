@@ -1,0 +1,23 @@
+{
+  "set": "mn-v3",
+  "lang": "mn",
+  "variant": "improved + reasoning + formal + keep-latin",
+  "target": "mongolian-reasoning-graded.json",
+  "id": "w7",
+  "task": "weather",
+  "question": "Лондон-д одоо цаг агаар ямар байна?",
+  "instruction": null,
+  "injected": {
+    "location": "London",
+    "temperature_c": 17,
+    "feels_like_c": 15,
+    "humidity_pct": 42,
+    "wind_kmh": 32,
+    "precipitation_mm": 0,
+    "condition": "partly cloudy"
+  },
+  "location": null,
+  "source": null,
+  "toolCalled": null,
+  "output": "Лондонд одоо 17°C, мэдрэгдэх байдлаар 15°C байна. Тэнгэр багавтар үүлэрхэг байна."
+}

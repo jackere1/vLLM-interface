@@ -1,0 +1,652 @@
+{
+  "meta": {
+    "generatedAt": "2026-06-05T08:35:30.026Z",
+    "baseUrl": "https://clean-hostels-holdem-election.trycloudflare.com/v1",
+    "model": "gemma-4-31b",
+    "modelRoot": "RedHatAI/gemma-4-31B-it-NVFP4",
+    "maxModelLen": 16384,
+    "serverFingerprint": "vllm-0.21.0-81cc15f0",
+    "kvBlocks": 3741,
+    "blockSize": 16,
+    "kvCapacityTokens": 59856,
+    "docSizes": [
+      1000,
+      2000,
+      4000
+    ],
+    "maxTokens": 768,
+    "temperature": 0.4,
+    "reqsPerConc": 4,
+    "concurrencies": [
+      5,
+      10,
+      20,
+      40,
+      60
+    ],
+    "node": "v24.13.1",
+    "quick": false
+  },
+  "cells": [
+    {
+      "concurrency": 5,
+      "requested": 20,
+      "succeeded": 20,
+      "failed": 0,
+      "successPct": 100,
+      "meanPromptTokens": 2332.2,
+      "meanOutputTokens": 308.75,
+      "ttft": {
+        "mean": 737.4153234500006,
+        "p50": 615.377840000001,
+        "p95": 1442.9062159999994
+      },
+      "e2e": {
+        "mean": 11963.47174215,
+        "p50": 8396.769839,
+        "p95": 25871.195157000002,
+        "p99": 28378.20644200001
+      },
+      "decodeTpsPerReq": 27.095267200586285,
+      "aggOutputTps": 116.79729457324572,
+      "achievedReqPerSec": 0.3782908326258971,
+      "cellDurationS": 52.869375293,
+      "prefixCacheHitPct": 0.6174427579109854,
+      "peakKvUsagePct": 81.92513368983957,
+      "peakRunning": 5,
+      "peakWaiting": 0,
+      "byBucket": {
+        "1000": {
+          "n": 8,
+          "e2eP50": 8282.834364000002,
+          "e2eP95": 19054.006799,
+          "meanOut": 228.125,
+          "meanPrompt": 1106.625,
+          "decodeTps": 27.731887466139103
+        },
+        "2000": {
+          "n": 6,
+          "e2eP50": 5208.780475,
+          "e2eP95": 28378.20644200001,
+          "meanOut": 295,
+          "meanPrompt": 2111.3333333333335,
+          "decodeTps": 26.33971668536164
+        },
+        "4000": {
+          "n": 6,
+          "e2eP50": 19921.479905999997,
+          "e2eP95": 25871.195157000002,
+          "meanOut": 430,
+          "meanPrompt": 4187.166666666667,
+          "decodeTps": 27.00199069507383
+        }
+      },
+      "byTask": {
+        "summarize": {
+          "n": 10,
+          "e2eP50": 4403.327450000004,
+          "e2eP95": 19921.479905999997,
+          "meanOut": 149.5,
+          "meanPrompt": 2331.7,
+          "decodeTps": 26.25311486449175
+        },
+        "longctx": {
+          "n": 10,
+          "e2eP50": 15585.909236,
+          "e2eP95": 28378.20644200001,
+          "meanOut": 468,
+          "meanPrompt": 2332.7,
+          "decodeTps": 27.937419536680824
+        }
+      },
+      "samples": [
+        {
+          "task": "summarize",
+          "sizeBucket": 1000,
+          "promptTokens": 1094,
+          "outputTokens": 92,
+          "instruction": "Summarize the following documentation in 3–4 sentences:",
+          "answer": "vLLM optimizes memory and throughput using PagedAttention, continuous batching, and tensor parallelism, while offering an OpenAI-compatible Chat API. Next.js documentation covers the use of Server Components for data fetching, Server Actions for mutations, and route handlers with proper error handling. Additionally, React effects should include cleanup functions to prevent resource accumulation, a"
+        },
+        {
+          "task": "longctx",
+          "sizeBucket": 1000,
+          "promptTokens": 1079,
+          "outputTokens": 231,
+          "instruction": "If you were teaching this to a junior engineer, what are the three most important takeaways from the text above?",
+          "answer": "Based on the provided documentation, the three most important takeaways are:\n\n1.  **Vercel AI SDK Implementation**: You can use `streamText` for both text and structured data (using `Output.object` with a zod schema). For complex workflows, you can create multi-step agents by chaining `streamText` calls inside `createUIMessageStream`, merging results into a single UI stream.\n2.  **Next.js Data Han"
+        },
+        {
+          "task": "summarize",
+          "sizeBucket": 2000,
+          "promptTokens": 2100,
+          "outputTokens": 98,
+          "instruction": "Summarize the following documentation in 3–4 sentences:",
+          "answer": "The provided documentation covers React's built-in hook categories and the use of `useReducer` with Context for complex state management. It details Next.js features, including Server Components for data fetching, Server Actions for mutations, dynamic routing, and streaming with Suspense. Additionally, it describes vLLM's performance optimizations like PagedAttention and tensor parallelism, as wel"
+        },
+        {
+          "task": "longctx",
+          "sizeBucket": 2000,
+          "promptTokens": 2091,
+          "outputTokens": 402,
+          "instruction": "If you were teaching this to a junior engineer, what are the three most important takeaways from the text above?",
+          "answer": "Based on the provided documentation, here are the three most important takeaways for a junior engineer:\n\n**1. Modern Next.js Architecture (Server-First Approach)**\n*   **Data Fetching:** Use async Server Components to colocate data fetching using the `fetch` API, managing cache behavior via options like `force-cache`, `no-store`, or time-based revalidation.\n*   **Mutations:** Handle all mutations "
+        },
+        {
+          "task": "summarize",
+          "sizeBucket": 4000,
+          "promptTokens": 4158,
+          "outputTokens": 511,
+          "instruction": "Write a short summary of the key points in the documentation below:",
+          "answer": "Here is a summary of the key points from the documentation:\n\n### Next.js\n*   **Data Fetching & Rendering:** Data is fetched within async Server Components using the `fetch` API, with caching controlled via `force-cache` (static), `no-store` (dynamic), or time-based revalidation. Server Components can pass this data to Client Components as props.\n*   **Routing & Metadata:** Dynamic routes use a `pa"
+        },
+        {
+          "task": "longctx",
+          "sizeBucket": 4000,
+          "promptTokens": 4171,
+          "outputTokens": 690,
+          "instruction": "Based on the documentation above, explain the main concepts and how they fit together.",
+          "answer": "Based on the provided documentation, the concepts can be grouped into three main technical areas: **Next.js & React Frontend Architecture**, **vLLM Model Serving**, and the **Vercel AI SDK**.\n\n### 1. Next.js & React Frontend Architecture\nThis section focuses on modern server-client patterns and state management:\n*   **Data Fetching & Rendering:** Next.js utilizes async Server Components to fetch d"
+        }
+      ],
+      "errorsSample": []
+    },
+    {
+      "concurrency": 10,
+      "requested": 40,
+      "succeeded": 40,
+      "failed": 0,
+      "successPct": 100,
+      "meanPromptTokens": 2389.925,
+      "meanOutputTokens": 324.075,
+      "ttft": {
+        "mean": 5233.642073925,
+        "p50": 5168.518626000005,
+        "p95": 8823.353367000003
+      },
+      "e2e": {
+        "mean": 17473.706096250004,
+        "p50": 16940.501049,
+        "p95": 29202.791742999994,
+        "p99": 32471.526048999993
+      },
+      "decodeTpsPerReq": 26.826102430213904,
+      "aggOutputTps": 151.76478863828294,
+      "achievedReqPerSec": 0.4683014383654492,
+      "cellDurationS": 85.415069703,
+      "prefixCacheHitPct": 0.09778511007258114,
+      "peakKvUsagePct": 97.27272727272728,
+      "peakRunning": 8,
+      "peakWaiting": 4,
+      "byBucket": {
+        "1000": {
+          "n": 14,
+          "e2eP50": 12022.070260999986,
+          "e2eP95": 26305.616102,
+          "meanOut": 216.14285714285714,
+          "meanPrompt": 1148.857142857143,
+          "decodeTps": 26.920192035929066
+        },
+        "2000": {
+          "n": 14,
+          "e2eP50": 12443.693618999998,
+          "e2eP95": 32471.526048999993,
+          "meanOut": 337,
+          "meanPrompt": 2133.5,
+          "decodeTps": 27.136263162706303
+        },
+        "4000": {
+          "n": 12,
+          "e2eP50": 26638.086160000006,
+          "e2eP95": 31641.675866999998,
+          "meanOut": 434.9166666666667,
+          "meanPrompt": 4137,
+          "decodeTps": 26.35447703563841
+        }
+      },
+      "byTask": {
+        "summarize": {
+          "n": 20,
+          "e2eP50": 9434.607797000004,
+          "e2eP95": 26638.086160000006,
+          "meanOut": 175.55,
+          "meanPrompt": 2388.95,
+          "decodeTps": 27.170050418526863
+        },
+        "longctx": {
+          "n": 20,
+          "e2eP50": 25097.98232000001,
+          "e2eP95": 31641.675866999998,
+          "meanOut": 472.6,
+          "meanPrompt": 2390.9,
+          "decodeTps": 26.48215444190094
+        }
+      },
+      "samples": [
+        {
+          "task": "summarize",
+          "sizeBucket": 1000,
+          "promptTokens": 1139,
+          "outputTokens": 87,
+          "instruction": "Summarize the following documentation in 3–4 sentences:",
+          "answer": "The Vercel AI SDK provides `streamText` for streaming text and structured data via zod schemas, while the `useChat` hook manages client-side chat state. Next.js utilizes Suspense for streaming server rendering, Server Components for fetching data, and Server Actions for handling mutations. Additionally, vLLM offers an OpenAI-compatible Chat API, and React uses `useReducer` with Context for complex"
+        },
+        {
+          "task": "longctx",
+          "sizeBucket": 1000,
+          "promptTokens": 1154,
+          "outputTokens": 227,
+          "instruction": "Compare the different approaches described above and explain the trade-offs.",
+          "answer": "Based on the provided documentation, the trade-offs for the different approaches are as follows:\n\n**vLLM Performance Tuning**\n*   **`max_num_batched_tokens`**: Tuning this value involves a trade-off between Time to First Token (TTFT) and Inter-Token Latency (ITL). Smaller values improve ITL, while larger values improve TTFT.\n\n**Next.js Data Fetching and Rendering**\n*   **Server Components**: Using"
+        },
+        {
+          "task": "summarize",
+          "sizeBucket": 2000,
+          "promptTokens": 2128,
+          "outputTokens": 105,
+          "instruction": "Summarize the following documentation in 3–4 sentences:",
+          "answer": "The provided documentation covers the Vercel AI SDK, which offers tools like `useChat` for client-side state management and `streamText` for streaming text and structured data. It details Next.js patterns for data fetching in Server Components, dynamic routing, and route handler error handling, as well as React's various hook categories and state management strategies. Additionally, it explains vL"
+        },
+        {
+          "task": "longctx",
+          "sizeBucket": 2000,
+          "promptTokens": 2113,
+          "outputTokens": 513,
+          "instruction": "Compare the different approaches described above and explain the trade-offs.",
+          "answer": "Based on the provided documentation, here are the comparisons and trade-offs for the different technical approaches described:\n\n### Next.js: Data Fetching and Rendering\n*   **Server Components vs. Client Components:** Server Components can fetch data directly using `async/await` and forward it to Client Components as props. This replaces `getServerSideProps` and `getStaticProps`, keeping secrets o"
+        },
+        {
+          "task": "summarize",
+          "sizeBucket": 4000,
+          "promptTokens": 4108,
+          "outputTokens": 72,
+          "instruction": "Give a concise TL;DR (2–3 sentences) of the documentation below:",
+          "answer": "This documentation covers technical guides for vLLM, focusing on memory conservation, tensor parallelism, and OpenAI-compatible API endpoints. It also details Next.js patterns for server components, data fetching, and server actions, alongside React state management and effect cleanup. Additionally, it provides instructions for using the Vercel AI SDK for streaming text and structured outputs."
+        },
+        {
+          "task": "longctx",
+          "sizeBucket": 4000,
+          "promptTokens": 4095,
+          "outputTokens": 421,
+          "instruction": "Summarize the most important caveats or gotchas a developer should know from the text above.",
+          "answer": "Based on the provided documentation, here are the most important caveats and \"gotchas\" for developers:\n\n**Next.js & React Development**\n*   **Dynamic Route Params:** In recent versions of Next.js, the `params` prop in dynamic routes is a Promise and must be awaited before use.\n*   **Server Actions:** Mutations must be handled by Server Actions and invoked from a `<form>` to ensure they only run on"
+        }
+      ],
+      "errorsSample": []
+    },
+    {
+      "concurrency": 20,
+      "requested": 80,
+      "succeeded": 80,
+      "failed": 0,
+      "successPct": 100,
+      "meanPromptTokens": 2445.0625,
+      "meanOutputTokens": 383.0625,
+      "ttft": {
+        "mean": 24240.83800015,
+        "p50": 27649.94270100002,
+        "p95": 33417.32054300001
+      },
+      "e2e": {
+        "mean": 38561.01169346251,
+        "p50": 38557.311136000004,
+        "p95": 58582.05433699998,
+        "p99": 64441.61003500002
+      },
+      "decodeTpsPerReq": 27.077746237335255,
+      "aggOutputTps": 177.28029169371652,
+      "achievedReqPerSec": 0.4627973025125574,
+      "cellDurationS": 172.861854565,
+      "prefixCacheHitPct": 0.1612436424041139,
+      "peakKvUsagePct": 98.95721925133691,
+      "peakRunning": 9,
+      "peakWaiting": 14,
+      "byBucket": {
+        "1000": {
+          "n": 28,
+          "e2eP50": 36440.202304000006,
+          "e2eP95": 47280.52726000003,
+          "meanOut": 340.2857142857143,
+          "meanPrompt": 1142.5,
+          "decodeTps": 27.761508357694744
+        },
+        "2000": {
+          "n": 26,
+          "e2eP50": 36435.20388399999,
+          "e2eP95": 58330.397354999965,
+          "meanOut": 415.46153846153845,
+          "meanPrompt": 2131.3846153846152,
+          "decodeTps": 27.181022760909237
+        },
+        "4000": {
+          "n": 26,
+          "e2eP50": 44955.72091500001,
+          "e2eP95": 62575.006403000036,
+          "meanOut": 396.7307692307692,
+          "meanPrompt": 4161.5,
+          "decodeTps": 26.23811050722026
+        }
+      },
+      "byTask": {
+        "summarize": {
+          "n": 40,
+          "e2eP50": 33368.14876100002,
+          "e2eP95": 46360.00498,
+          "meanOut": 220.45,
+          "meanPrompt": 2446.225,
+          "decodeTps": 27.339568754422373
+        },
+        "longctx": {
+          "n": 40,
+          "e2eP50": 44955.72091500001,
+          "e2eP95": 59891.496520000015,
+          "meanOut": 545.675,
+          "meanPrompt": 2443.9,
+          "decodeTps": 26.815923720248122
+        }
+      },
+      "samples": [
+        {
+          "task": "summarize",
+          "sizeBucket": 1000,
+          "promptTokens": 1159,
+          "outputTokens": 118,
+          "instruction": "Summarize the following documentation in 3–4 sentences:",
+          "answer": "vLLM optimizes serving throughput using PagedAttention, continuous batching, and chunked prefill, while offering memory conservation via `max_model_len` and `max_num_seqs` and an OpenAI-compatible Chat API. Next.js documentation covers using Server Components for data fetching, Server Actions for mutations, dynamic metadata via `generateMetadata`, and implementing route handlers with error handlin"
+        },
+        {
+          "task": "longctx",
+          "sizeBucket": 1000,
+          "promptTokens": 1125,
+          "outputTokens": 540,
+          "instruction": "What problems do the features described above solve, and when would you choose each?",
+          "answer": "Based on the provided documentation, here are the problems the features solve and when to choose them:\n\n**vLLM**\n*   **Memory Constraints:** Use `max_model_len` and `max_num_seqs` to reduce memory usage, which is useful when sequences are short or memory is limited.\n*   **Serving Throughput and Latency:** Use PagedAttention, continuous batching, chunked prefill, and prefix caching to achieve high "
+        },
+        {
+          "task": "summarize",
+          "sizeBucket": 2000,
+          "promptTokens": 2091,
+          "outputTokens": 113,
+          "instruction": "Summarize the following documentation in 3–4 sentences:",
+          "answer": "The provided documentation covers technical implementations across vLLM, Next.js, React, and the Vercel AI SDK. vLLM focuses on high-throughput model serving using PagedAttention, tensor parallelism, and OpenAI-compatible API endpoints. Next.js and React sections detail server-side rendering, data fetching strategies, state management via hooks and Context, and the use of Suspense for streaming. A"
+        },
+        {
+          "task": "longctx",
+          "sizeBucket": 2000,
+          "promptTokens": 2103,
+          "outputTokens": 410,
+          "instruction": "Summarize the most important caveats or gotchas a developer should know from the text above.",
+          "answer": "Based on the provided documentation, here are the most important caveats and \"gotchas\" for developers:\n\n**Next.js & React**\n*   **Dynamic Route Params:** In recent versions of Next.js, the `params` prop in dynamic segments is a Promise and must be awaited before use.\n*   **Server Actions:** Mutations must be handled by Server Actions invoked from a `<form>` to ensure they only run on explicit user"
+        },
+        {
+          "task": "summarize",
+          "sizeBucket": 4000,
+          "promptTokens": 4184,
+          "outputTokens": 83,
+          "instruction": "Give a concise TL;DR (2–3 sentences) of the documentation below:",
+          "answer": "This documentation provides technical guidance on using the Vercel AI SDK for streaming and structured AI outputs, Next.js for server-side rendering, data fetching, and mutations, and vLLM for high-throughput LLM serving via OpenAI-compatible APIs. It also covers core React concepts, including hook categories, state management with `useReducer` and Context, and the implementation of effects with c"
+        },
+        {
+          "task": "longctx",
+          "sizeBucket": 4000,
+          "promptTokens": 4154,
+          "outputTokens": 768,
+          "instruction": "Using only the documentation above, list the key steps or APIs a developer would use and what each is for.",
+          "answer": "Based on the provided documentation, here are the key steps and APIs categorized by technology:\n\n### Next.js\n*   **`fetch` API (in Server Components):** Used for colocated data fetching. Caching is controlled via options: `{ cache: 'force-cache' }` (default), `{ cache: 'no-store' }` (refetches every request), or `{ next: { revalidate: 10 } }` (time-based revalidation).\n*   **`params` prop:** Used "
+        }
+      ],
+      "errorsSample": []
+    },
+    {
+      "concurrency": 40,
+      "requested": 160,
+      "succeeded": 160,
+      "failed": 0,
+      "successPct": 100,
+      "meanPromptTokens": 2460.96875,
+      "meanOutputTokens": 372.6,
+      "ttft": {
+        "mean": 59569.49585741254,
+        "p50": 68455.69273999997,
+        "p95": 84607.933761
+      },
+      "e2e": {
+        "mean": 73490.3526049188,
+        "p50": 79524.54962900002,
+        "p95": 104569.85473899997,
+        "p99": 114518.937951
+      },
+      "decodeTpsPerReq": 27.157767677896015,
+      "aggOutputTps": 178.34686954835482,
+      "achievedReqPerSec": 0.47865504441319057,
+      "cellDurationS": 334.269954673,
+      "prefixCacheHitPct": 0.09089266286097357,
+      "peakKvUsagePct": 99.73262032085562,
+      "peakRunning": 10,
+      "peakWaiting": 35,
+      "byBucket": {
+        "1000": {
+          "n": 54,
+          "e2eP50": 77226.196911,
+          "e2eP95": 96352.67595599999,
+          "meanOut": 284.9259259259259,
+          "meanPrompt": 1136.6296296296296,
+          "decodeTps": 27.63672186401218
+        },
+        "2000": {
+          "n": 54,
+          "e2eP50": 80454.85650699999,
+          "e2eP95": 100060.862463,
+          "meanOut": 409.5925925925926,
+          "meanPrompt": 2149.0925925925926,
+          "decodeTps": 27.029092336009096
+        },
+        "4000": {
+          "n": 52,
+          "e2eP50": 83901.68379400001,
+          "e2eP95": 113657.90855200001,
+          "meanOut": 425.2307692307692,
+          "meanPrompt": 4160.115384615385,
+          "decodeTps": 26.794016570427182
+        }
+      },
+      "byTask": {
+        "summarize": {
+          "n": 80,
+          "e2eP50": 76594.85944800009,
+          "e2eP95": 96352.67595599999,
+          "meanOut": 211.7625,
+          "meanPrompt": 2459.6,
+          "decodeTps": 27.60143921412457
+        },
+        "longctx": {
+          "n": 80,
+          "e2eP50": 86596.38596599997,
+          "e2eP95": 110618.56502699998,
+          "meanOut": 533.4375,
+          "meanPrompt": 2462.3375,
+          "decodeTps": 26.714096141667454
+        }
+      },
+      "samples": [
+        {
+          "task": "summarize",
+          "sizeBucket": 1000,
+          "promptTokens": 1150,
+          "outputTokens": 69,
+          "instruction": "Give a concise TL;DR (2–3 sentences) of the documentation below:",
+          "answer": "This documentation covers React hooks for state, effects, and performance, as well as Next.js patterns for Server Components and Actions. It also details the Vercel AI SDK's `useChat` and `streamText` functions, and vLLM's server endpoints, tensor parallelism, and throughput optimizations like PagedAttention."
+        },
+        {
+          "task": "longctx",
+          "sizeBucket": 1000,
+          "promptTokens": 1199,
+          "outputTokens": 186,
+          "instruction": "Summarize the most important caveats or gotchas a developer should know from the text above.",
+          "answer": "Based on the provided text, developers should be aware of the following caveats and \"gotchas\":\n\n*   **React Effects:** When connecting to external systems, effects must return a cleanup function to prevent connections from accumulating. For data fetching, an \"ignore\" flag should be used to prevent stale responses from overwriting fresh state.\n*   **Next.js Route Handlers:** POST handlers should us"
+        },
+        {
+          "task": "summarize",
+          "sizeBucket": 2000,
+          "promptTokens": 2206,
+          "outputTokens": 128,
+          "instruction": "Summarize the following documentation in 3–4 sentences:",
+          "answer": "vLLM provides an OpenAI-compatible HTTP server with endpoints for chat, completions, embeddings, and audio, supporting tensor parallelism and memory conservation settings. Next.js documentation covers the App Router, focusing on async Server Components for data fetching, dynamic routing with awaited params, and the use of Server Actions for mutations. React's built-in hooks are categorized by func"
+        },
+        {
+          "task": "longctx",
+          "sizeBucket": 2000,
+          "promptTokens": 2230,
+          "outputTokens": 379,
+          "instruction": "Summarize the most important caveats or gotchas a developer should know from the text above.",
+          "answer": "Based on the provided documentation, here are the most important caveats and \"gotchas\" for developers:\n\n**Next.js & React**\n*   **Mutations:** Server Actions for mutations must be invoked from a `<form>` to ensure they only run on explicit user interaction and never as a side effect of rendering.\n*   **Route Handlers:** POST handlers must wrap work in `try/catch` blocks to avoid leaking sensitive "
+        },
+        {
+          "task": "summarize",
+          "sizeBucket": 4000,
+          "promptTokens": 4146,
+          "outputTokens": 93,
+          "instruction": "Summarize the following documentation in 3–4 sentences:",
+          "answer": "The provided documentation covers Next.js features, including dynamic metadata, server components for data fetching and mutations, and streaming with Suspense. It details React's built-in hook categories and state management patterns using `useReducer` and Context. Additionally, it describes the Vercel AI SDK's capabilities for managing chat state and streaming structured output, as well as vLLM's"
+        },
+        {
+          "task": "longctx",
+          "sizeBucket": 4000,
+          "promptTokens": 4183,
+          "outputTokens": 420,
+          "instruction": "Summarize the most important caveats or gotchas a developer should know from the text above.",
+          "answer": "Based on the provided documentation, here are the most important caveats and \"gotchas\" for developers:\n\n**Next.js**\n*   **Dynamic Route Params:** In recent versions, `params` is a Promise and **must be awaited** before it can be used.\n*   **Server Actions:** Mutations must be handled by Server Actions invoked from a `<form>` to ensure they only run on explicit user interaction and never as a side "
+        }
+      ],
+      "errorsSample": []
+    },
+    {
+      "concurrency": 60,
+      "requested": 240,
+      "succeeded": 239,
+      "failed": 1,
+      "successPct": 99.58333333333333,
+      "meanPromptTokens": 2473.8200836820083,
+      "meanOutputTokens": 369.673640167364,
+      "ttft": {
+        "mean": 92587.90721953141,
+        "p50": 107810.29356999998,
+        "p95": 121152.79376500007
+      },
+      "e2e": {
+        "mean": 106306.80689988703,
+        "p50": 121236.58615899994,
+        "p95": 141678.63075699995,
+        "p99": 149724.8565949999
+      },
+      "decodeTpsPerReq": 27.302980440708513,
+      "aggOutputTps": 180.9583096530527,
+      "achievedReqPerSec": 0.489508285121781,
+      "cellDurationS": 488.24505583299987,
+      "prefixCacheHitPct": 0.14798534427817644,
+      "peakKvUsagePct": 99.83957219251337,
+      "peakRunning": 10,
+      "peakWaiting": 55,
+      "byBucket": {
+        "1000": {
+          "n": 80,
+          "e2eP50": 117874.04425699997,
+          "e2eP95": 135752.70818100008,
+          "meanOut": 290.25,
+          "meanPrompt": 1133.275,
+          "decodeTps": 28.018352550299994
+        },
+        "2000": {
+          "n": 80,
+          "e2eP50": 119893.98958200007,
+          "e2eP95": 136730.62082399998,
+          "meanOut": 394.775,
+          "meanPrompt": 2145.525,
+          "decodeTps": 27.349847508527212
+        },
+        "4000": {
+          "n": 79,
+          "e2eP50": 124696.79699199996,
+          "e2eP95": 146869.70215199993,
+          "meanOut": 424.6835443037975,
+          "meanPrompt": 4163.784810126583,
+          "decodeTps": 26.531092666115992
+        }
+      },
+      "byTask": {
+        "summarize": {
+          "n": 119,
+          "e2eP50": 113731.6477470001,
+          "e2eP95": 133588.3427429999,
+          "meanOut": 213.08403361344537,
+          "meanPrompt": 2465.8823529411766,
+          "decodeTps": 27.60649290837581
+        },
+        "longctx": {
+          "n": 120,
+          "e2eP50": 126705.81635700003,
+          "e2eP95": 144754.61880399997,
+          "meanOut": 524.9583333333334,
+          "meanPrompt": 2481.6916666666666,
+          "decodeTps": 27.001997243605118
+        }
+      },
+      "samples": [
+        {
+          "task": "summarize",
+          "sizeBucket": 1000,
+          "promptTokens": 1165,
+          "outputTokens": 61,
+          "instruction": "Give a concise TL;DR (2–3 sentences) of the documentation below:",
+          "answer": "This documentation covers the Vercel AI SDK's multi-step agents, React's hook categories and effect cleanup patterns, and Next.js data fetching in Server Components. It also details vLLM's OpenAI-compatible API, server endpoints, tensor parallelism, and memory conservation techniques."
+        },
+        {
+          "task": "longctx",
+          "sizeBucket": 1000,
+          "promptTokens": 1133,
+          "outputTokens": 273,
+          "instruction": "If you were teaching this to a junior engineer, what are the three most important takeaways from the text above?",
+          "answer": "Based on the provided documentation, here are the three most important takeaways for a junior engineer:\n\n1.  **Modern AI Streaming and Structured Data:** Use `streamText` from the Vercel AI SDK to stream responses. For structured data, `streamObject` is deprecated; instead, use `streamText` with the `output` setting and `Output.object` combined with a zod schema for validation.\n2.  **Next.js Data "
+        },
+        {
+          "task": "summarize",
+          "sizeBucket": 2000,
+          "promptTokens": 2124,
+          "outputTokens": 65,
+          "instruction": "Give a concise TL;DR (2–3 sentences) of the documentation below:",
+          "answer": "This documentation covers vLLM's server endpoints, memory optimization, and high-throughput features like PagedAttention and tensor parallelism. It also details Next.js implementation patterns for Server Components, Server Actions, and dynamic routing, alongside React state management and the Vercel AI SDK's chat and streaming capabilities."
+        },
+        {
+          "task": "longctx",
+          "sizeBucket": 2000,
+          "promptTokens": 2153,
+          "outputTokens": 448,
+          "instruction": "Summarize the most important caveats or gotchas a developer should know from the text above.",
+          "answer": "Based on the provided documentation, here are the most important caveats and \"gotchas\" for developers:\n\n**Next.js & React**\n*   **Dynamic Routes:** In recent versions of Next.js, the `params` prop in dynamic segments is a Promise and must be awaited before use.\n*   **Server Actions:** Mutations must be handled by Server Actions and invoked via a `<form>` to ensure they only run on explicit user in"
+        },
+        {
+          "task": "summarize",
+          "sizeBucket": 4000,
+          "promptTokens": 4154,
+          "outputTokens": 119,
+          "instruction": "Summarize the following documentation in 3–4 sentences:",
+          "answer": "The provided documentation covers technical implementations for React, Next.js, the Vercel AI SDK, and vLLM. React and Next.js sections focus on state management with `useReducer` and Context, async Server Components for data fetching, and the use of Server Actions for mutations. The Vercel AI SDK details streaming text and structured data, multi-step agents, and client-side chat management via `u"
+        },
+        {
+          "task": "longctx",
+          "sizeBucket": 4000,
+          "promptTokens": 4113,
+          "outputTokens": 672,
+          "instruction": "Based on the documentation above, explain the main concepts and how they fit together.",
+          "answer": "Based on the provided documentation, the concepts can be grouped into three main technical areas: **Next.js Application Architecture**, **vLLM Model Serving**, and **Vercel AI SDK/React Client State**.\n\n### 1. Next.js Application Architecture\nNext.js focuses on optimizing data flow and rendering using Server Components:\n*   **Data Fetching:** Data is fetched inside async Server Components using th"
+        }
+      ],
+      "errorsSample": [
+        {
+          "status": 524,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-"
+        }
+      ]
+    }
+  ]
+}

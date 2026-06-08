@@ -1,0 +1,23 @@
+{
+  "set": "mn-v1",
+  "lang": "mn",
+  "variant": "minimal-prompt (baseline)",
+  "target": "mongolian-graded.json",
+  "id": "w2",
+  "task": "weather",
+  "question": "Мөрөн-д одоо цаг агаар ямар байна?",
+  "instruction": null,
+  "injected": {
+    "location": "Мөрөн",
+    "temperature_c": 10,
+    "feels_like_c": 8,
+    "humidity_pct": 67,
+    "wind_kmh": 32,
+    "precipitation_mm": 0.8,
+    "condition": "overcast"
+  },
+  "location": null,
+  "source": null,
+  "toolCalled": null,
+  "output": "Мөрөнд одоогоор бүрхэг, 10°C байна (мэдрэгдэх температур 8°C). Салхи хүчтэй байна."
+}

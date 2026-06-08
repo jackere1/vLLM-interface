@@ -1,0 +1,15 @@
+{
+  "set": "mn-v3",
+  "lang": "mn",
+  "variant": "improved + reasoning + formal + keep-latin",
+  "target": "mongolian-reasoning-graded.json",
+  "id": "g14",
+  "task": "general",
+  "question": "TCP болон UDP протоколын гол ялгаа юу вэ?",
+  "instruction": null,
+  "injected": null,
+  "location": null,
+  "source": null,
+  "toolCalled": null,
+  "output": "Гол ялгаа нь холболт тогтоох болон өгөгдлийг дамжуулах найдвартай"
+}

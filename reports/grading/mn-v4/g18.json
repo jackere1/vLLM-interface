@@ -1,0 +1,15 @@
+{
+  "set": "mn-v4",
+  "lang": "mn",
+  "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+  "target": "mongolian-optimal-graded.json",
+  "id": "g18",
+  "task": "general",
+  "question": "Рекурс (recursion) гэж юу вэ? Богино жишээтэйгээр тайлбарла.",
+  "instruction": null,
+  "injected": null,
+  "location": null,
+  "source": null,
+  "toolCalled": null,
+  "output": "Рекурс гэдэг нь функц өөрийгөө дахин дуудахыг хэлнэ. Энэ нь том асуудлыг жижиг, ижил төлөвтэй хэсгүүдэд хувааж шийдвэрлэх арга юм.\n\nЖишээ нь: Тооны факториалыг олохдоо тухайн тоог өмнөх тооны факториалаар үржүүлж, нэг хүртэлх хүртлээ өөрийгөө дахин дуудаж тооцоолно."
+}

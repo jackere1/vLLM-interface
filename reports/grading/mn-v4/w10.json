@@ -1,0 +1,23 @@
+{
+  "set": "mn-v4",
+  "lang": "mn",
+  "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+  "target": "mongolian-optimal-graded.json",
+  "id": "w10",
+  "task": "weather",
+  "question": "Берлин-д одоо цаг агаар ямар байна?",
+  "instruction": null,
+  "injected": {
+    "location": "Berlin",
+    "temperature_c": -11,
+    "feels_like_c": -13,
+    "humidity_pct": 92,
+    "wind_kmh": 12,
+    "precipitation_mm": 0,
+    "condition": "light rain"
+  },
+  "location": null,
+  "source": null,
+  "toolCalled": null,
+  "output": "Берлинд одоо минус арван нэг градус, мэдрэгдэх байдлаар минус арван гурав градус байна. Бороо шиврэж байна."
+}

@@ -1,0 +1,24 @@
+{
+  "set": "english",
+  "lang": "en",
+  "variant": "english",
+  "target": "quality-graded.json",
+  "id": "w7",
+  "task": "weather",
+  "question": "How are conditions in Mumbai at the moment?",
+  "instruction": null,
+  "injected": {
+    "location": "Mumbai",
+    "temperature_c": 31,
+    "feels_like_c": 29,
+    "humidity_pct": 53,
+    "wind_kmh": 18,
+    "precipitation_mm": 0,
+    "is_day": true,
+    "condition": "Moderate rain"
+  },
+  "location": "Mumbai",
+  "source": null,
+  "toolCalled": true,
+  "output": "It is currently 31°C in Mumbai, though it feels like 29°C, with moderate rain."
+}

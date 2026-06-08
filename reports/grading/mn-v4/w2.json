@@ -1,0 +1,23 @@
+{
+  "set": "mn-v4",
+  "lang": "mn",
+  "variant": "glossary+guardrail+formal+keep-latin, no thinking",
+  "target": "mongolian-optimal-graded.json",
+  "id": "w2",
+  "task": "weather",
+  "question": "Мөрөн-д одоо цаг агаар ямар байна?",
+  "instruction": null,
+  "injected": {
+    "location": "Мөрөн",
+    "temperature_c": 10,
+    "feels_like_c": 8,
+    "humidity_pct": 67,
+    "wind_kmh": 32,
+    "precipitation_mm": 0.8,
+    "condition": "overcast"
+  },
+  "location": null,
+  "source": null,
+  "toolCalled": null,
+  "output": "Мөрөн хотод одоо 10°C, мэдрэгдэх байдлаар 8°C байна. Тэнгэр бүрхэг байна."
+}

@@ -1,0 +1,1435 @@
+{
+  "meta": {
+    "generatedAt": "2026-06-05T07:54:10.952Z",
+    "baseUrl": "https://clean-hostels-holdem-election.trycloudflare.com/v1",
+    "model": "gemma-4-31b",
+    "modelRoot": "RedHatAI/gemma-4-31B-it-NVFP4",
+    "maxModelLen": 16384,
+    "serverFingerprint": "vllm-0.21.0-81cc15f0",
+    "kvBlocks": 3741,
+    "blockSize": 16,
+    "kvCapacityTokens": 59856,
+    "poolWeather": 1120,
+    "poolOfftopic": 495,
+    "weatherRatio": 0.5,
+    "maxTokens": 512,
+    "temperature": 0.7,
+    "reqsPerConc": 6,
+    "concurrencies": [
+      25,
+      50,
+      100,
+      150,
+      200,
+      300
+    ],
+    "node": "v24.13.1",
+    "quick": false
+  },
+  "cells": [
+    {
+      "concurrency": 25,
+      "requested": 150,
+      "succeeded": 150,
+      "failed": 0,
+      "successPct": 100,
+      "nWeather": 75,
+      "nOfftopic": 75,
+      "weatherToolRatePct": 100,
+      "offtopicFalseToolPct": 0,
+      "meanOutputTokens": 38.38,
+      "ttft": {
+        "mean": 594.2676993600002,
+        "p50": 567.8317070000003,
+        "p95": 1226.9396829999996,
+        "p99": 1240.2453880000003
+      },
+      "e2e": {
+        "mean": 2128.2356926399993,
+        "p50": 2337.9175320000013,
+        "p95": 3383.4816570000003,
+        "p99": 3895.459492,
+        "weatherP50": 2656.8064219999997,
+        "offtopicP50": 1323.2444510000005
+      },
+      "decodeTpsPerReq": 31.752407022299728,
+      "aggOutputTps": 412.897174880451,
+      "achievedReqPerSec": 10.758133790527644,
+      "cellDurationS": 13.942938703000001,
+      "prefixCacheHitPct": 73.85673071020808,
+      "uniquePromptsPct": 95.33333333333334,
+      "cacheQueries": 48873,
+      "peakKvUsagePct": 20.053475935828878,
+      "peakRunning": 21,
+      "peakWaiting": 0,
+      "samples": [
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Write a minimalist one-line haiku about kites.",
+          "answer": "Dancing on the wind."
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Suggest a whimsical name for a deserts-themed cafe.",
+          "answer": "How about **\"The Gilded Oasis\"** or **\"Sands & Sweets\"**?"
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Write a playful one-line haiku about honeybees.",
+          "answer": "Golden fuzzy wings,\nDancing for the sweet nectar,\nBuzzing through the bloom."
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Suggest a vivid name for a mountains-themed cafe.",
+          "answer": "How about **Summit & Sip** or **The Alpine Roast**?"
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Explain inflation to a busy adult in one sentence.",
+          "answer": "Inflation is the gradual increase in the prices of goods and services over time, which reduces the purchasing power of your money."
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Write a whimsical one-line haiku about robots.",
+          "answer": "Metal hearts beat fast,\nDreaming of electric sheep,\nOil for a teardrop."
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Suggest a whimsical name for a fireflies-themed cafe.",
+          "answer": "How about **The Glimmer Garden Cafe** or **Lanternglow Coffee**?"
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Write a short one-line haiku about rivers.",
+          "answer": "Silver waters flow,\nWinding paths to distant seas,\nEndless journey home."
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Write a playful one-line haiku about coffee.",
+          "answer": "Dark roast in my cup,\nWaking up my sleepy brain,\nMagic bean liquid."
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Write a playful one-line haiku about bicycles.",
+          "answer": "Two wheels spin around,\nWind rushing past my happy face,\nPedal fast, fly free."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Bucharest",
+          "injected": {
+            "temperature_c": 11,
+            "condition": "Moderate rain"
+          },
+          "prompt": "What's the temperature in Bucharest?",
+          "answer": "It is currently 11°C in Bucharest and feels like 11°C, with moderate rain."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Ottawa",
+          "injected": {
+            "temperature_c": 0,
+            "condition": "Light snow"
+          },
+          "prompt": "What's the weather in Ottawa right now?",
+          "answer": "It is currently 0°C in Ottawa, though it feels like -1°C with light snow."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Istanbul",
+          "injected": {
+            "temperature_c": 2,
+            "condition": "Mainly clear"
+          },
+          "prompt": "Give me the current conditions in Istanbul.",
+          "answer": "It's currently 2°C (feels like -1°C) and mainly clear in Istanbul."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Wellington",
+          "injected": {
+            "temperature_c": 7,
+            "condition": "Moderate rain"
+          },
+          "prompt": "What's the temperature in Wellington?",
+          "answer": "It is currently 7°C in Wellington with moderate rain, and it feels like 7°C."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Chicago",
+          "injected": {
+            "temperature_c": 14,
+            "condition": "Mainly clear"
+          },
+          "prompt": "What's the weather in Chicago right now?",
+          "answer": "It's currently 14°C (feels like 11°C) and mainly clear in Chicago."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Doha",
+          "injected": {
+            "temperature_c": 32,
+            "condition": "Mainly clear"
+          },
+          "prompt": "What's the weather in Doha right now?",
+          "answer": "It's currently 32°C in Doha, though it feels like 29°C. The skies are mainly clear."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Amsterdam",
+          "injected": {
+            "temperature_c": 18,
+            "condition": "Light rain"
+          },
+          "prompt": "Give me the current conditions in Amsterdam.",
+          "answer": "It is currently 18°C in Amsterdam, though it feels like 15°C. The weather is overcast with light rain."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Portland",
+          "injected": {
+            "temperature_c": -2,
+            "condition": "Mainly clear"
+          },
+          "prompt": "Is it cold in Portland today?",
+          "answer": "Yes, it's cold in Portland. It is currently -2°C, which feels like -5°C, with mainly clear skies."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Calgary",
+          "injected": {
+            "temperature_c": 31,
+            "condition": "Fog"
+          },
+          "prompt": "Should I bring an umbrella in Calgary?",
+          "answer": "It's currently 31°C (feels like 29°C) and foggy in Calgary. There is no precipitation, so you shouldn't need an umbrella."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Stockholm",
+          "injected": {
+            "temperature_c": 28,
+            "condition": "Light rain"
+          },
+          "prompt": "Will I need a jacket in Stockholm right now?",
+          "answer": "It is currently 28°C (feels like 25°C) with light rain in Stockholm, so you likely won't need a warm jacket, but you may want a light rain jacket or umbrella."
+        }
+      ],
+      "errorsSample": []
+    },
+    {
+      "concurrency": 50,
+      "requested": 300,
+      "succeeded": 300,
+      "failed": 0,
+      "successPct": 100,
+      "nWeather": 146,
+      "nOfftopic": 154,
+      "weatherToolRatePct": 100,
+      "offtopicFalseToolPct": 0,
+      "meanOutputTokens": 38.35333333333333,
+      "ttft": {
+        "mean": 595.9529075466662,
+        "p50": 574.9390109999986,
+        "p95": 1042.4073409999983,
+        "p99": 1257.677794000003
+      },
+      "e2e": {
+        "mean": 2086.51677477,
+        "p50": 2283.9736479999992,
+        "p95": 2996.3361300000033,
+        "p99": 3695.0654609999983,
+        "weatherP50": 2557.3649259999984,
+        "offtopicP50": 1380.0589660000005
+      },
+      "decodeTpsPerReq": 32.03356254587343,
+      "aggOutputTps": 819.2075735992793,
+      "achievedReqPerSec": 21.359488273925237,
+      "cellDurationS": 14.045280305999997,
+      "prefixCacheHitPct": 74.5659910258394,
+      "uniquePromptsPct": 89.66666666666666,
+      "cacheQueries": 96945,
+      "peakKvUsagePct": 33.63636363636363,
+      "peakRunning": 41,
+      "peakWaiting": 0,
+      "samples": [
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Suggest a whimsical name for a the moon-themed cafe.",
+          "answer": "How about **The Lunar Latte** or **Crescent Cup**?"
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Write a short one-line haiku about vinyl records.",
+          "answer": "Black disc spins around,\nNeedle finds the dusty groove,\nWarm music fills air."
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Write a minimalist one-line haiku about honeybees.",
+          "answer": "Golden wings hum soft."
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Write a minimalist one-line haiku about tidepools.",
+          "answer": "Glassy pools hold stars."
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Suggest a minimalist name for a skyscrapers-themed cafe.",
+          "answer": "How about **Apex**, **Spires**, or **Vista**?"
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Suggest a minimalist name for a jazz-themed cafe.",
+          "answer": "How about **Blue Note** or simply **Sotto**?"
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Write a vivid one-line haiku about the aurora.",
+          "answer": "Green fire paints the night,\nDancing ribbons in the sky,\nSilent, glowing light."
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Write a short one-line haiku about tea.",
+          "answer": "Warm steam fills the air,\nGolden leaves dance in the cup,\nQuiet peace descends."
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Suggest a playful name for a skyscrapers-themed cafe.",
+          "answer": "How about **\"The Cloud Nine Cafe\"** or **\"Summit Sips\"**?"
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Explain blockchain to a 10-year-old in one sentence.",
+          "answer": "Imagine a digital notebook that everyone can see, but no one can erase or change, making it a perfect way to keep a shared, honest record of things."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Kathmandu",
+          "injected": {
+            "temperature_c": 23,
+            "condition": "Moderate rain"
+          },
+          "prompt": "Should I bring an umbrella in Kathmandu?",
+          "answer": "Yes, you should bring an umbrella. It is currently 23°C with moderate rain in Kathmandu."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Madrid",
+          "injected": {
+            "temperature_c": 3,
+            "condition": "Clear sky"
+          },
+          "prompt": "Give me the current conditions in Madrid.",
+          "answer": "It is currently 3°C in Madrid with a clear sky, and it feels like 3°C."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Birmingham",
+          "injected": {
+            "temperature_c": 20,
+            "condition": "Mainly clear"
+          },
+          "prompt": "What's the temperature in Birmingham?",
+          "answer": "It is currently 20°C in Birmingham, though it feels like 17°C. The conditions are mainly clear."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Portland",
+          "injected": {
+            "temperature_c": -2,
+            "condition": "Mainly clear"
+          },
+          "prompt": "Will I need a jacket in Portland right now?",
+          "answer": "Yes, you will definitely need a jacket. It is currently -2°C (feeling like -5°C) and mainly clear."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Montevideo",
+          "injected": {
+            "temperature_c": 16,
+            "condition": "Light snow"
+          },
+          "prompt": "What's the temperature in Montevideo?",
+          "answer": "It is currently 16°C in Montevideo, which feels like 15°C, with light snow."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Moscow",
+          "injected": {
+            "temperature_c": 14,
+            "condition": "Partly cloudy"
+          },
+          "prompt": "How's the weather in Moscow today?",
+          "answer": "It's currently 14°C in Moscow, feeling like 13°C, with partly cloudy skies."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Edinburgh",
+          "injected": {
+            "temperature_c": 4,
+            "condition": "Mainly clear"
+          },
+          "prompt": "What's the temperature in Edinburgh?",
+          "answer": "It is currently 4°C in Edinburgh, though it feels more like 1°C. The sky is mainly clear."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Karachi",
+          "injected": {
+            "temperature_c": 29,
+            "condition": "Fog"
+          },
+          "prompt": "How's the weather in Karachi today?",
+          "answer": "It's currently 29°C in Karachi, though it feels like 27°C. The conditions are foggy."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Seville, Spain",
+          "injected": {
+            "temperature_c": 11,
+            "condition": "Clear sky"
+          },
+          "prompt": "Is it raining in Seville at the moment?",
+          "answer": "No, it is not raining in Seville. It is currently 11°C with a clear sky."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Edinburgh",
+          "injected": {
+            "temperature_c": 4,
+            "condition": "Mainly clear"
+          },
+          "prompt": "How's the weather in Edinburgh today?",
+          "answer": "It's currently 4°C in Edinburgh, though it feels more like 1°C. The sky is mainly clear."
+        }
+      ],
+      "errorsSample": []
+    },
+    {
+      "concurrency": 100,
+      "requested": 600,
+      "succeeded": 600,
+      "failed": 0,
+      "successPct": 100,
+      "nWeather": 286,
+      "nOfftopic": 314,
+      "weatherToolRatePct": 100,
+      "offtopicFalseToolPct": 0,
+      "meanOutputTokens": 37.39666666666667,
+      "ttft": {
+        "mean": 613.5291466249997,
+        "p50": 588.6819640000031,
+        "p95": 1241.5374599999996,
+        "p99": 1485.2103960000022
+      },
+      "e2e": {
+        "mean": 2155.35070975,
+        "p50": 2387.6943390000015,
+        "p95": 3531.1685600000055,
+        "p99": 3983.320946999993,
+        "weatherP50": 2704.6782269999967,
+        "offtopicP50": 1347.6906299999973
+      },
+      "decodeTpsPerReq": 29.426459141787454,
+      "aggOutputTps": 1560.9561847105977,
+      "achievedReqPerSec": 41.74051657127902,
+      "cellDurationS": 14.374522629000007,
+      "prefixCacheHitPct": 74.43908467342033,
+      "uniquePromptsPct": 80.33333333333333,
+      "cacheQueries": 192587,
+      "peakKvUsagePct": 76.60427807486631,
+      "peakRunning": 85,
+      "peakWaiting": 0,
+      "samples": [
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Write a minimalist one-line haiku about coffee.",
+          "answer": "Dark roast, morning light."
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Write a minimalist one-line haiku about jazz.",
+          "answer": "Brass notes drift away."
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Write a minimalist one-line haiku about gardens.",
+          "answer": "Green leaves, silent blooms."
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Suggest a playful name for a the moon-themed cafe.",
+          "answer": "How about **The Lunar Latte** or **Moonbeam Mugs**?"
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Suggest a whimsical name for a origami-themed cafe.",
+          "answer": "How about **The Paper Fold Cafe** or **Crease & Coffee**?"
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Suggest a whimsical name for a origami-themed cafe.",
+          "answer": "How about **\"The Paper Fold Cafe\"** or **\"Crease & Coffee\"**?"
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Write a whimsical one-line haiku about jazz.",
+          "answer": "Brass notes dance in air,\nSwaying to a midnight beat,\nGolden echoes drift."
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Write a vivid one-line haiku about the ocean.",
+          "answer": "Blue waves kiss the sand,\nEndless depths of shimmering,\nSalt air fills the breeze."
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Write a short one-line haiku about mountains.",
+          "answer": "Peaks touch silent skies."
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Explain DNA to a beginner in one sentence.",
+          "answer": "DNA is like a biological instruction manual or blueprint that contains all the genetic information needed to build and operate a living organism."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Jeddah",
+          "injected": {
+            "temperature_c": 6,
+            "condition": "Partly cloudy"
+          },
+          "prompt": "Give me the current conditions in Jeddah.",
+          "answer": "It is currently 6°C (feels like 5°C) and partly cloudy in Jeddah."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Dublin",
+          "injected": {
+            "temperature_c": 12,
+            "condition": "Light rain"
+          },
+          "prompt": "Give me the current conditions in Dublin.",
+          "answer": "It is currently 12°C in Dublin, though it feels like 9°C, with light rain."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Copenhagen",
+          "injected": {
+            "temperature_c": 6,
+            "condition": "Light snow"
+          },
+          "prompt": "Will I need a jacket in Copenhagen right now?",
+          "answer": "Yes, you will need a jacket. It is currently 6°C (feeling like 5°C) with light snow."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Portland",
+          "injected": {
+            "temperature_c": -2,
+            "condition": "Mainly clear"
+          },
+          "prompt": "How's the weather in Portland today?",
+          "answer": "It's currently -2°C in Portland, though it feels more like -5°C. The sky is mainly clear."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Portland",
+          "injected": {
+            "temperature_c": -2,
+            "condition": "Mainly clear"
+          },
+          "prompt": "Is it cold in Portland today?",
+          "answer": "Yes, it is cold in Portland. It's currently -2°C (feeling like -5°C) and mainly clear."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Beijing",
+          "injected": {
+            "temperature_c": 16,
+            "condition": "Light snow"
+          },
+          "prompt": "Will I need a jacket in Beijing right now?",
+          "answer": "Yes, you will need a jacket. It is currently 16°C (feeling like 15°C) with light snow."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Kyoto",
+          "injected": {
+            "temperature_c": -4,
+            "condition": "Mainly clear"
+          },
+          "prompt": "How's the weather in Kyoto today?",
+          "answer": "It's currently -4°C in Kyoto and feels like -7°C. The sky is mainly clear."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Barcelona",
+          "injected": {
+            "temperature_c": -1,
+            "condition": "Fog"
+          },
+          "prompt": "Give me the current conditions in Barcelona.",
+          "answer": "It is currently -1°C in Barcelona and feels like -3°C with foggy conditions."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Ho Chi Minh City",
+          "injected": {
+            "temperature_c": 30,
+            "condition": "Partly cloudy"
+          },
+          "prompt": "What's the temperature in Ho Chi Minh City?",
+          "answer": "It's currently 30°C in Ho Chi Minh City, which feels like 29°C, with partly cloudy skies."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "New York",
+          "injected": {
+            "temperature_c": 3,
+            "condition": "Clear sky"
+          },
+          "prompt": "Is it cold in New York today?",
+          "answer": "Yes, it's cold in New York today with a temperature of 3°C (39°F) and clear skies."
+        }
+      ],
+      "errorsSample": []
+    },
+    {
+      "concurrency": 150,
+      "requested": 900,
+      "succeeded": 900,
+      "failed": 0,
+      "successPct": 100,
+      "nWeather": 449,
+      "nOfftopic": 451,
+      "weatherToolRatePct": 100,
+      "offtopicFalseToolPct": 0,
+      "meanOutputTokens": 37.977777777777774,
+      "ttft": {
+        "mean": 790.2591574200006,
+        "p50": 703.6776469999895,
+        "p95": 1601.2694779999947,
+        "p99": 1941.6533469999995
+      },
+      "e2e": {
+        "mean": 2581.0397248100003,
+        "p50": 2789.1287509999966,
+        "p95": 4145.062040000004,
+        "p99": 4771.4477169999955,
+        "weatherP50": 3188.4731759999995,
+        "offtopicP50": 1639.7783920000074
+      },
+      "decodeTpsPerReq": 71.2069698293211,
+      "aggOutputTps": 1945.8947125719785,
+      "achievedReqPerSec": 51.23771917246286,
+      "cellDurationS": 17.565184683,
+      "prefixCacheHitPct": 73.28858541114572,
+      "uniquePromptsPct": 74.11111111111111,
+      "cacheQueries": 310182,
+      "peakKvUsagePct": 97.37967914438502,
+      "peakRunning": 131,
+      "peakWaiting": 18,
+      "samples": [
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Write a minimalist one-line haiku about kites.",
+          "answer": "Dancing on the wind."
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Suggest a vivid name for a the moon-themed cafe.",
+          "answer": "How about **Lunar Lustre** or **The Silver Crescent**?"
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Suggest a short name for a lighthouses-themed cafe.",
+          "answer": "How about **Beacon Brew** or **The Lantern Cafe**?"
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Suggest a whimsical name for a vinyl records-themed cafe.",
+          "answer": "How about **\"The Groovy Bean\"** or **\"Spin & Sip\"**?"
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Write a minimalist one-line haiku about deserts.",
+          "answer": "Golden dunes of sand."
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Suggest a playful name for a coffee-themed cafe.",
+          "answer": "How about **\"The Daily Grind\"** or **\"Brew-tiful Moments\"**?"
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Write a minimalist one-line haiku about skyscrapers.",
+          "answer": "Steel peaks touch the sky."
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Write a whimsical one-line haiku about snow.",
+          "answer": "Soft white petals fall,\nBlanketing the sleeping earth,\nQuiet winter dream."
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Write a playful one-line haiku about the moon.",
+          "answer": "Silver glowing orb,\nDancing through the velvet night,\nQuiet night-light sky."
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Explain inflation to a beginner in one sentence.",
+          "answer": "Inflation is when prices for goods and services rise over time, meaning your money has less purchasing power than it did before."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Baghdad",
+          "injected": {
+            "temperature_c": 29,
+            "condition": "Clear sky"
+          },
+          "prompt": "Give me the current conditions in Baghdad.",
+          "answer": "It is currently 29°C (feels like 29°C) and clear in Baghdad."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Ottawa",
+          "injected": {
+            "temperature_c": 0,
+            "condition": "Light snow"
+          },
+          "prompt": "Is it raining in Ottawa at the moment?",
+          "answer": "It is currently light snow in Ottawa with a temperature of 0°C, which feels like -1°C."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Mexico City",
+          "injected": {
+            "temperature_c": 6,
+            "condition": "Light snow"
+          },
+          "prompt": "How's the weather in Mexico City today?",
+          "answer": "It's currently 6°C (feels like 5°C) with light snow in Mexico City."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Montreal",
+          "injected": {
+            "temperature_c": -2,
+            "condition": "Light rain"
+          },
+          "prompt": "How's the weather in Montreal today?",
+          "answer": "It's currently -2°C in Montreal and feels like -5°C with light rain."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Geneva",
+          "injected": {
+            "temperature_c": 26,
+            "condition": "Partly cloudy"
+          },
+          "prompt": "How's the weather in Geneva today?",
+          "answer": "It is currently 26°C in Geneva and feels like 25°C. The weather is partly cloudy."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Accra",
+          "injected": {
+            "temperature_c": 24,
+            "condition": "Light rain"
+          },
+          "prompt": "Give me the current conditions in Accra.",
+          "answer": "It is currently 24°C (feeling like 21°C) in Accra with light rain."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Porto",
+          "injected": {
+            "temperature_c": 18,
+            "condition": "Light rain"
+          },
+          "prompt": "Give me the current conditions in Porto.",
+          "answer": "It's currently 18°C (feels like 15°C) in Porto with light rain."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Bratislava",
+          "injected": {
+            "temperature_c": 9,
+            "condition": "Fog"
+          },
+          "prompt": "Is it raining in Bratislava at the moment?",
+          "answer": "It is not currently raining in Bratislava; it is foggy with a temperature of 9°C (feeling like 7°C)."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Karachi",
+          "injected": {
+            "temperature_c": 29,
+            "condition": "Fog"
+          },
+          "prompt": "What's the weather in Karachi right now?",
+          "answer": "It's currently 29°C in Karachi, though it feels like 27°C, with foggy conditions."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Cardiff",
+          "injected": {
+            "temperature_c": 21,
+            "condition": "Fog"
+          },
+          "prompt": "Is it raining in Cardiff at the moment?",
+          "answer": "It is not raining in Cardiff; it is currently foggy with a temperature of 21°C (feels like 19°C)."
+        }
+      ],
+      "errorsSample": []
+    },
+    {
+      "concurrency": 200,
+      "requested": 1200,
+      "succeeded": 1198,
+      "failed": 2,
+      "successPct": 99.83333333333333,
+      "nWeather": 567,
+      "nOfftopic": 631,
+      "weatherToolRatePct": 100,
+      "offtopicFalseToolPct": 0,
+      "meanOutputTokens": 36.76794657762938,
+      "ttft": {
+        "mean": 1121.1547282904853,
+        "p50": 1038.4311119999911,
+        "p95": 1958.488068000006,
+        "p99": 2337.6511489999975
+      },
+      "e2e": {
+        "mean": 3021.503521364777,
+        "p50": 3277.7065659999935,
+        "p95": 4753.323174999998,
+        "p99": 5491.1770109999925,
+        "weatherP50": 3842.449861999994,
+        "offtopicP50": 1996.7291459999979
+      },
+      "decodeTpsPerReq": 26.093374093739403,
+      "aggOutputTps": 2169.5988791002637,
+      "achievedReqPerSec": 59.00788814843162,
+      "cellDurationS": 20.302370371,
+      "prefixCacheHitPct": 72.40313161082685,
+      "uniquePromptsPct": 68.16666666666666,
+      "cacheQueries": 442456,
+      "peakKvUsagePct": 98.15508021390374,
+      "peakRunning": 139,
+      "peakWaiting": 70,
+      "samples": [
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Suggest a short name for a cats-themed cafe.",
+          "answer": "How about **The Purrfect Cup** or **Catnip Cafe**?"
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Suggest a whimsical name for a thunderstorms-themed cafe.",
+          "answer": "How about **The Gilded Gale** or **Thunderbrew Coffee**?"
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Write a playful one-line haiku about lighthouses.",
+          "answer": "Tall light by the sea,\nWinking at the salty ships,\nGuide them safely home."
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Write a playful one-line haiku about old books.",
+          "answer": "Dusty gold pages,\nWhispers of a thousand years,\nScent of old magic."
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Suggest a playful name for a origami-themed cafe.",
+          "answer": "How about **\"The Paper Fold Cafe\"** or **\"Crease & Coffee\"**?"
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Write a short one-line haiku about fireflies.",
+          "answer": "Golden sparks of light,\nDancing through the summer night,\nTiny stars on earth."
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Suggest a whimsical name for a the moon-themed cafe.",
+          "answer": "How about **\"The Lunar Latte\"** or **\"Moonbeam Mugs\"**?"
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Write a short one-line haiku about lighthouses.",
+          "answer": "Tall light guides the way,\nCutting through the salty mist,\nSafe harbor awaits."
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Write a vivid one-line haiku about volcanoes.",
+          "answer": "Red fire meets the sky."
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Suggest a whimsical name for a cats-themed cafe.",
+          "answer": "How about **The Purrfect Brew** or **Whisker & Bean**?"
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Taipei",
+          "injected": {
+            "temperature_c": -2,
+            "condition": "Light snow"
+          },
+          "prompt": "Give me the current conditions in Taipei.",
+          "answer": "It is currently -2°C in Taipei and feels like -3°C with light snow."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Dubai",
+          "injected": {
+            "temperature_c": -1,
+            "condition": "Fog"
+          },
+          "prompt": "Give me the current conditions in Dubai.",
+          "answer": "It is currently -1°C in Dubai, feeling like -3°C, with foggy conditions."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Seville, Spain",
+          "injected": {
+            "temperature_c": 11,
+            "condition": "Clear sky"
+          },
+          "prompt": "Is it raining in Seville at the moment?",
+          "answer": "No, it is not raining in Seville. It is currently 11°C with clear skies."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Bratislava",
+          "injected": {
+            "temperature_c": 9,
+            "condition": "Fog"
+          },
+          "prompt": "How's the weather in Bratislava today?",
+          "answer": "It's currently 9°C (feels like 7°C) and foggy in Bratislava."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Prague",
+          "injected": {
+            "temperature_c": 4,
+            "condition": "Partly cloudy"
+          },
+          "prompt": "What's the weather in Prague right now?",
+          "answer": "It's currently 4°C in Prague, feeling like 3°C, with partly cloudy skies."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Beijing",
+          "injected": {
+            "temperature_c": 16,
+            "condition": "Light snow"
+          },
+          "prompt": "Is it cold in Beijing today?",
+          "answer": "It is currently 16°C in Beijing, feeling like 15°C, with light snow."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Brisbane",
+          "injected": {
+            "temperature_c": 24,
+            "condition": "Partly cloudy"
+          },
+          "prompt": "How's the weather in Brisbane today?",
+          "answer": "It's currently 24°C (feeling like 23°C) and partly cloudy in Brisbane."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Cape Town",
+          "injected": {
+            "temperature_c": 19,
+            "condition": "Fog"
+          },
+          "prompt": "What's the weather in Cape Town right now?",
+          "answer": "It is currently 19°C in Cape Town, though it feels like 17°C with foggy conditions."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Marrakech",
+          "injected": {
+            "temperature_c": 12,
+            "condition": "Light snow"
+          },
+          "prompt": "What's the temperature in Marrakech?",
+          "answer": "It is currently 12°C in Marrakech, feeling like 11°C, with light snow."
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Kyiv",
+          "injected": {
+            "temperature_c": 5,
+            "condition": "Overcast"
+          },
+          "prompt": "What's the temperature in Kyiv?",
+          "answer": "It is currently 5°C in Kyiv, though it feels like 3°C. The weather is overcast."
+        }
+      ],
+      "errorsSample": [
+        {
+          "status": 429,
+          "error": ""
+        },
+        {
+          "status": 429,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "concurrency": 300,
+      "requested": 1800,
+      "succeeded": 286,
+      "failed": 1514,
+      "successPct": 15.88888888888889,
+      "nWeather": 138,
+      "nOfftopic": 148,
+      "weatherToolRatePct": 100,
+      "offtopicFalseToolPct": 0,
+      "meanOutputTokens": 32.18181818181818,
+      "ttft": {
+        "mean": 2197.839338545456,
+        "p50": 2418.2205819999945,
+        "p95": 3470.748152999993,
+        "p99": 3714.8697990000073
+      },
+      "e2e": {
+        "mean": 3749.813204597901,
+        "p50": 3707.469982999988,
+        "p95": 6100.456390000007,
+        "p99": 6734.7621840000065,
+        "weatherP50": 4452.274968000012,
+        "offtopicP50": 3133.8677710000047
+      },
+      "decodeTpsPerReq": 25.964535853573665,
+      "aggOutputTps": 994.7295958878642,
+      "achievedReqPerSec": 30.909676708379962,
+      "cellDurationS": 9.252765815000005,
+      "prefixCacheHitPct": 75.31401455093389,
+      "uniquePromptsPct": 58.166666666666664,
+      "cacheQueries": 88929,
+      "peakKvUsagePct": 98.52941176470588,
+      "peakRunning": 135,
+      "peakWaiting": 28,
+      "samples": [
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Madrid, Spain",
+          "injected": {
+            "temperature_c": 20,
+            "condition": "Light snow"
+          },
+          "prompt": "Should I bring an umbrella in Madrid?",
+          "answer": ""
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Houston, Texas",
+          "injected": {
+            "temperature_c": 23,
+            "condition": "Overcast"
+          },
+          "prompt": "Is it cold in Houston today?",
+          "answer": ""
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Shanghai",
+          "injected": {
+            "temperature_c": -3,
+            "condition": "Moderate rain"
+          },
+          "prompt": "Should I bring an umbrella in Shanghai?",
+          "answer": ""
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "London",
+          "injected": {
+            "temperature_c": 32,
+            "condition": "Mainly clear"
+          },
+          "prompt": "Should I bring an umbrella in London?",
+          "answer": ""
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Hamburg",
+          "injected": {
+            "temperature_c": 0,
+            "condition": "Light rain"
+          },
+          "prompt": "Give me the current conditions in Hamburg.",
+          "answer": ""
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Ho Chi Minh City",
+          "injected": {
+            "temperature_c": 30,
+            "condition": "Partly cloudy"
+          },
+          "prompt": "What's the temperature in Ho Chi Minh City?",
+          "answer": ""
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Boston",
+          "injected": {
+            "temperature_c": -3,
+            "condition": "Moderate rain"
+          },
+          "prompt": "How's the weather in Boston today?",
+          "answer": ""
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "New York",
+          "injected": {
+            "temperature_c": 3,
+            "condition": "Clear sky"
+          },
+          "prompt": "What's the weather in New York right now?",
+          "answer": ""
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Denver",
+          "injected": {
+            "temperature_c": 20,
+            "condition": "Partly cloudy"
+          },
+          "prompt": "Will I need a jacket in Denver right now?",
+          "answer": ""
+        },
+        {
+          "type": "weather",
+          "toolCalled": true,
+          "location": "Bucharest",
+          "injected": {
+            "temperature_c": 11,
+            "condition": "Moderate rain"
+          },
+          "prompt": "Will I need a jacket in Bucharest right now?",
+          "answer": ""
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Suggest a whimsical name for a skyscrapers-themed cafe.",
+          "answer": "How about **\"The Cloud Lounge\"** or **\"Summit Sips\"**?"
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Suggest a vivid name for a volcanoes-themed cafe.",
+          "answer": "How about **Magma & Mugs** or **The Obsidian Roast**?"
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Suggest a vivid name for a rain-themed cafe.",
+          "answer": "How about **Azure Drizzle** or **The Silver Pluviophile**?"
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Suggest a vivid name for a thunderstorms-themed cafe.",
+          "answer": "How about **The Electric Bean** or **Thunderbrew Coffee**?"
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Suggest a whimsical name for a jazz-themed cafe.",
+          "answer": "How about **The Velvet Note** or **Syncopated Sips**?"
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Write a whimsical one-line haiku about honeybees.",
+          "answer": "Golden fuzzy bees,\nDancing through the summer blooms,\nSipping liquid sun."
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Explain machine learning to a curious teenager in one sentence.",
+          "answer": "Machine learning is a way of teaching computers to recognize patterns in data so they can make predictions or decisions on their own without being explicitly programmed for every single task."
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Explain quantum entanglement to a beginner in one sentence.",
+          "answer": "Quantum entanglement is a phenomenon where two particles become so deeply linked that the state of one instantly influences the state of the other, regardless of how far apart they are."
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Write a whimsical one-line haiku about bicycles.",
+          "answer": "Two wheels spin in air,\nChasing whispers of the wind,\nSilver spokes dance fast."
+        },
+        {
+          "type": "offtopic",
+          "toolCalled": false,
+          "location": null,
+          "injected": null,
+          "prompt": "Write a minimalist one-line haiku about deserts.",
+          "answer": "Golden sands drift slow."
+        }
+      ],
+      "errorsSample": [
+        {
+          "status": 429,
+          "error": ""
+        },
+        {
+          "status": 429,
+          "error": ""
+        },
+        {
+          "status": 429,
+          "error": ""
+        },
+        {
+          "status": 429,
+          "error": ""
+        },
+        {
+          "status": 429,
+          "error": ""
+        }
+      ]
+    }
+  ]
+}

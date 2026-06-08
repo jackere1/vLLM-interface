@@ -1,0 +1,15 @@
+{
+  "set": "mn-v3",
+  "lang": "mn",
+  "variant": "improved + reasoning + formal + keep-latin",
+  "target": "mongolian-reasoning-graded.json",
+  "id": "g18",
+  "task": "general",
+  "question": "Рекурс (recursion) гэж юу вэ? Богино жишээтэйгээр тайлбарла.",
+  "instruction": null,
+  "injected": null,
+  "location": null,
+  "source": null,
+  "toolCalled": null,
+  "output": "Рекурсив функц гэдэг нь өөрийгөө дахин дуудаж ажиллах функцийг хэлнэ. Энэхүү процесс нь тодорхой нэг зогсох нөхцөлд хүрэх хүртэл давтагддаг.\n\nЖишээ нь: Факториал тооцоолол.\nТоог факториаллахдаа тухайн"
+}

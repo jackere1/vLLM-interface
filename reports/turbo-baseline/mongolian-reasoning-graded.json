@@ -1,0 +1,133 @@
+{
+  "meta": {
+    "generatedAt": "2026-05-29",
+    "model": "gemma-4-31b",
+    "language": "Mongolian (mn)",
+    "variant": "improved + reasoning(thinking) + formal + keep-latin",
+    "method": "LLM-judge + adversarial verify"
+  },
+  "overall": {
+    "total": 30,
+    "pass": 13,
+    "passPct": 43,
+    "fluentPct": 47,
+    "meanScore": 2.93,
+    "note": "7 EN→MN summaries returned empty (reasoning consumed the token budget) and are counted as failures"
+  },
+  "summary": {
+    "weather": {
+      "n": 10,
+      "pass": 9,
+      "passPct": 90,
+      "fluentPct": 90,
+      "meanScore": 4.5
+    },
+    "general": {
+      "n": 10,
+      "pass": 4,
+      "passPct": 40,
+      "fluentPct": 40,
+      "meanScore": 3.1
+    },
+    "xsum": {
+      "n": 10,
+      "pass": 0,
+      "passPct": 0,
+      "fluentPct": 10,
+      "meanScore": 1.2
+    }
+  },
+  "flagged": [
+    {
+      "id": "w5",
+      "task": "weather",
+      "problem": "Манан буун байна — брокен/натурал биш эвгүй үгийн хэлбэр. 'It is foggy' гэхэд 'Манантай байна' эсвэл 'Манан буусан байна' гэж бичнэ. 'буун' нь 'буух' үйл үгийн буруу нөхцөлдөл (converb misuse) бөгөөд үндсэн өгүүлэмж болж чадахгүй.; Fluency: \"Манан буун байна\" is ungrammatical. \"буун\" is a malformed/imperfective converb form of \"буух\" (to settle/descend) and cannot serve as the predicate stem with \"байна\". Correct continuous form would be \"буж байна\" (буу- + -ж converb), or natural alternatives \"Манантай байна\" / \"Манан буусан байна\". As written it is a clear conjugation error and broken Mongolian.",
+      "output": "Улаанбаатарт одоо -15°C, мэдрэгдэх байдлаар -16°C байна. Манан буун байна.",
+      "question": "Улаанбаатар-д одоо цаг агаар ямар байна?",
+      "injected": {
+        "location": "Ulaanbaatar",
+        "temperature_c": -15,
+        "feels_like_c": -16,
+        "humidity_pct": 46,
+        "wind_kmh": 31,
+        "precipitation_mm": 0,
+        "condition": "fog"
+      }
+    },
+    {
+      "id": "g12",
+      "task": "general",
+      "problem": "хүчилтэсчлүүр — invented non-word; the correct Mongolian term for oxygen is 'хүчилтөрөгч'. This breaks both fluency and factual accuracy in a key position (the gas plants release).; нийлүүлж — awkward/incorrect verb for 'produce/synthesize nutrients'; 'нийлэгжүүлж' (synthesize) or 'үйлдвэрлэж' would be expected here.; FLUENCY/FACTUAL (key term): 'хүчилтэсчлүүр' is an invented, garbled non-word in the slot for the gas plants release; the correct word for oxygen is 'хүчилтөрөгч'. Breaks fluency and mis-names the key product of photosynthesis.; FLUENCY (minor word choice): 'тэжээлийг нийлүүлж' uses 'нийлүүлэх' (supply/merge), imprecise for synthesizing nutrients; 'нийлэгжүүлэх' or 'үйлдвэрлэх' expected. Awkward but grammatical, not a non-word.; Minor redundancy/clumsiness: 'өөртөө хэрэгцээтэй тэжээлийг нийлүүлж'.",
+      "output": "Фотосинтез гэж ургамал нарны гэрэл, ус болон нүүрсхүчлийн хийг ашиглан өөртөө хэрэгцээтэй тэжээлийг нийлүүлж, агаар руу хүчилтэсчлүүр ялгаруулах үйл явцыг хэлнэ. Энэхүү үйл явцаар ургамал нарны энергийг химийн энерги болгон хувиргаж, өөрийн ургаж хөгжихөд шаардлагатай тэжээлийг бүтээдэг.",
+      "question": "Фотосинтез гэж юу вэ? Энгийнээр тайлбарлаач.",
+      "injected": null
+    },
+    {
+      "id": "g14",
+      "task": "general",
+      "problem": "удаахan — broken mixed-script non-word: Cyrillic 'удах' + Latin 'an'; intended word is 'удаан' (slow). Clear mis-rendering/non-word.; 'удаахan' — confirmed at byte level as a broken mixed-script non-word: Cyrillic 'удаах' (U+0443 U+0434 U+0430 U+0430 U+0445) directly followed by Latin 'an' (U+0061 U+006E); intended word is the adjective 'удаан' (slow). Clear mojibake/mis-rendering.; Beyond the Latin suffix, the Cyrillic stem 'удаах' is itself the wrong form (verb 'to delay'), where the adjective 'удаан' is required in 'найдвартай боловч удаан' — so the token is both broken and morphologically incorrect.",
+      "output": "",
+      "question": "TCP болон UDP протоколын гол ялгаа юу вэ?",
+      "injected": null
+    },
+    {
+      "id": "g15",
+      "task": "general",
+      "problem": "нүүрсхүлэг / нүүрсхүлэгийг — invented non-word for carbon dioxide; standard Mongolian is 'нүүрсхүчлийн хий', 'нүүрстөрөгчийн давхар исэл', or 'нүүрсхүчил'. The morpheme '-хүлэг' is not a chemistry term (as a standalone word 'хүлэг' means 'steed'), so this is not recognizable Mongolian terminology.; усыг болон нүүрсхүлэгийг — awkward double-accusative listing; 'ус болон нүүрсхүчлийн хийг' would read more naturally.; эрчим хүч буюу сахар болон хүчилтөрөгч болгон — loose/imprecise phrasing ('energy or sugar and oxygen').; see above",
+      "output": "Фотосинтез гэдэг нь ногоон ургамлууд нарны гэрлийг ашиглан ус болон нүүрсхүчлийн хийг органик бодис болон хүчилтөрөгч болгон хувиргах биохимийн үйл явц юм. Энгийнээр хэлбэл, ургамал нарны гэрлийг ашиглан өөртөө хэрэгцээтэй хоол тэжээлийг үйлдвэрлэж, агаар руу хүчилтөрөгчийг ялгаруулдаг.",
+      "question": "Фотосинтез гэж юу вэ? Энгийнээр тайлбарлаач.",
+      "injected": null
+    },
+    {
+      "id": "g16",
+      "task": "general",
+      "problem": "複雑 — Japanese/Chinese kanji (meaning 'complex') embedded directly in the Mongolian text; a non-Mongolian token / broken output, should be 'нарийн төвөгтэй'; хүчлээх — wrong/awkward word (means 'to acidify/force'); intended sense is 'ашиглах' or 'хүчээр', mis-used in context; хэв шимийг — non-standard; should be 'хэв шинжийг' (pattern); 'шим' is a wrong/mis-conjugated root here; 複雑 — Japanese/Chinese kanji compound (meaning 'complex') spliced directly into the Mongolian sentence ('таньж,複雑 асуудлыг'); a foreign-script, non-Mongolian token mid-sentence is definitively broken output. Should be 'нарийн төвөгтэй'. Also note the missing space after the comma reinforces the bad splice.; хүчлээх — wrong word in context ('компьютерыг хүчлээх замаар'); 'хүчлэх' means 'to acidify / to force-strain', not the intended 'to use/utilize'. Should be 'ашиглах' (by using computers).; хэв шимийг — non-standard / wrong root; the standard term for 'pattern' is 'хэв шинж', so it should be 'хэв шинжийг'. 'шим' (nutrient/sap) is the wrong morpheme here.",
+      "output": "Хиймэл оюун ухаан нь хүний сэтгэлгээг дуурайлган, суралцах болон дүн шинжилгээ хийх чадвартай систем бүрдүүлэх ухааны салбар юм. Энэхүү технологи нь өгөгдөлд үндэслэн бие даан шийдвэр гаргах болон асуудал шийдвэрлэх боломжийг олгодог.",
+      "question": "Хиймэл оюун ухаан гэж юу вэ? Хоёр өгүүлбэрээр тайлбарла.",
+      "injected": null
+    },
+    {
+      "id": "g17",
+      "task": "general",
+      "problem": "сэтгэнзүйн — not a valid Mongolian word; appears to be a malformed blend of сэтгэхүйн (cognitive/of-thinking) or сэтгэл зүйн (psychological); Non-word: \"сэтгэнзүйн\" is not a valid Mongolian word. The intended term is \"сэтгэхүйн\" (cognitive / of-thinking) or \"сэтгэл зүйн / сэтгэлзүйн\" (psychological). \"сэтгэнзүйн\" is a malformed blend gluing the converb \"сэтгэн\" (thinking) onto \"-зүйн\"; it does not exist in standard Mongolian. In a two-sentence definition this is a load-bearing core term, so the error is significant.; Minor internal inconsistency: sentence 1 classifies AI as a \"шинжлэх ухаан\" (a science), while sentence 2 refers to it as \"технологи\" (technology). Also \"...дуурайлган хэрэгжүүлсэн шинжлэх ухаан\" (a science implemented by imitating) is somewhat awkward phrasing. Not disqualifying on its own, but reinforces the lack of polish.",
+      "output": "Хиймэл оюун ухаан гэдэг нь хүний сэтгэнзүйн чадварыг компьютер болон программ хангамжаар дуурайлган хэрэгжүүлсэн шинжлэх ухаан юм. Энэхүү технологи нь мэдээллийг боловсруулах, суралцах болон шийдвэр гаргах үйлдлийг бие даан гүйцэтгэх зорилготой байдаг.",
+      "question": "Хиймэл оюун ухаан гэж юу вэ? Хоёр өгүүлбэрээр тайлбарла.",
+      "injected": null
+    },
+    {
+      "id": "g20",
+      "task": "general",
+      "problem": "конденсаци (унтрах) — the gloss 'унтрах' means 'to go to sleep / extinguish', a clear mistranslation; condensation should be glossed 'өтгөрөх/нягтрах'; хэлбэржлэн — malformed/invented word; correct form would be 'хэлбэржин' or 'хэлбэрээ өөрчлөн'; үе шаруудаас — non-word/typo; should be 'үе шатуудаас' (шат = stage); конденсаци (унтрах): gloss 'унтрах' (to fall asleep/be extinguished) is a flat mistranslation of condensation; should be 'өтгөрөл/нягтрал'; хэлбэржлэн: malformed/invented converb; correct is 'хэлбэржин' or 'хэлбэрээ өөрчлөн'; үе шаруудаас: non-word/typo (шар=yellow); should be 'үе шатуудаас' (шат=stage)",
+      "output": "Усны эргэлт гэж дэлхий дэх усны тогтмол хувиргалт, хөдөлгөөнийг хэлнэ. Энэхүү явц нь нарны халуунаар ус ууршиж, агаарт хүрэх, тэндээсээ хөлтгөлцөж үүл болох, улмаар бороо, цас болон дэлхий дээр буух замаар үргэлжилдэг.",
+      "question": "Усны эргэлт (water cycle) гэж юу вэ?",
+      "injected": null
+    },
+    {
+      "id": "x21",
+      "task": "xsum",
+      "problem": "\"Server Actions-и\" — output is truncated mid-word, leaving a dangling instrumental/accusative case particle with no verb; The entire output is a single unfinished noun phrase, not a grammatical sentence; No predicate/verb to complete the clause; the text ends abruptly; Truncated mid-word: the output ends at \"Server Actions-и\", a dangling/incomplete case suffix (\"-и\") that is not a valid Mongolian word or particle.; No predicate/finite verb anywhere — the entire output is a single unfinished noun phrase, not a grammatical sentence, so it is broken Mongolian.; Grossly incomplete vs. the xsum task: requested 3-4 sentences, but only a fragment of one clause exists; it covers only the first Next.js section and omits all other source content (useReducer/Context, vLLM PagedAttention/batching, memory conservation, dynamic routes, OpenAI-compatible API, dynamic metadata).",
+      "output": "Next.js-ийн App Router-т Server Components-ийн fetch API-г ашиглан өгөгдөл татах, кэшлэх, динамик зам болон Server Actions-и",
+      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч.",
+      "injected": null,
+      "source": "[doc:401fc1a4]\n\n## Next.js — Data fetching in Server Components\nIn the App Router, data fetching is colocated inside async Server Components using the fetch API. The caching behavior is controlled per request. `fetch(url, { cache: 'force-cache' })` caches until manually invalidated (like getStaticProps) and is the default. `fetch(url, { cache: 'no-store' })` refetches on every request (like getServerSideProps). Time-based revalidation uses `fetch(url, { next: { revalidate: 10 } })` to cache with a 10-second lifetime.\n\nexport default async function Page() {\n  const staticData = await fetch('https://...', { cache: 'force-cache' })\n  const dynamicData = await fetch('https://...', { cache: 'no-store' })\n  const revalidated = await fetch('https://...', { next: { revalidate: 10 } })\n  return <div>...</div>\n}\n\n## React — useReducer with Context\nFor complex state, a parent manages it with useReducer while Context passes both state and dispatch deep into the tree, so any descendant can read state and dispatch actions without prop drilling.\n\nconst [tasks, dispatch] = useReducer(tasksReducer, initialTasks);\nfunction tasksReducer(tasks, action) {\n  switch (action.type) {\n    case 'added': return [...tasks, { id: action.id, text: action.text, done: false }];\n    case 'changed': return tasks.map(t => t.id === action.task.id ? action.task : t);\n    case 'deleted': return tasks.filter(t => t.i"
+    },
+    {
+      "id": "x23",
+      "task": "xsum",
+      "problem": "Output is an empty string — there is no Mongolian text to assess for grammar or naturalness.; Output is an empty string — no Mongolian summary was produced for the xsum task that requested a 3-4 sentence summary of the English document.; Cannot assess fluency: there is no Mongolian text at all.; Not a faithful or complete summary: zero coverage of the source document (Next.js dynamic routes, vLLM endpoints, Vercel AI SDK streamText, React effects).",
+      "output": "",
+      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч.",
+      "injected": null,
+      "source": "[doc:95562161]\n\n## Next.js — Dynamic routes with params\nA dynamic segment like [slug] receives a params prop. In recent versions params is a Promise that must be awaited before use. The component fetches the matching record and renders it.\n\nexport default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {\n  const { slug } = await params\n  const post = await getPost(slug)\n  return (<div><h1>{post.title}</h1><p>{post.content}</p></div>)\n}\n\n## vLLM — Server endpoints overview\nThe server provides multiple OpenAI-compatible endpoints: /v1/completions for raw text generation, /v1/chat/completions for chat with message history and tools, /v1/embeddings for embeddings, and /v1/audio/transcriptions and /v1/audio/translations for speech. It hosts one model at a time and provides a models listing endpoint. The host and port default to localhost:8000 and are configurable with --host and --port.\n\n## Vercel AI SDK — streamText and structured output\nstreamText streams text from a model and prompt; the output is available as a textStream, with a fullStream of typed parts and tool-call handling, retries, and telemetry built in. streamObject is deprecated in favor of streamText with the output setting and Output.object to stream structured data validated by a zod schema.\n\nconst { partialOutputStream } = streamText({ model, output: Output.object({ schema: z.object({ "
+    },
+    {
+      "id": "x27",
+      "task": "xsum",
+      "problem": "Hallucination: the output lists 'динамик мета өгөгдөл' (dynamic metadata) as one of the documented Next.js topics, but the English source has no section or mention of metadata. The 8 sections are: route handler error handling, vLLM OpenAI-compatible Chat API, Server→Client Components data passing, useReducer+Context, vLLM memory conservation, React built-in hook categories, Streaming with Suspense, and Vercel AI SDK useChat. 'Dynamic metadata' is invented and inserted into a list presented as factual document coverage.; динамик мета өгөгдөл (\"dynamic metadata\") — the source contains no section or mention of dynamic metadata; this topic is invented. The document's sections are: route handler error handling, vLLM OpenAI-compatible Chat API, Server→Client Components data passing, useReducer with Context, vLLM conserving memory, React built-in hook categories, Streaming with Suspense, and Vercel AI SDK useChat — none of which concern metadata.",
+      "output": "",
+      "question": "Дээрх англи баримт бичгийг Монгол хэлээр 3-4 өгүүлбэрээр товчилж бичээч.",
+      "injected": null,
+      "source": "[doc:676e57e4]\n\n## Next.js — Route handler with error handling\nA POST route handler should wrap work in try/catch, return appropriate HTTP status codes, and avoid leaking sensitive error detail to clients.\n\nimport { submit } from '@/lib/submit'\nexport async function POST(request: Request) {\n  try {\n    await submit(request)\n    return new Response(null, { status: 204 })\n  } catch (reason) {\n    const message = reason instanceof Error ? reason.message : 'Unexpected error'\n    return new Response(message, { status: 500 })\n  }\n}\n\n## vLLM — OpenAI-compatible Chat API\nvLLM exposes an HTTP server implementing the OpenAI API protocol, acting as a drop-in replacement. POST /v1/chat/completions accepts messages (the conversation history), plus optional model, stream, max_tokens, temperature, top_p, and stop. The response contains choices and a usage object with prompt_tokens, completion_tokens, and total_tokens. parallel_tool_calls controls whether more than one tool call is allowed per request (default true).\n\n## Next.js — Server Components passing data to Client Components\nA Server Component can fetch data directly with async/await and forward it to a Client Component as props. This replaces getServerSideProps and getStaticProps with a simpler pattern and keeps secrets on the server.\n\nimport HomePage from './home-page'\nasync function getPosts() {\n  const res = await fetch('https://..."
+    }
+  ]
+}
